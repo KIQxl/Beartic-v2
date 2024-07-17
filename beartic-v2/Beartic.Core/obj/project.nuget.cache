@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "noH5y53lzRrIFKAN5Iv0t/6/t3k+PmtpgeABuFNd2ZjrQqC45ESMK9P0wKKhZByu/gw5+yxiHPsYsRHlMwitKw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Core\\Beartic.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Caiaque\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}

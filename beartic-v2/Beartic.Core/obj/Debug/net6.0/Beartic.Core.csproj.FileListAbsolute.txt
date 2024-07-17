@@ -1,0 +1,12 @@
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Core\bin\Debug\net6.0\Beartic.Core.deps.json
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Core\bin\Debug\net6.0\Beartic.Core.dll
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Core\bin\Debug\net6.0\Beartic.Core.pdb
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Core\obj\Debug\net6.0\Beartic.Core.csproj.AssemblyReference.cache
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Core\obj\Debug\net6.0\Beartic.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Core\obj\Debug\net6.0\Beartic.Core.AssemblyInfoInputs.cache
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Core\obj\Debug\net6.0\Beartic.Core.AssemblyInfo.cs
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Core\obj\Debug\net6.0\Beartic.Core.csproj.CoreCompileInputs.cache
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Core\obj\Debug\net6.0\Beartic.Core.dll
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Core\obj\Debug\net6.0\refint\Beartic.Core.dll
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Core\obj\Debug\net6.0\Beartic.Core.pdb
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Core\obj\Debug\net6.0\ref\Beartic.Core.dll
