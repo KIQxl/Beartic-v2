@@ -20,5 +20,10 @@ namespace Beartic.Core.ValueObjects
 
         public string Firstname { get; private set; }
         public string Lastname { get; private set; }
+
+        public override string ToString()
+        {
+            return $"{Firstname} {Lastname}";
+        }
     }
 }

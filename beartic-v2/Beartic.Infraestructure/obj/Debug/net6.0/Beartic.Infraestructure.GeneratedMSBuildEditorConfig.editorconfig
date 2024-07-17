@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Beartic.Infraestructure
-build_property.ProjectDir = C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Infraestructure\
+build_property.ProjectDir = C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Infraestructure\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

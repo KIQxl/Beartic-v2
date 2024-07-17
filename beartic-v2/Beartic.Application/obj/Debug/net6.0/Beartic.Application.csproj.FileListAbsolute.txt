@@ -1,0 +1,12 @@
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\bin\Debug\net6.0\Beartic.Application.deps.json
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\bin\Debug\net6.0\Beartic.Application.dll
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\bin\Debug\net6.0\Beartic.Application.pdb
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\obj\Debug\net6.0\Beartic.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\obj\Debug\net6.0\Beartic.Application.AssemblyInfoInputs.cache
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\obj\Debug\net6.0\Beartic.Application.AssemblyInfo.cs
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\obj\Debug\net6.0\Beartic.Application.csproj.CoreCompileInputs.cache
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\obj\Debug\net6.0\Beartic.Application.sourcelink.json
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\obj\Debug\net6.0\Beartic.Application.dll
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\obj\Debug\net6.0\refint\Beartic.Application.dll
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\obj\Debug\net6.0\Beartic.Application.pdb
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\obj\Debug\net6.0\ref\Beartic.Application.dll

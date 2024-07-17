@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "mA3OFXiVI9nFExCoOG9J/d72rAcpnZZ7NwzjbM/llhU=",
+  "Source": "Beartic.Api",
+  "BasePath": "_content/Beartic.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
