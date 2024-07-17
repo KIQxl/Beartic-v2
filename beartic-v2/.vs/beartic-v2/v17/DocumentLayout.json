@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8A5DB681-C420-4750-ADB1-1809F0C1EE4D}|Beartic.Tests\\Beartic.Tests.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.tests\\entitiestests\\producttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A5DB681-C420-4750-ADB1-1809F0C1EE4D}|Beartic.Tests\\Beartic.Tests.csproj|solutionrelative:beartic.tests\\entitiestests\\producttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A5DB681-C420-4750-ADB1-1809F0C1EE4D}|Beartic.Tests\\Beartic.Tests.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.tests\\entitiestests\\ordertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A5DB681-C420-4750-ADB1-1809F0C1EE4D}|Beartic.Tests\\Beartic.Tests.csproj|solutionrelative:beartic.tests\\entitiestests\\ordertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4ACA8F79-35BC-49B9-955C-033017A2DC1A}|Beartic.Core\\Beartic.Core.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.core\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4ACA8F79-35BC-49B9-955C-033017A2DC1A}|Beartic.Core\\Beartic.Core.csproj|solutionrelative:beartic.core\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4ACA8F79-35BC-49B9-955C-033017A2DC1A}|Beartic.Core\\Beartic.Core.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.core\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ACA8F79-35BC-49B9-955C-033017A2DC1A}|Beartic.Core\\Beartic.Core.csproj|solutionrelative:beartic.core\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ACA8F79-35BC-49B9-955C-033017A2DC1A}|Beartic.Core\\Beartic.Core.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.core\\valueobjects\\installment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ACA8F79-35BC-49B9-955C-033017A2DC1A}|Beartic.Core\\Beartic.Core.csproj|solutionrelative:beartic.core\\valueobjects\\installment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A5DB681-C420-4750-ADB1-1809F0C1EE4D}|Beartic.Tests\\Beartic.Tests.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.tests\\entitiestests\\customertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A5DB681-C420-4750-ADB1-1809F0C1EE4D}|Beartic.Tests\\Beartic.Tests.csproj|solutionrelative:beartic.tests\\entitiestests\\customertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductTests.cs",
-              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\EntitiesTests\\ProductTests.cs",
-              "RelativeDocumentMoniker": "Beartic.Tests\\EntitiesTests\\ProductTests.cs",
-              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\EntitiesTests\\ProductTests.cs",
-              "RelativeToolTip": "Beartic.Tests\\EntitiesTests\\ProductTests.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAYwBkAAAAzAAAA",
+              "DocumentIndex": 2,
+              "Title": "Installment.cs",
+              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Core\\ValueObjects\\Installment.cs",
+              "RelativeDocumentMoniker": "Beartic.Core\\ValueObjects\\Installment.cs",
+              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Core\\ValueObjects\\Installment.cs",
+              "RelativeToolTip": "Beartic.Core\\ValueObjects\\Installment.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAjwBoAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T14:57:32.721Z",
+              "WhenOpened": "2024-07-17T18:23:48.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomerTests.cs",
+              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\EntitiesTests\\CustomerTests.cs",
+              "RelativeDocumentMoniker": "Beartic.Tests\\EntitiesTests\\CustomerTests.cs",
+              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\EntitiesTests\\CustomerTests.cs",
+              "RelativeToolTip": "Beartic.Tests\\EntitiesTests\\CustomerTests.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowAkAAADWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T18:08:46.186Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Core\\Entities\\Product.cs",
-              "RelativeDocumentMoniker": "Beartic.Core\\Entities\\Product.cs",
-              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Core\\Entities\\Product.cs",
-              "RelativeToolTip": "Beartic.Core\\Entities\\Product.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAsAAAA",
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Core\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "Beartic.Core\\Entities\\Order.cs",
+              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Core\\Entities\\Order.cs",
+              "RelativeToolTip": "Beartic.Core\\Entities\\Order.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAwwDUAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T14:05:34.505Z",
+              "WhenOpened": "2024-07-17T18:07:49.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderTests.cs",
+              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\EntitiesTests\\OrderTests.cs",
+              "RelativeDocumentMoniker": "Beartic.Tests\\EntitiesTests\\OrderTests.cs",
+              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\EntitiesTests\\OrderTests.cs",
+              "RelativeToolTip": "Beartic.Tests\\EntitiesTests\\OrderTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T18:02:34.709Z",
               "EditorCaption": ""
             }
           ]
