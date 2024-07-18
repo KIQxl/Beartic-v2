@@ -1087,6 +1087,10 @@
         }
       },
       "Beartic.Application/1.0.0": {
+        "dependencies": {
+          "Beartic.Core": "1.0.0",
+          "Flunt": "1.0.5"
+        },
         "runtime": {
           "Beartic.Application.dll": {}
         }

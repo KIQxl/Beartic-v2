@@ -32,7 +32,7 @@ namespace Beartic.Core.Entities
             }
 
             Items.Add(item);
-            Installment = new Installment(Total(), 1, Total());
+            Installment = new Installment(Total(), 1);
         }
 
         public decimal Total()

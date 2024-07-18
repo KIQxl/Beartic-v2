@@ -10,3 +10,7 @@ C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Appli
 C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\obj\Debug\net6.0\refint\Beartic.Application.dll
 C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\obj\Debug\net6.0\Beartic.Application.pdb
 C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\obj\Debug\net6.0\ref\Beartic.Application.dll
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\obj\Debug\net6.0\Beartic.Application.csproj.AssemblyReference.cache
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\bin\Debug\net6.0\Beartic.Core.dll
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\bin\Debug\net6.0\Beartic.Core.pdb
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\obj\Debug\net6.0\Beartic..E9403F59.Up2Date

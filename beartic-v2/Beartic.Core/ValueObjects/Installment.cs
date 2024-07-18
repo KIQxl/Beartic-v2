@@ -2,11 +2,11 @@
 {
     public class Installment : ValueObject
     {
-        public Installment(decimal price, int installments, decimal installmentPrice)
+        public Installment(decimal price, int installments)
         {
             Price = price;
             Installments = installments;
-            InstallmentPrice = installmentPrice;
+            InstallmentPrice = price / installments;
             ModifiedAt = DateTime.Now;
 
         }

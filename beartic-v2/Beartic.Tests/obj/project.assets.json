@@ -1801,6 +1801,10 @@
       "Beartic.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Beartic.Core": "1.0.0",
+          "Flunt": "1.0.5"
+        },
         "compile": {
           "bin/placeholder/Beartic.Application.dll": {}
         },

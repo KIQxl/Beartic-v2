@@ -9,6 +9,7 @@ namespace Beartic.Tests.EntitiesTests
     {
         private Product _product1 = new Product("Produto 1", "Teste", 100m, 10);
         private Product _product2 = new Product("Produto 2", "Teste 2", 200m, 10);
+        private Product _product3 = new Product(null, "", 0, 10);
         private Customer _customer = new Customer(new Name("Kaique", "Alves"), "11977268607", new Document("99403111097", Core.Enums.EDocumentType.CPF), new Password("123456789"), new Email("kaique@email.com.br"));
 
         [TestMethod]
@@ -31,7 +32,7 @@ namespace Beartic.Tests.EntitiesTests
             order.AddItem(new OrderItem(_product1, 3));
             order.Parcel(3);
 
-            Assert.IsTrue(100m == order.Installment.InstallmentPrice && order.Installment.Price == 300m);
+            Assert.IsTrue(100m == order.Installment.InstallmentPrice && order.Installment.Price == 300m && order.Status == Core.Enums.EOrderStatus.WaitingPayment);
         }
 
         [TestMethod]
@@ -42,7 +43,7 @@ namespace Beartic.Tests.EntitiesTests
 
             order.Pay(100);
 
-            Assert.IsTrue(order.Installment.Price == 200 && order.Installment.Installments == 1);
+            Assert.IsTrue(order.Installment.Price == 200 && order.Installment.Installments == 1 && order.Status == Core.Enums.EOrderStatus.WaitingPayment);
         }
 
         [TestMethod]
@@ -53,7 +54,49 @@ namespace Beartic.Tests.EntitiesTests
             order.Parcel(3);
             order.Pay(100);
 
-            Assert.IsTrue(order.Installment.Price == 200 && order.Installment.Installments == 2);
+            Assert.IsTrue(order.Installment.Price == 200 && order.Installment.Installments == 2 && order.Installment.InstallmentPrice == 100 && order.Status == Core.Enums.EOrderStatus.WaitingPayment);
+        }
+
+        [TestMethod]
+        public void ReturnSuccesWhenAddOrderItemInOrder()
+        {
+            var order = new Order(_customer);
+
+            order.AddItem(new OrderItem(_product1, 3));
+
+            Assert.IsTrue(order.Items.Any());
+        }
+
+        [TestMethod]
+        public void Return0WhenPaidTotalOrderPrice()
+        {
+            var order = new Order(_customer);
+            order.AddItem(new OrderItem(_product1, 2));
+
+            order.Pay(200);
+
+            Assert.IsTrue(order.Installment.Price == 0 && order.Installment.Installments == 0 && order.Installment.InstallmentPrice == 0 && order.Status == Core.Enums.EOrderStatus.Paid);
+        }
+
+        [TestMethod]
+        public void ReturnTrueWhenCancelOrder()
+        {
+            var order = new Order(_customer);
+            order.AddItem(new OrderItem(_product1, 2));
+
+            order.Cancel();
+
+            Assert.IsTrue(order.Status == Core.Enums.EOrderStatus.Canceled);
+        }
+
+        [TestMethod]
+        public void ReturnFalseWhenAddInvalidOrderItemInOrder()
+        {
+            var order = new Order(_customer);
+
+            order.AddItem(new OrderItem(_product3, 3));
+
+            Assert.IsTrue(!order.Items.Any() && order.Invalid);
         }
     }
 }
