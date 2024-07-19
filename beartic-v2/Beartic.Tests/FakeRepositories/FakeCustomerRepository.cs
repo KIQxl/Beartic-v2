@@ -1,5 +1,5 @@
-﻿using Beartic.Application.Interfaces;
-using Beartic.Core.Entities;
+﻿using Beartic.Core.Entities;
+using Beartic.Core.Interfaces;
 using Beartic.Core.ValueObjects;
 
 namespace Beartic.Tests.FakeRepositories

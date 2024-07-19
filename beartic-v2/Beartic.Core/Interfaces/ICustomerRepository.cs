@@ -1,6 +1,6 @@
 ﻿using Beartic.Core.Entities;
 
-namespace Beartic.Application.Interfaces
+namespace Beartic.Core.Interfaces
 {
     public interface ICustomerRepository
     {

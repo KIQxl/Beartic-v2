@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8A5DB681-C420-4750-ADB1-1809F0C1EE4D}|Beartic.Tests\\Beartic.Tests.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.tests\\usecasestests\\usecasesorder\\createordertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A5DB681-C420-4750-ADB1-1809F0C1EE4D}|Beartic.Tests\\Beartic.Tests.csproj|solutionrelative:beartic.tests\\usecasestests\\usecasesorder\\createordertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateOrderTest.cs",
+              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\UseCasesTests\\UseCasesOrder\\CreateOrderTest.cs",
+              "RelativeDocumentMoniker": "Beartic.Tests\\UseCasesTests\\UseCasesOrder\\CreateOrderTest.cs",
+              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\UseCasesTests\\UseCasesOrder\\CreateOrderTest.cs",
+              "RelativeToolTip": "Beartic.Tests\\UseCasesTests\\UseCasesOrder\\CreateOrderTest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAB1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T19:20:24.802Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

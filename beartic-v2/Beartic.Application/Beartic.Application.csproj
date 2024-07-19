@@ -14,4 +14,8 @@
     <ProjectReference Include="..\Beartic.Core\Beartic.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="UseCases\ProductUseCases\ProductDtos\" />
+  </ItemGroup>
+
 </Project>

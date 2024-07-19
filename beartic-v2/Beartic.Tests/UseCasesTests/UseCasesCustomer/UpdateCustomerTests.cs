@@ -1,7 +1,7 @@
-﻿using Beartic.Application.Interfaces;
-using Beartic.Application.UseCases.CustomerUseCases;
+﻿using Beartic.Application.UseCases.CustomerUseCases;
 using Beartic.Application.UseCases.CustomerUseCases.CustomerDtos;
 using Beartic.Core.Enums;
+using Beartic.Core.Interfaces;
 using Beartic.Tests.FakeRepositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

@@ -1,7 +1,7 @@
-﻿using Beartic.Application.Interfaces;
-using Beartic.Application.UseCases.CustomerUseCases.CreateCustomer;
+﻿using Beartic.Application.UseCases.CustomerUseCases.CreateCustomer;
 using Beartic.Application.UseCases.CustomerUseCases.CustomerDtos;
 using Beartic.Core.Entities;
+using Beartic.Core.Interfaces;
 using Beartic.Core.ValueObjects;
 using Flunt.Notifications;
 
