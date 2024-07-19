@@ -7,7 +7,7 @@ namespace Beartic.Tests.EntitiesTests
     [TestClass]
     public class CustomerTests
     {
-        private Customer _customer = new Customer(new Name("Kaique", "Alves"), "11977268607", new Document("99403111097", Core.Enums.EDocumentType.CPF), new Password("123456789"), new Email("kaique@email.com.br"));
+        private Customer _customer = new Customer(new Name("Kaique", "Alves"), "11977268607", new Document("99403111097", Core.Enums.EDocumentType.CPF), new Password("123456789"), new Email("kaique@email.com.br"), new Address("Parreira Brava", "São Paulo", "São Paulo", "08031450", "Brasil", "202"));
 
         [TestMethod]
         public void ReturnTrueGivenValidCustomerParameters()
@@ -22,8 +22,9 @@ namespace Beartic.Tests.EntitiesTests
             Document document = new Document("", Core.Enums.EDocumentType.CPF);
             Email email = new Email("kaiqueemail.com.br");
             Password password = new Password("1236789");
+            Address address = new Address("", "São Paulo", "São Paulo", "08031450", "Brasil", "");
 
-            Customer customer = new Customer(name, "11977268607", document, password, email);
+            Customer customer = new Customer(name, "11977268607", document, password, email, address);
 
             Assert.IsFalse(customer.Valid);
         }

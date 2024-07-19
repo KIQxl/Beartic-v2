@@ -7,8 +7,8 @@ namespace Beartic.Application.UseCases.CustomerUseCases
     public interface ICustomerServices
     {
         public Task<CustomerResult> CreateCustomer(CreateCustomerDto request);
-        public CustomerResult Remove(Customer customer);
-        public CustomerResult Update(Customer customer);
-        public GetCustomerResult GetCustomerById(string id);
+        public Task<CustomerResult> Remove(string id);
+        public Task<CustomerResult> Update(UpdateCustomerDto request);
+        public Task<GetCustomerResult> GetCustomerByDocument(string document);
     }
 }

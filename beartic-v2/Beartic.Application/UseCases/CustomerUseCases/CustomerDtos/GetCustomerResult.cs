@@ -14,5 +14,5 @@ namespace Beartic.Application.UseCases.CustomerUseCases.CustomerDtos
         {
         }
     }
-    public record GetCustomerData(string Id, string Name, string Document, string Phone, string Email);
+    public record GetCustomerData(string Id, string Name, string Document, string Phone, string Email, string City, string ZipCode, string Street, string AddressNumber);
 }

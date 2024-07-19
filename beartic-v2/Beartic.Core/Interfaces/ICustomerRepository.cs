@@ -6,9 +6,10 @@ namespace Beartic.Application.Interfaces
     {
         public Task AddAsync(Customer customer);
         public void Remove(Customer customer);
-        public Customer Get(string id);
+        public Task<Customer> GetByIdAsync(string id);
         public void Update(Customer customer);
-        public bool GetByDocument(string document);
-        public bool GetByEmail(string document);
+        public bool DocumentExists(string document);
+        public bool EmailExists(string document);
+        public Task<Customer> GetByDocumentAsync(string document);
     }
 }

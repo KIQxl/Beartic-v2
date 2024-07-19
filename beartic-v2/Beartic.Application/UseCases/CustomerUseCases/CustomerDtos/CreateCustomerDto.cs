@@ -8,7 +8,8 @@ namespace Beartic.Application.UseCases.CustomerUseCases.CustomerDtos
         {
             
         }
-        public CreateCustomerDto(string firstname, string lastname, string phone, string email, string document, EDocumentType documentType, string password)
+
+        public CreateCustomerDto(string firstname, string lastname, string phone, string email, string document, EDocumentType documentType, string password, string street, string city, string state, string zipCode, string country, string number)
         {
             Firstname = firstname;
             Lastname = lastname;
@@ -17,6 +18,12 @@ namespace Beartic.Application.UseCases.CustomerUseCases.CustomerDtos
             Document = document;
             DocumentType = documentType;
             Password = password;
+            Street = street;
+            City = city;
+            State = state;
+            ZipCode = zipCode;
+            Country = country;
+            Number = number;
         }
 
         public string Firstname { get; set; }
@@ -26,5 +33,11 @@ namespace Beartic.Application.UseCases.CustomerUseCases.CustomerDtos
         public string Document { get; set; }
         public EDocumentType DocumentType { get; set; }
         public string Password { get; set; }
+        public string Street { get; private set; }
+        public string City { get; private set; }
+        public string State { get; private set; }
+        public string ZipCode { get; private set; }
+        public string Country { get; private set; }
+        public string Number { get; private set; }
     }
 }

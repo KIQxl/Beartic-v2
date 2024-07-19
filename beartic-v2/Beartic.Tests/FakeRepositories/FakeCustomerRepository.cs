@@ -1,5 +1,6 @@
 ﻿using Beartic.Application.Interfaces;
 using Beartic.Core.Entities;
+using Beartic.Core.ValueObjects;
 
 namespace Beartic.Tests.FakeRepositories
 {
@@ -15,24 +16,46 @@ namespace Beartic.Tests.FakeRepositories
             throw new NotImplementedException();
         }
 
-        public bool GetByDocument(string document)
+        public bool DocumentExists(string document)
         {
-            throw new NotImplementedException();
+            if(document == "45261517850")
+                return true;
+
+            return false;
         }
 
-        public bool GetByEmail(string document)
+        public bool EmailExists(string email)
         {
-            throw new NotImplementedException();
+            if(email == "email@email.com")
+                return true;
+
+            return false;
         }
 
         public void Remove(Customer customer)
         {
-            throw new NotImplementedException();
+            return;
         }
 
         public void Update(Customer customer)
         {
-            throw new NotImplementedException();
+            return;
+        }
+
+        public async Task<Customer> GetByDocumentAsync(string document)
+        {
+            if(document == "45261517850")
+                return new Customer(new Name("Kaique", "Alves"), "11977268607", new Document("99403111097", Core.Enums.EDocumentType.CPF), new Password("123456789"), new Email("kaique@email.com.br"), new Address("Parreira Brava", "São Paulo", "São Paulo", "08031450", "Brasil", "202"));
+
+            return null;
+    }
+
+        public async Task<Customer> GetByIdAsync(string id)
+        {
+            if (id == "123")
+                return new Customer(new Name("Kaique", "Alves"), "11977268607", new Document("99403111097", Core.Enums.EDocumentType.CPF), new Password("123456789"), new Email("kaique@email.com.br"), new Address("Parreira Brava", "São Paulo", "São Paulo", "08031450", "Brasil", "202"));
+
+            return null;
         }
     }
 }

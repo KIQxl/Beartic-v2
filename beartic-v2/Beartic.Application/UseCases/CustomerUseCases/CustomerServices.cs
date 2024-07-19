@@ -3,10 +3,11 @@ using Beartic.Application.UseCases.CustomerUseCases.CreateCustomer;
 using Beartic.Application.UseCases.CustomerUseCases.CustomerDtos;
 using Beartic.Core.Entities;
 using Beartic.Core.ValueObjects;
+using Flunt.Notifications;
 
 namespace Beartic.Application.UseCases.CustomerUseCases
 {
-    public class CustomerServices : ICustomerServices
+    public class CustomerServices : Notifiable, ICustomerServices
     {
         public readonly ICustomerRepository _customerRepository;
 
@@ -21,13 +22,13 @@ namespace Beartic.Application.UseCases.CustomerUseCases
             var document = new Document(request.Document, request.DocumentType);
             var email = new Email(request.Email);
             var password = new Password(request.Password);
-
-            var customer = new Customer(name, request.Phone, document, password, email);
+            var address = new Address(request.Street, request.City, request.State, request.ZipCode, request.Country, request.Number);
+            var customer = new Customer(name, request.Phone, document, password, email, address);
 
             if (customer.Invalid)
                 return new CustomerResult(401, "Não foi possível cadastrar o cliente", customer.Notifications);
 
-            if (_customerRepository.GetByDocument(customer.Document.Number))
+            if (_customerRepository.DocumentExists(customer.Document.Number))
                 return new CustomerResult(401, "Número de documento já está sendo utilizado");
             
             await _customerRepository.AddAsync(customer);
@@ -35,19 +36,50 @@ namespace Beartic.Application.UseCases.CustomerUseCases
             return new CustomerResult(201, "Cliente cadastrado com sucesso", new CreateCustomerData(customer.Id.ToString(), customer.Name.ToString(), customer.Document.Number));
         }
 
-        public GetCustomerResult GetCustomerById(string id)
+        public async Task<GetCustomerResult> GetCustomerByDocument(string document)
         {
-            throw new NotImplementedException();
+            var customer = await _customerRepository.GetByDocumentAsync(document);
+            if (customer == null) 
+                return new GetCustomerResult(404, "Cliente não encontrado");
+
+            return new GetCustomerResult(200, "Sucesso", new GetCustomerData(customer.Id.ToString(), customer.Name.ToString(), customer.Document.Number, customer.Phone, customer.Email.Address, customer.Address.City, customer.Address.ZipCode, customer.Address.Street, customer.Address.Number));
         }
 
-        public CustomerResult Remove(Customer customer)
+        public async Task<CustomerResult> Remove(string id)
         {
-            throw new NotImplementedException();
+            var customer = await _customerRepository.GetByIdAsync(id);
+            if (customer == null)
+                return new CustomerResult(404, "Cliente não encontrado");
+
+            _customerRepository.Remove(customer);
+
+            return new CustomerResult(200, "Cliente excluído com sucesso", new CreateCustomerData(customer.Id.ToString(), customer.Name.ToString(), customer.Document.Number));
         }
 
-        public CustomerResult Update(Customer customer)
+        public async Task<CustomerResult> Update(UpdateCustomerDto request)
         {
-            throw new NotImplementedException();
+            var name = new Name(request.FirstName, request.LastName);
+            var email = new Email(request.Email);
+            var document = new Document(request.Document, request.DocumentType);
+            var address = new Address(request.Street, request.City, request.State, request.ZipCode, request.Country, request.Number);
+
+            AddNotifications(name, email, document, address);
+            if (Invalid)
+                return new CustomerResult(401, "Não foi possível alterar os dados", Notifications);
+
+            var customer = await _customerRepository.GetByIdAsync(request.Id);
+            if (customer == null)
+                return new CustomerResult(404, "Não foi possível encontrar o cliente");
+
+            customer.ChangeName(name);
+            customer.ChangeEmail(email);
+            customer.ChangeAddress(address);
+            customer.ChangeDocument(document);
+            customer.ChangePhone(request.Phone);
+
+            _customerRepository.Update(customer);
+
+            return new CustomerResult(201, "Dados do cliente alterados com sucesso", new CreateCustomerData(customer.Id.ToString(), customer.Name.ToString(), customer.Document.Number));
         }
     }
 }
