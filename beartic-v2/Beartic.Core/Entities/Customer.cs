@@ -5,12 +5,9 @@ namespace Beartic.Core.Entities
 {
     public class Customer : BaseEntity
     {
-        public Customer(Name name, string phone, Document document, Password password, Email email, Address address)
+        public Customer(Name name, Phone phone, Document document, Password password, Email email, Address address)
         {
-            AddNotifications(name, document, password, email, address, new Contract()
-                .Requires()
-                .IsNotNullOrEmpty(phone, "Phone number", "Número de telefone é obrigatório")
-                .HasLen(phone, 11, "Phone number", "Número de telefone inválido"));
+            AddNotifications(name, phone, document, password, email, address);
 
             Name = name;
             Phone = phone;
@@ -21,7 +18,7 @@ namespace Beartic.Core.Entities
         }
 
         public Name Name { get; private set; }
-        public string Phone { get; private set; }
+        public Phone Phone { get; private set; }
         public Document Document { get; private set; }
         public Password Password { get; private set; }
         public Email Email { get; private set; }
@@ -83,14 +80,15 @@ namespace Beartic.Core.Entities
             this.Address = address;
         }
 
-        public void ChangePhone(string phone)
+        public void ChangePhone(Phone phone)
         {
-            AddNotifications(new Contract()
-                .Requires()
-                .IsNotNullOrEmpty(phone, "Phone", "Telefone inválido"));
+            if (Invalid)
+            {
+                AddNotifications(phone);
+                return;
+            }
 
-            if(Valid)
-                this.Phone = phone;
+            this.Phone = phone;
         }
     }
 }

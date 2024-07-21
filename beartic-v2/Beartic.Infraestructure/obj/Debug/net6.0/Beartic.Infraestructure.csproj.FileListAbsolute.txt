@@ -10,3 +10,14 @@ C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Infra
 C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Infraestructure\obj\Debug\net6.0\refint\Beartic.Infraestructure.dll
 C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Infraestructure\obj\Debug\net6.0\Beartic.Infraestructure.pdb
 C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Infraestructure\obj\Debug\net6.0\ref\Beartic.Infraestructure.dll
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Infraestructure\bin\Debug\net6.0\Beartic.Infraestructure.deps.json
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Infraestructure\bin\Debug\net6.0\Beartic.Infraestructure.dll
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Infraestructure\bin\Debug\net6.0\Beartic.Infraestructure.pdb
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Infraestructure\obj\Debug\net6.0\Beartic.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Infraestructure\obj\Debug\net6.0\Beartic.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Infraestructure\obj\Debug\net6.0\Beartic.Infraestructure.AssemblyInfo.cs
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Infraestructure\obj\Debug\net6.0\Beartic.Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Infraestructure\obj\Debug\net6.0\Beartic.Infraestructure.dll
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Infraestructure\obj\Debug\net6.0\refint\Beartic.Infraestructure.dll
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Infraestructure\obj\Debug\net6.0\Beartic.Infraestructure.pdb
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Infraestructure\obj\Debug\net6.0\ref\Beartic.Infraestructure.dll

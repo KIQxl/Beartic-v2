@@ -10,7 +10,7 @@ namespace Beartic.Tests.EntitiesTests
         private Product _product1 = new Product("Produto 1", "Teste", 100m, 10);
         private Product _product2 = new Product("Produto 2", "Teste 2", 200m, 10);
         private Product _product3 = new Product(null, "", 0, 10);
-        private Customer _customer = new Customer(new Name("Kaique", "Alves"), "11977268607", new Document("99403111097", Core.Enums.EDocumentType.CPF), new Password("123456789"), new Email("kaique@email.com.br"), new Address("Parreira Brava", "São Paulo", "São Paulo", "08031450", "Brasil", "202"));
+        private Customer _customer = new Customer(new Name("Kaique", "Alves"), new Phone("11977268607"), new Document("99403111097", Core.Enums.EDocumentType.CPF), new Password("123456789"), new Email("kaique@email.com.br"), new Address("Parreira Brava", "São Paulo", "São Paulo", "08031450", "Brasil", "202"));
 
         [TestMethod]
         public void ReturnTrueGivenValidOrder()

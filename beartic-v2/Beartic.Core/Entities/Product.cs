@@ -43,5 +43,28 @@ namespace Beartic.Core.Entities
 
             this.QuantityOnHand += quantity;
         }
+
+        public void SetProduct(string title, string description, decimal price, int quantity)
+        {
+            AddNotifications(new Contract()
+                .Requires()
+                .IsNotNullOrEmpty(title, "Product Title", "O Nome do produto é obrigatório")
+                .IsNotNullOrEmpty(description, "Product Description", "A Descrição  do produto é obrigatório")
+                .HasMinLen(title, 2, "Product Title", "O nome do produto deve conter no mínimo 2 caractéres")
+                .IsGreaterThan(price, 0, "Price", "O valor do produto deve ser maior 0")
+                .IsNotNull(price, "Price", "O valor do produto é obrigatório")
+                .IsGreaterThan(quantity, 0, "QuantityOnHand", "A quantidade do produto deve ser maior 0")
+                .IsNotNull(quantity, "QuantityOnHand", "A quantidade do produto é obrigatória")
+            );
+
+            if (Valid)
+            {   
+                this.Title = title;
+                this.Description = description;
+                this.Price = price;
+                this.QuantityOnHand = quantity;
+                return;
+            }
+        }
     }
 }

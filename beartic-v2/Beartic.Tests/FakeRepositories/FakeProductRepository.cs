@@ -5,6 +5,11 @@ namespace Beartic.Tests.FakeRepositories
 {
     public class FakeProductRepository : IProductRepository
     {
+        public Task Add(Product product)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<Product> GetProductByIdAsync(string id)
         {
             if (id == "1")

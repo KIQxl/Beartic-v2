@@ -14,5 +14,5 @@ namespace Beartic.Application.UseCases.ProductUseCases.ProductDtos.ProductDtos
         }
     }
 
-    public record ProductResultData();
+    public record ProductResultData(string Id, string Title, string Description, decimal Price, int Quantity);
 }

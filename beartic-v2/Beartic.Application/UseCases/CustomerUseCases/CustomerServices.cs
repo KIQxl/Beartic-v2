@@ -19,11 +19,12 @@ namespace Beartic.Application.UseCases.CustomerUseCases
         public async Task<CustomerResult> CreateCustomer(CreateCustomerDto request)
         {
             var name = new Name(request.Firstname, request.Lastname);
+            var phone = new Phone(request.Phone);
             var document = new Document(request.Document, request.DocumentType);
             var email = new Email(request.Email);
             var password = new Password(request.Password);
             var address = new Address(request.Street, request.City, request.State, request.ZipCode, request.Country, request.Number);
-            var customer = new Customer(name, request.Phone, document, password, email, address);
+            var customer = new Customer(name, phone, document, password, email, address);
 
             if (customer.Invalid)
                 return new CustomerResult(401, "Não foi possível cadastrar o cliente", customer.Notifications);
@@ -42,7 +43,7 @@ namespace Beartic.Application.UseCases.CustomerUseCases
             if (customer == null) 
                 return new GetCustomerResult(404, "Cliente não encontrado");
 
-            return new GetCustomerResult(200, "Sucesso", new GetCustomerData(customer.Id.ToString(), customer.Name.ToString(), customer.Document.Number, customer.Phone, customer.Email.Address, customer.Address.City, customer.Address.ZipCode, customer.Address.Street, customer.Address.Number));
+            return new GetCustomerResult(200, "Sucesso", new GetCustomerData(customer.Id.ToString(), customer.Name.ToString(), customer.Document.Number, customer.Phone.Number, customer.Email.Address, customer.Address.City, customer.Address.ZipCode, customer.Address.Street, customer.Address.Number));
         }
 
         public async Task<CustomerResult> Remove(string id)
@@ -59,11 +60,12 @@ namespace Beartic.Application.UseCases.CustomerUseCases
         public async Task<CustomerResult> Update(UpdateCustomerDto request)
         {
             var name = new Name(request.FirstName, request.LastName);
+            var phone = new Phone(request.Phone);
             var email = new Email(request.Email);
             var document = new Document(request.Document, request.DocumentType);
             var address = new Address(request.Street, request.City, request.State, request.ZipCode, request.Country, request.Number);
 
-            AddNotifications(name, email, document, address);
+            AddNotifications(name, phone, email, document, address);
             if (Invalid)
                 return new CustomerResult(401, "Não foi possível alterar os dados", Notifications);
 
@@ -72,10 +74,10 @@ namespace Beartic.Application.UseCases.CustomerUseCases
                 return new CustomerResult(404, "Não foi possível encontrar o cliente");
 
             customer.ChangeName(name);
+            customer.ChangePhone(phone);
             customer.ChangeEmail(email);
             customer.ChangeAddress(address);
             customer.ChangeDocument(document);
-            customer.ChangePhone(request.Phone);
 
             _customerRepository.Update(customer);
 
