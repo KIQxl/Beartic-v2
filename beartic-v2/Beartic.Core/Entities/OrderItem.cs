@@ -4,6 +4,7 @@ namespace Beartic.Core.Entities
 {
     public class OrderItem : BaseEntity
     {
+        private OrderItem() { }
         public OrderItem(Product product, int quantity)
         {
 

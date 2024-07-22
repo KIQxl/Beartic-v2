@@ -40,7 +40,7 @@ namespace Beartic.Infraestructure.Mappings
                 .HasColumnType("varchar(14)")
                 .HasColumnName("Document_Number");
 
-                document.Property(d => d.Number)
+                document.Property(d => d.Type)
                 .IsRequired()
                 .HasColumnType("int")
                 .HasColumnName("Document_Type");

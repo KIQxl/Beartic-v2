@@ -5,6 +5,7 @@ namespace Beartic.Core.Entities
 {
     public class Customer : BaseEntity
     {
+        private Customer() { }
         public Customer(Name name, Phone phone, Document document, Password password, Email email, Address address)
         {
             AddNotifications(name, phone, document, password, email, address);

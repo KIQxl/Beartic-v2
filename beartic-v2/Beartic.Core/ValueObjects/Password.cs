@@ -6,6 +6,8 @@ namespace Beartic.Core.ValueObjects
 {
     public class Password : ValueObject
     {
+        private Password() { }
+
         public Password(string password)
         {
             AddNotifications( new Contract()

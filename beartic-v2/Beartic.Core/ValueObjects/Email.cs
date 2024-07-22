@@ -4,6 +4,7 @@ namespace Beartic.Core.ValueObjects
 {
     public class Email : ValueObject
     {
+        private Email() { }
         public Email(string address)
         {
             AddNotifications( new Contract()

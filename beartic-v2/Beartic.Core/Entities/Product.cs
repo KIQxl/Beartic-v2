@@ -4,6 +4,7 @@ namespace Beartic.Core.Entities
 {
     public class Product : BaseEntity
     {
+        private Product() { }
         public Product(string title, string description, decimal price, int quantityOnHand)
         {
             AddNotifications(new Contract()

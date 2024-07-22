@@ -4,6 +4,8 @@ namespace Beartic.Core.ValueObjects
 {
     public class Address : ValueObject
     {
+        private Address() { }
+
         public Address(string street, string city, string state, string zipCode, string country, string number)
         {
             AddNotifications( new Contract()

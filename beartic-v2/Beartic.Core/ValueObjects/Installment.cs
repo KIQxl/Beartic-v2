@@ -2,6 +2,7 @@
 {
     public class Installment : ValueObject
     {
+        private Installment() { }
         public Installment(decimal price, int installments)
         {
             Price = price;

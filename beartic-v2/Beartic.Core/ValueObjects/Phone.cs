@@ -4,6 +4,7 @@ namespace Beartic.Core.ValueObjects
 {
     public class Phone : ValueObject
     {
+        private Phone() { }
         public Phone(string number)
         {
             AddNotifications(new Contract()

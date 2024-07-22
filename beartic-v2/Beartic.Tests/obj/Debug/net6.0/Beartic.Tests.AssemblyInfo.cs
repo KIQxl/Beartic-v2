@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Beartic.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06d8ead0bd335379eb5669046e783e440e878aab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c8ff6916dcb5253c009bac9434ea44905f1a7bd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Beartic.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Beartic.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

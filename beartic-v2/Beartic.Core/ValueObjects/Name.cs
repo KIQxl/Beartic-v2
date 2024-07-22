@@ -4,6 +4,8 @@ namespace Beartic.Core.ValueObjects
 {
     public class Name : ValueObject
     {
+        private Name() { }
+
         public Name(string firstname, string lastname)
         {
             AddNotifications(new Contract()

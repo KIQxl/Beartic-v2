@@ -6,6 +6,8 @@ namespace Beartic.Core.ValueObjects
 {
     public class Document : ValueObject
     {
+        private Document() { }
+
         public Document(string number, EDocumentType type)
         {
             if (!ValidateCPF(number) && type == EDocumentType.CPF)

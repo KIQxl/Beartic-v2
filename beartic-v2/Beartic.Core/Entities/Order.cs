@@ -5,6 +5,7 @@ namespace Beartic.Core.Entities
 {
     public class Order : BaseEntity
     {
+        private Order() { }
         public Order(Customer customer)
         {
             AddNotifications(customer);
