@@ -15,9 +15,23 @@ namespace Beartic.Tests.FakeRepositories
             throw new NotImplementedException();
         }
 
-        public Task<Order> GetByIdAsync(string id)
+        public async Task<Order> GetByIdAsync(string id)
         {
-            throw new NotImplementedException();
+            if(id == "1")
+            {
+                var fakeCustomerRepository = new FakeCustomerRepository();
+                var customer = await fakeCustomerRepository.GetByIdAsync("123");
+
+                var fakeProductRepository = new FakeProductRepository();
+                var product = await fakeProductRepository.GetProductByIdAsync("1");
+
+                var order = new Order(customer);
+                order.AddItem(new OrderItem(product, 5));
+
+                return order;
+            }
+
+            return null;
         }
     }
 }

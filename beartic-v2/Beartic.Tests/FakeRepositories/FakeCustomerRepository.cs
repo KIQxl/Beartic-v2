@@ -42,20 +42,20 @@ namespace Beartic.Tests.FakeRepositories
             return;
         }
 
-        public async Task<Customer> GetByDocumentAsync(string document)
+        public Task<Customer> GetByDocumentAsync(string document)
         {
             if(document == "45261517850")
-                return new Customer(new Name("Kaique", "Alves"), new Phone("11977268607"), new Document("99403111097", Core.Enums.EDocumentType.CPF), new Password("123456789"), new Email("kaique@email.com.br"), new Address("Parreira Brava", "São Paulo", "São Paulo", "08031450", "Brasil", "202"));
+                return Task.FromResult(new Customer(new Name("Kaique", "Alves"), new Phone("11977268607"), new Document("99403111097", Core.Enums.EDocumentType.CPF), new Password("123456789"), new Email("kaique@email.com.br"), new Address("Parreira Brava", "São Paulo", "São Paulo", "08031450", "Brasil", "202")));
 
-            return null;
+            return Task.FromResult<Customer>(null);
     }
 
-        public async Task<Customer> GetByIdAsync(string id)
+        public Task<Customer> GetByIdAsync(string id)
         {
             if (id == "123")
-                return new Customer(new Name("Kaique", "Alves"), new Phone("11977268607"), new Document("99403111097", Core.Enums.EDocumentType.CPF), new Password("123456789"), new Email("kaique@email.com.br"), new Address("Parreira Brava", "São Paulo", "São Paulo", "08031450", "Brasil", "202"));
+                return Task.FromResult(new Customer(new Name("Kaique", "Alves"), new Phone("11977268607"), new Document("99403111097", Core.Enums.EDocumentType.CPF), new Password("123456789"), new Email("kaique@email.com.br"), new Address("Parreira Brava", "São Paulo", "São Paulo", "08031450", "Brasil", "202")));
 
-            return null;
+            return Task.FromResult<Customer>(null);
         }
     }
 }

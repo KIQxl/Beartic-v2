@@ -26,6 +26,18 @@ namespace Beartic.Application.UseCases.ProductUseCases
             return new ProductResult(201, "Produto cadastrado!", new ProductResultData(product.Id.ToString(), product.Title, product.Description, product.Price, product.QuantityOnHand));
         }
 
+        public async Task<ProductResult> DeleteProduct(string id)
+        {
+            var product = await _productRepository.GetProductByIdAsync(id);
+
+            if (product == null)
+                return new ProductResult(404, "Produto não encontrado");
+
+            _productRepository.Remove(product);
+
+            return new ProductResult(200, "Produto removido com sucesso!", new ProductResultData(product.Id.ToString(), product.Title, product.Description, product.Price,product.QuantityOnHand));
+        }
+
         public async Task<ProductResult> GetProduct(string id)
         {
             var product = await _productRepository.GetProductByIdAsync(id);

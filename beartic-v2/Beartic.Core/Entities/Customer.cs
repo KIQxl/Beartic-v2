@@ -23,7 +23,7 @@ namespace Beartic.Core.Entities
         public Password Password { get; private set; }
         public Email Email { get; private set; }
         public Address Address { get; private set; }
-        public Order? Orders { get; private set; }
+        public IList<Order>? Orders { get; private set; }
 
         public void ChangeName(Name name)
         {

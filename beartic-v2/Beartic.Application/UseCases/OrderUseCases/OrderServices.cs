@@ -43,5 +43,15 @@ namespace Beartic.Application.UseCases.OrderUseCases
 
             return new OrderResult(201, $"Pedido finalizado", new OrderResultData(order.Id.ToString(), customer.Name.ToString(), order.Date, order.Status, order.Installment.Price));
         }
+
+        public async Task<OrderResult> GetOrderByIdAsync(string id)
+        {
+            var order = await _orderRepository.GetByIdAsync(id);
+
+            if (order == null)
+                return new OrderResult(404, "Pedido não encontrado");
+
+            return new OrderResult(200, $"Pedido {order.Id}", new OrderResultData(order.Id.ToString(), order.Customer.Name.ToString(), order.Date, order.Status, order.Installment.Price));
+        }
     }
 }

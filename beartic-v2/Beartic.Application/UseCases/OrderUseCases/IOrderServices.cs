@@ -5,5 +5,6 @@ namespace Beartic.Application.UseCases.OrderUseCases
     public interface IOrderServices
     {
         public Task<OrderResult> CreateOrder(CreateOrderDto request);
+        public Task<OrderResult> GetOrderByIdAsync(string id);
     }
 }
