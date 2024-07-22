@@ -5,7 +5,7 @@ using Flunt.Notifications;
 
 namespace Beartic.Application.UseCases.ProductUseCases
 {
-    public class ProductServices : Notifiable, IProductServices
+    public class ProductServices : IProductServices
     {
         public readonly IProductRepository _productRepository;
 
@@ -23,7 +23,17 @@ namespace Beartic.Application.UseCases.ProductUseCases
 
             await _productRepository.Add(product);
 
-            return new ProductResult(201, "Produto cadastrado!", new ProductResultData(product.Id.ToString() ,product.Title, product.Description, product.Price, product.QuantityOnHand));
+            return new ProductResult(201, "Produto cadastrado!", new ProductResultData(product.Id.ToString(), product.Title, product.Description, product.Price, product.QuantityOnHand));
+        }
+
+        public async Task<ProductResult> GetProduct(string id)
+        {
+            var product = await _productRepository.GetProductByIdAsync(id);
+
+            if (product == null)
+                return new ProductResult(404, "Produto não encontrado");
+
+            return new ProductResult(200, "Sucesso!", new ProductResultData(product.Id.ToString(), product.Title, product.Description, product.Price, product.QuantityOnHand));
         }
 
         public async Task<ProductResult> UpdateProduct(UpdateProductDto request)

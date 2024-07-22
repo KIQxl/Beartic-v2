@@ -7,7 +7,7 @@ namespace Beartic.Tests.FakeRepositories
     {
         public Task Add(Product product)
         {
-            throw new NotImplementedException();
+            return Task.CompletedTask;
         }
 
         public async Task<Product> GetProductByIdAsync(string id)
