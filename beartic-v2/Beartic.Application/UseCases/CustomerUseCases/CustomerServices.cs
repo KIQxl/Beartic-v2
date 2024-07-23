@@ -2,7 +2,7 @@
 using Beartic.Application.UseCases.CustomerUseCases.CustomerDtos;
 using Beartic.Core.Entities;
 using Beartic.Core.Interfaces;
-using Beartic.Core.ValueObjects;
+using Beartic.Shared.ValueObjects;
 using Flunt.Notifications;
 
 namespace Beartic.Application.UseCases.CustomerUseCases
@@ -22,9 +22,8 @@ namespace Beartic.Application.UseCases.CustomerUseCases
             var phone = new Phone(request.Phone);
             var document = new Document(request.Document, request.DocumentType);
             var email = new Email(request.Email);
-            var password = new Password(request.Password);
             var address = new Address(request.Street, request.City, request.State, request.ZipCode, request.Country, request.Number);
-            var customer = new Customer(name, phone, document, password, email, address);
+            var customer = new Customer(name, phone, document, email, address);
 
             if (customer.Invalid)
                 return new CustomerResult(401, "Não foi possível cadastrar o cliente", customer.Notifications);

@@ -696,6 +696,7 @@
       },
       "Beartic.Core/1.0.0": {
         "dependencies": {
+          "Beartic.Shared": "1.0.0",
           "Flunt": "1.0.5"
         },
         "runtime": {
@@ -710,6 +711,14 @@
         },
         "runtime": {
           "Beartic.Infraestructure.dll": {}
+        }
+      },
+      "Beartic.Shared/1.0.0": {
+        "dependencies": {
+          "Flunt": "1.0.5"
+        },
+        "runtime": {
+          "Beartic.Shared.dll": {}
         }
       }
     }
@@ -1195,6 +1204,11 @@
       "sha512": ""
     },
     "Beartic.Infraestructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Beartic.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

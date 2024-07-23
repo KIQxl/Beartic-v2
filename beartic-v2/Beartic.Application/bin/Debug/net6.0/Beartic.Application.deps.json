@@ -25,10 +25,19 @@
       },
       "Beartic.Core/1.0.0": {
         "dependencies": {
+          "Beartic.Shared": "1.0.0",
           "Flunt": "1.0.5"
         },
         "runtime": {
           "Beartic.Core.dll": {}
+        }
+      },
+      "Beartic.Shared/1.0.0": {
+        "dependencies": {
+          "Flunt": "1.0.5"
+        },
+        "runtime": {
+          "Beartic.Shared.dll": {}
         }
       }
     }
@@ -47,6 +56,11 @@
       "hashPath": "flunt.1.0.5.nupkg.sha512"
     },
     "Beartic.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Beartic.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

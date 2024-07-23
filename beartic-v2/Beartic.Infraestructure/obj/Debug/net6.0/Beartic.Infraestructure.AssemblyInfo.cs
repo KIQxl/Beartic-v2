@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Beartic.Infraestructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d36e8b6e7cd1b13691e305ad2d1c2af59ac7f08")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b37c842b8489c51f36a26448e6284d269e498a44")]
 [assembly: System.Reflection.AssemblyProductAttribute("Beartic.Infraestructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Beartic.Infraestructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

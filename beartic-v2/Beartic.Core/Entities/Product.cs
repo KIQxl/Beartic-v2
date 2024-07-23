@@ -1,4 +1,5 @@
-﻿using Flunt.Validations;
+﻿using Beartic.Shared.Entities;
+using Flunt.Validations;
 
 namespace Beartic.Core.Entities
 {

@@ -46,19 +46,6 @@ namespace Beartic.Infraestructure.Mappings
                 .HasColumnName("Document_Type");
             });
 
-            builder.OwnsOne(x => x.Password, password =>
-            {
-                password.Property(p => p.PasswordHash)
-                 .IsRequired()
-                .HasColumnType("varchar(100)")
-                .HasColumnName("Password_Hash");
-
-                password.Property(p => p.SaltKey)
-                .IsRequired()
-                .HasColumnType("varchar(100)")
-                .HasColumnName("Salt_Key");
-            });
-
             builder.OwnsOne(x => x.Email, email =>
             {
                 email.Property(e => e.Address)
@@ -99,6 +86,10 @@ namespace Beartic.Infraestructure.Mappings
                 .HasColumnType("varchar(10)")
                 .HasColumnName("Address_Number");
             });
+
+            //builder.HasIndex(x => x.Email.Address).IsUnique();
+            //builder.HasIndex(x => x.Phone.Number).IsUnique();
+            //builder.HasIndex(x => x.Document.Number).IsUnique();
 
             builder.HasMany(x => x.Orders)
                 .WithOne(x => x.Customer);

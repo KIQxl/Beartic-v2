@@ -10,6 +10,19 @@
         "runtime": {
           "lib/netstandard2.0/Flunt.dll": {}
         }
+      },
+      "Beartic.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Flunt": "1.0.5"
+        },
+        "compile": {
+          "bin/placeholder/Beartic.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Beartic.Shared.dll": {}
+        }
       }
     }
   },
@@ -25,10 +38,16 @@
         "flunt.nuspec",
         "lib/netstandard2.0/Flunt.dll"
       ]
+    },
+    "Beartic.Shared/1.0.0": {
+      "type": "project",
+      "path": "../SharedContext/Beartic.Shared.csproj",
+      "msbuildProject": "../SharedContext/Beartic.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Beartic.Shared >= 1.0.0",
       "Flunt >= 1.0.5"
     ]
   },
@@ -58,7 +77,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\SharedContext\\Beartic.Shared.csproj": {
+              "projectPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\SharedContext\\Beartic.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,4 +1,4 @@
-﻿using Beartic.Core.ValueObjects;
+﻿using Beartic.Shared.ValueObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Beartic.Tests.ValueObjectsTests

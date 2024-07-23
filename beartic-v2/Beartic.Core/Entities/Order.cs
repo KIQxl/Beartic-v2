@@ -1,5 +1,6 @@
 ﻿using Beartic.Core.Enums;
 using Beartic.Core.ValueObjects;
+using Beartic.Shared.Entities;
 
 namespace Beartic.Core.Entities
 {

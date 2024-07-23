@@ -29,3 +29,5 @@ C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Application\obj\
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Application\obj\Debug\net6.0\refint\Beartic.Application.dll
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Application\obj\Debug\net6.0\Beartic.Application.pdb
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Application\obj\Debug\net6.0\ref\Beartic.Application.dll
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\bin\Debug\net6.0\Beartic.Shared.dll
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Application\bin\Debug\net6.0\Beartic.Shared.pdb

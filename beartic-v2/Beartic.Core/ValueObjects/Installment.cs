@@ -1,4 +1,6 @@
-﻿namespace Beartic.Core.ValueObjects
+﻿using Beartic.Shared.ValueObjects;
+
+namespace Beartic.Core.ValueObjects
 {
     public class Installment : ValueObject
     {

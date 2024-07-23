@@ -1,4 +1,4 @@
-﻿using Beartic.Core.Enums;
+﻿using Beartic.Shared.Enums;
 
 namespace Beartic.Application.UseCases.CustomerUseCases.CustomerDtos
 {
@@ -9,7 +9,7 @@ namespace Beartic.Application.UseCases.CustomerUseCases.CustomerDtos
             
         }
 
-        public CreateCustomerDto(string firstname, string lastname, string phone, string email, string document, EDocumentType documentType, string password, string street, string city, string state, string zipCode, string country, string number)
+        public CreateCustomerDto(string firstname, string lastname, string phone, string email, string document, EDocumentType documentType, string street, string city, string state, string zipCode, string country, string number)
         {
             Firstname = firstname;
             Lastname = lastname;
@@ -17,7 +17,6 @@ namespace Beartic.Application.UseCases.CustomerUseCases.CustomerDtos
             Email = email;
             Document = document;
             DocumentType = documentType;
-            Password = password;
             Street = street;
             City = city;
             State = state;
@@ -32,7 +31,6 @@ namespace Beartic.Application.UseCases.CustomerUseCases.CustomerDtos
         public string Email { get; set; }
         public string Document { get; set; }
         public EDocumentType DocumentType { get; set; }
-        public string Password { get; set; }
         public string Street { get; private set; }
         public string City { get; private set; }
         public string State { get; private set; }

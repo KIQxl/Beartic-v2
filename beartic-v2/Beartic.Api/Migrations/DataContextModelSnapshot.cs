@@ -119,7 +119,7 @@ namespace Beartic.Api.Migrations
 
             modelBuilder.Entity("Beartic.Core.Entities.Customer", b =>
                 {
-                    b.OwnsOne("Beartic.Core.ValueObjects.Address", "Address", b1 =>
+                    b.OwnsOne("Beartic.Shared.ValueObjects.Address", "Address", b1 =>
                         {
                             b1.Property<Guid>("CustomerId")
                                 .HasColumnType("uniqueidentifier");
@@ -162,7 +162,7 @@ namespace Beartic.Api.Migrations
                                 .HasForeignKey("CustomerId");
                         });
 
-                    b.OwnsOne("Beartic.Core.ValueObjects.Document", "Document", b1 =>
+                    b.OwnsOne("Beartic.Shared.ValueObjects.Document", "Document", b1 =>
                         {
                             b1.Property<Guid>("CustomerId")
                                 .HasColumnType("uniqueidentifier");
@@ -184,7 +184,7 @@ namespace Beartic.Api.Migrations
                                 .HasForeignKey("CustomerId");
                         });
 
-                    b.OwnsOne("Beartic.Core.ValueObjects.Email", "Email", b1 =>
+                    b.OwnsOne("Beartic.Shared.ValueObjects.Email", "Email", b1 =>
                         {
                             b1.Property<Guid>("CustomerId")
                                 .HasColumnType("uniqueidentifier");
@@ -202,7 +202,7 @@ namespace Beartic.Api.Migrations
                                 .HasForeignKey("CustomerId");
                         });
 
-                    b.OwnsOne("Beartic.Core.ValueObjects.Name", "Name", b1 =>
+                    b.OwnsOne("Beartic.Shared.ValueObjects.Name", "Name", b1 =>
                         {
                             b1.Property<Guid>("CustomerId")
                                 .HasColumnType("uniqueidentifier");
@@ -225,30 +225,7 @@ namespace Beartic.Api.Migrations
                                 .HasForeignKey("CustomerId");
                         });
 
-                    b.OwnsOne("Beartic.Core.ValueObjects.Password", "Password", b1 =>
-                        {
-                            b1.Property<Guid>("CustomerId")
-                                .HasColumnType("uniqueidentifier");
-
-                            b1.Property<string>("PasswordHash")
-                                .IsRequired()
-                                .HasColumnType("varchar(100)")
-                                .HasColumnName("Password_Hash");
-
-                            b1.Property<string>("SaltKey")
-                                .IsRequired()
-                                .HasColumnType("varchar(100)")
-                                .HasColumnName("Salt_Key");
-
-                            b1.HasKey("CustomerId");
-
-                            b1.ToTable("customers");
-
-                            b1.WithOwner()
-                                .HasForeignKey("CustomerId");
-                        });
-
-                    b.OwnsOne("Beartic.Core.ValueObjects.Phone", "Phone", b1 =>
+                    b.OwnsOne("Beartic.Shared.ValueObjects.Phone", "Phone", b1 =>
                         {
                             b1.Property<Guid>("CustomerId")
                                 .HasColumnType("uniqueidentifier");
@@ -276,9 +253,6 @@ namespace Beartic.Api.Migrations
                         .IsRequired();
 
                     b.Navigation("Name")
-                        .IsRequired();
-
-                    b.Navigation("Password")
                         .IsRequired();
 
                     b.Navigation("Phone")

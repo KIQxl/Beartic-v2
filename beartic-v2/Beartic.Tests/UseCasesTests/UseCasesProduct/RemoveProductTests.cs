@@ -1,5 +1,5 @@
-﻿using Beartic.Application.UseCases.ProductUseCases;
-using Beartic.Core.Interfaces;
+﻿using Beartic.Core.Interfaces;
+using Beartic.Core.UseCases.ProductUseCases;
 using Beartic.Tests.FakeRepositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

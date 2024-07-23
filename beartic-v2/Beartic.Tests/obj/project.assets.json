@@ -1798,24 +1798,24 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "Beartic.Application/1.0.0": {
+      "Beartic.Auth/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Beartic.Core": "1.0.0",
-          "Flunt": "1.0.5"
+          "Beartic.Shared": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Beartic.Application.dll": {}
+          "bin/placeholder/Beartic.Auth.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Beartic.Application.dll": {}
+          "bin/placeholder/Beartic.Auth.dll": {}
         }
       },
       "Beartic.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Beartic.Shared": "1.0.0",
           "Flunt": "1.0.5"
         },
         "compile": {
@@ -1823,6 +1823,19 @@
         },
         "runtime": {
           "bin/placeholder/Beartic.Core.dll": {}
+        }
+      },
+      "Beartic.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Flunt": "1.0.5"
+        },
+        "compile": {
+          "bin/placeholder/Beartic.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Beartic.Shared.dll": {}
         }
       }
     }
@@ -6374,20 +6387,25 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Beartic.Application/1.0.0": {
+    "Beartic.Auth/1.0.0": {
       "type": "project",
-      "path": "../Beartic.Application/Beartic.Application.csproj",
-      "msbuildProject": "../Beartic.Application/Beartic.Application.csproj"
+      "path": "../Beartic.Auth/Beartic.Auth.csproj",
+      "msbuildProject": "../Beartic.Auth/Beartic.Auth.csproj"
     },
     "Beartic.Core/1.0.0": {
       "type": "project",
       "path": "../Beartic.Core/Beartic.Core.csproj",
       "msbuildProject": "../Beartic.Core/Beartic.Core.csproj"
+    },
+    "Beartic.Shared/1.0.0": {
+      "type": "project",
+      "path": "../SharedContext/Beartic.Shared.csproj",
+      "msbuildProject": "../SharedContext/Beartic.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Beartic.Application >= 1.0.0",
+      "Beartic.Auth >= 1.0.0",
       "Beartic.Core >= 1.0.0",
       "MSTest.TestAdapter >= 2.2.8",
       "MSTest.TestFramework >= 2.2.8",
@@ -6422,8 +6440,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Application\\Beartic.Application.csproj": {
-              "projectPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Application\\Beartic.Application.csproj"
+            "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Auth\\Beartic.Auth.csproj": {
+              "projectPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Auth\\Beartic.Auth.csproj"
             },
             "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Core\\Beartic.Core.csproj": {
               "projectPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Core\\Beartic.Core.csproj"

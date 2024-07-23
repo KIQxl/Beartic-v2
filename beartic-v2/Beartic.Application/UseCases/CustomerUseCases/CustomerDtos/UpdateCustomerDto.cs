@@ -1,4 +1,5 @@
 ﻿using Beartic.Core.Enums;
+using Beartic.Shared.Enums;
 
 namespace Beartic.Application.UseCases.CustomerUseCases.CustomerDtos
 {

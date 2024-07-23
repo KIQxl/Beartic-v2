@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Beartic.Application\Beartic.Application.csproj" />
+    <ProjectReference Include="..\Beartic.Auth\Beartic.Auth.csproj" />
     <ProjectReference Include="..\Beartic.Core\Beartic.Core.csproj" />
   </ItemGroup>
 

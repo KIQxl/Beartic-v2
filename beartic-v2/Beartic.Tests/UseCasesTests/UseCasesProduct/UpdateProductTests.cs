@@ -1,7 +1,6 @@
-﻿using Beartic.Application.UseCases.ProductUseCases;
-using Beartic.Application.UseCases.ProductUseCases.ProductDtos.ProductDtos;
-using Beartic.Core.Entities;
-using Beartic.Core.Interfaces;
+﻿using Beartic.Core.Interfaces;
+using Beartic.Core.UseCases.ProductUseCases;
+using Beartic.Core.UseCases.ProductUseCases.ProductDtos.ProductDtos;
 using Beartic.Tests.FakeRepositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

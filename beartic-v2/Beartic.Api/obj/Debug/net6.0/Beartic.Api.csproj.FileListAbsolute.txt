@@ -123,3 +123,5 @@ C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Api\b
 C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Api\bin\Debug\net6.0\Beartic.Infraestructure.dll
 C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Api\bin\Debug\net6.0\Beartic.Infraestructure.pdb
 C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Api\bin\Debug\net6.0\Beartic.Core.pdb
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Api\bin\Debug\net6.0\Beartic.Shared.dll
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Api\bin\Debug\net6.0\Beartic.Shared.pdb

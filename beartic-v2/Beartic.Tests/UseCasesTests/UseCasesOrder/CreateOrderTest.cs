@@ -1,7 +1,7 @@
-﻿using Beartic.Application.UseCases.OrderItemUseCases.OrderItemDto;
-using Beartic.Application.UseCases.OrderUseCases;
-using Beartic.Application.UseCases.OrderUseCases.OrderDtos;
-using Beartic.Core.Interfaces;
+﻿using Beartic.Core.Interfaces;
+using Beartic.Core.UseCases.OrderItemUseCases.OrderItemDto;
+using Beartic.Core.UseCases.OrderUseCases;
+using Beartic.Core.UseCases.OrderUseCases.OrderDtos;
 using Beartic.Tests.FakeRepositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

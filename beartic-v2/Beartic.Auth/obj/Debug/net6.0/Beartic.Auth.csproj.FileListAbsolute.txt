@@ -1,0 +1,16 @@
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Auth\bin\Debug\net6.0\Beartic.Auth.deps.json
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Auth\bin\Debug\net6.0\Beartic.Auth.dll
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Auth\bin\Debug\net6.0\Beartic.Auth.pdb
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Auth\bin\Debug\net6.0\Beartic.Shared.dll
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Auth\bin\Debug\net6.0\Beartic.Shared.pdb
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\Beartic.Auth.csproj.AssemblyReference.cache
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\Beartic.Auth.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\Beartic.Auth.AssemblyInfoInputs.cache
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\Beartic.Auth.AssemblyInfo.cs
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\Beartic.Auth.csproj.CoreCompileInputs.cache
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\Beartic.Auth.sourcelink.json
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\Beartic..55358DE1.Up2Date
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\Beartic.Auth.dll
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\refint\Beartic.Auth.dll
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\Beartic.Auth.pdb
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\ref\Beartic.Auth.dll

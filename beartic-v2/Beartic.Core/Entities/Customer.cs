@@ -1,19 +1,18 @@
-﻿using Beartic.Core.ValueObjects;
-using Flunt.Validations;
+﻿using Beartic.Shared.Entities;
+using Beartic.Shared.ValueObjects;
 
 namespace Beartic.Core.Entities
 {
     public class Customer : BaseEntity
     {
         private Customer() { }
-        public Customer(Name name, Phone phone, Document document, Password password, Email email, Address address)
+        public Customer(Name name, Phone phone, Document document, Email email, Address address)
         {
-            AddNotifications(name, phone, document, password, email, address);
+            AddNotifications(name, phone, document, email, address);
 
             Name = name;
             Phone = phone;
             Document = document;
-            Password = password;
             Email = email;
             Address = address;
         }
@@ -21,7 +20,6 @@ namespace Beartic.Core.Entities
         public Name Name { get; private set; }
         public Phone Phone { get; private set; }
         public Document Document { get; private set; }
-        public Password Password { get; private set; }
         public Email Email { get; private set; }
         public Address Address { get; private set; }
         public IList<Order>? Orders { get; private set; }
@@ -57,17 +55,6 @@ namespace Beartic.Core.Entities
             }
 
             this.Email = email;
-        }
-
-        public void ChangePassword(Password password)
-        {
-            if (password.Invalid)
-            {
-                AddNotifications(password);
-                return;
-            }
-
-            this.Password = password;
         }
 
         public void ChangeAddress(Address address)

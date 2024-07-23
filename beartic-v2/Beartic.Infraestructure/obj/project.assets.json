@@ -977,6 +977,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Beartic.Shared": "1.0.0",
           "Flunt": "1.0.5"
         },
         "compile": {
@@ -984,6 +985,19 @@
         },
         "runtime": {
           "bin/placeholder/Beartic.Core.dll": {}
+        }
+      },
+      "Beartic.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Flunt": "1.0.5"
+        },
+        "compile": {
+          "bin/placeholder/Beartic.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Beartic.Shared.dll": {}
         }
       }
     }
@@ -2651,6 +2665,11 @@
       "type": "project",
       "path": "../Beartic.Core/Beartic.Core.csproj",
       "msbuildProject": "../Beartic.Core/Beartic.Core.csproj"
+    },
+    "Beartic.Shared/1.0.0": {
+      "type": "project",
+      "path": "../SharedContext/Beartic.Shared.csproj",
+      "msbuildProject": "../SharedContext/Beartic.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
