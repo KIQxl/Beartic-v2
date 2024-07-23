@@ -1,6 +1,6 @@
 ﻿namespace Beartic.Auth.UseCases.UserUseCases.UserDtos
 {
-    public class UpdateUser
+    public class UpdateUserDto
     {
         public string Username { get; set; }
         public string Fisrtname { get; set; }

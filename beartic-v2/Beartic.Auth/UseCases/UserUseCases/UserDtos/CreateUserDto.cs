@@ -4,6 +4,19 @@ namespace Beartic.Auth.UseCases.UserUseCases.UserDtos
 {
     public class CreateUserDto
     {
+        public CreateUserDto(string id, string username, string fisrtname, string lastname, string email, string document, EDocumentType documentType, string phone, string password)
+        {
+            Id = id;
+            Username = username;
+            Fisrtname = fisrtname;
+            Lastname = lastname;
+            Email = email;
+            Document = document;
+            DocumentType = documentType;
+            Phone = phone;
+            Password = password;
+        }
+
         public string Id { get; set; }
         public string Username { get; set; }
         public string Fisrtname { get; set; }
