@@ -1157,6 +1157,19 @@
           }
         }
       },
+      "Beartic.Auth/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Beartic.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Beartic.Auth.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Beartic.Auth.dll": {}
+        }
+      },
       "Beartic.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -1175,6 +1188,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Beartic.Auth": "1.0.0",
           "Beartic.Core": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.14",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14"
@@ -3370,6 +3384,11 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Beartic.Auth/1.0.0": {
+      "type": "project",
+      "path": "../Beartic.Auth/Beartic.Auth.csproj",
+      "msbuildProject": "../Beartic.Auth/Beartic.Auth.csproj"
     },
     "Beartic.Core/1.0.0": {
       "type": "project",

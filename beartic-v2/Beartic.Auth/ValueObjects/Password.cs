@@ -52,5 +52,15 @@ namespace Beartic.Auth.ValueObjects
 
             return Convert.ToBase64String(saltBytes);
         }
+
+        public bool Auth(string passwordRequest)
+        {
+            var requestHash = GenerateHashByPassword(passwordRequest, this.SaltKey);
+
+            if (PasswordHash.Equals(requestHash))
+                return true;
+
+            return false;
+        }
     }
 }

@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Beartic.Api.Migrations
+namespace Beartic.Api.Migrations.Data
 {
     /// <inheritdoc />
-    public partial class initialMigration : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

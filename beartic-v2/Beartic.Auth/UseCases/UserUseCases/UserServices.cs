@@ -1,4 +1,5 @@
-﻿using Beartic.Auth.Interfaces;
+﻿using Beartic.Auth.Dtos;
+using Beartic.Auth.Interfaces;
 using Beartic.Auth.UseCases.UserUseCases.UserDtos;
 using Beartic.Auth.ValueObjects;
 using Beartic.Core.Entities;
@@ -45,6 +46,19 @@ namespace Beartic.Auth.UseCases.UserUseCases
             return new UserResult(200, "Sucesso", new UserResultData(user.Id.ToString(), user.Username, user.Email.Address, user.Phone.Number));
         }
 
+        public async Task<LoginResult> Login(RequestLoginDto request)
+        {
+            var user = await _userRepository.GetByUsernameAsync(request.Username);
+
+            if (user == null)
+                return new LoginResult(404, "Usuário não encontrado");
+
+            if(!user.Password.Auth(request.Password))
+                return new LoginResult(401, "Credenciais incorretas");
+
+            return new LoginResult(200, "Autenticado", new LoginResultData(user.Id.ToString(), user.Username, user.Email.Address));
+        }
+
         public async Task<UserResult> Remove(string id)
         {
             var user = await _userRepository.GetByIdAsync(id);
@@ -57,9 +71,19 @@ namespace Beartic.Auth.UseCases.UserUseCases
             return new UserResult(200, "Sucesso", new UserResultData(user.Id.ToString(), user.Username, user.Email.Address, user.Phone.Number));
         }
 
-        public Task<UserResult> Update(UpdateUserDto request)
+        public async Task<UserResult> Update(UpdateUserDto request)
         {
-            throw new NotImplementedException();
+            if(request.Invalid)
+                return new UserResult(401, "Erro ao atualizar usuário", request.Notifications);
+
+            var user = await _userRepository.GetByIdAsync(request.Id);
+
+            if(user == null)
+                return new UserResult(404, "Usuário não encontrado");
+
+            await _userRepository.Update(user);
+
+            return new UserResult(201, "Usuário atualizado.", new UserResultData(user.Id.ToString(), user.Username, user.Email.Address, user.Phone.Number));
         }
     }
 }

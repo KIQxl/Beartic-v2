@@ -1,13 +1,13 @@
 ﻿using Beartic.Core.Entities;
-using Beartic.Infraestructure.Mappings;
+using Beartic.Infraestructure.BussinessContext.Mappings;
 using Flunt.Notifications;
 using Microsoft.EntityFrameworkCore;
 
-namespace Beartic.Infraestructure.DataContexts
+namespace Beartic.Infraestructure.BussinessContext.DataContext
 {
     public class DataContext : DbContext
     {
-        public DataContext(DbContextOptions<DataContext> opts): base(opts)
+        public DataContext(DbContextOptions<DataContext> opts) : base(opts)
         {
 
         }

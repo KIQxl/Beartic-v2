@@ -973,6 +973,19 @@
           }
         }
       },
+      "Beartic.Auth/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Beartic.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Beartic.Auth.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Beartic.Auth.dll": {}
+        }
+      },
       "Beartic.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2661,6 +2674,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Beartic.Auth/1.0.0": {
+      "type": "project",
+      "path": "../Beartic.Auth/Beartic.Auth.csproj",
+      "msbuildProject": "../Beartic.Auth/Beartic.Auth.csproj"
+    },
     "Beartic.Core/1.0.0": {
       "type": "project",
       "path": "../Beartic.Core/Beartic.Core.csproj",
@@ -2674,6 +2692,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Beartic.Auth >= 1.0.0",
       "Beartic.Core >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.14",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.14"
@@ -2706,6 +2725,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Auth\\Beartic.Auth.csproj": {
+              "projectPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Auth\\Beartic.Auth.csproj"
+            },
             "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Core\\Beartic.Core.csproj": {
               "projectPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Core\\Beartic.Core.csproj"
             }

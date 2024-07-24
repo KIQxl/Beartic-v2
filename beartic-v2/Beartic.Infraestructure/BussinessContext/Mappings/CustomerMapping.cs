@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Beartic.Infraestructure.Mappings
+namespace Beartic.Infraestructure.BussinessContext.Mappings
 {
     public class CustomerMapping : IEntityTypeConfiguration<Customer>
     {

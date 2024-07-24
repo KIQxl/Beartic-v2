@@ -5,6 +5,7 @@ namespace Beartic.Auth.Interfaces
     public interface IUserRepository
     {
         public Task Add(User user);
+        public Task Update(User user);
         public Task<User> GetByIdAsync(string id);
         public Task<User> GetByUsernameAsync(string username);
         public Task<bool> EmailExists(string email);

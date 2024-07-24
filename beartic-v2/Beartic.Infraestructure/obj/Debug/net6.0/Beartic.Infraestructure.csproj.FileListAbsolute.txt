@@ -27,3 +27,5 @@ C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Infra
 C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Infraestructure\obj\Debug\net6.0\Beartic..A78B4357.Up2Date
 C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Infraestructure\bin\Debug\net6.0\Beartic.Shared.dll
 C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Infraestructure\bin\Debug\net6.0\Beartic.Shared.pdb
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Infraestructure\bin\Debug\net6.0\Beartic.Auth.dll
+C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\Beartic.Infraestructure\bin\Debug\net6.0\Beartic.Auth.pdb
