@@ -9,11 +9,12 @@ namespace Beartic.Tests.UseCasesTests.UseCasesProduct
     public class GetProductTests
     {
         private readonly IProductRepository _repository = new FakeProductRepository();
+        private readonly ICategoryRepository _categoryRepository = new FakeCategoryRepository();
 
         [TestMethod]
         public void GivenValidAndExistsIdReturnResultStatus200()
         {
-            var services = new ProductServices(_repository);
+            var services = new ProductServices(_repository, _categoryRepository);
             var result = services.GetProduct("1");
 
             Assert.IsTrue(result.Result.Success && result.Result.Status == 200 && result.Result.Data.Title == "Produto 1");
@@ -22,7 +23,7 @@ namespace Beartic.Tests.UseCasesTests.UseCasesProduct
         [TestMethod]
         public void GivenInvalidAndNotExistsIdReturnResultStatus404()
         {
-            var services = new ProductServices(_repository);
+            var services = new ProductServices(_repository, _categoryRepository);
             var result = services.GetProduct("99");
 
             Assert.IsTrue(!result.Result.Success && result.Result.Status == 404);

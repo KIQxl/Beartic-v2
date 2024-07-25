@@ -10,10 +10,12 @@ namespace Beartic.Auth.UseCases.UserUseCases
     public class UserServices : IUserServices
     {
         private readonly IUserRepository _userRepository;
+        private readonly IRoleRepository _roleRepository;
 
-        public UserServices(IUserRepository userRepository)
+        public UserServices(IUserRepository userRepository, IRoleRepository roleRepository)
         {
-            this._userRepository = userRepository;
+            _userRepository = userRepository;
+            _roleRepository = roleRepository;
         }
 
         public async Task<UserResult> Create(CreateUserDto request)
@@ -24,6 +26,15 @@ namespace Beartic.Auth.UseCases.UserUseCases
             var phone = new Phone(request.Phone);
             var password = new Password(request.Password);
             var user = new User(request.Username, name, email, document, phone, password);
+
+            foreach(string id in request.Roles)
+            {
+                var role = await _roleRepository.GetByIdAsync(id);
+                if(role != null)
+                {
+                    user.AddRole(role);
+                }
+            }
 
             if (user.Invalid)
                 return new UserResult(401, "Usuário não cadastrado", user.Notifications);
@@ -84,6 +95,40 @@ namespace Beartic.Auth.UseCases.UserUseCases
             await _userRepository.Update(user);
 
             return new UserResult(201, "Usuário atualizado.", new UserResultData(user.Id.ToString(), user.Username, user.Email.Address, user.Phone.Number));
+        }
+
+        public async Task<UserResult> AddRole(string userId, string roleId)
+        {
+            var user = await _userRepository.GetByIdAsync(userId);
+            if (user == null)
+                return new UserResult(404, "Usuário não encontrado");
+
+            var role = await _roleRepository.GetByIdAsync(roleId);
+            if (role == null)
+                return new UserResult(404, "Perfil não encontrado.");
+
+            user.AddRole(role);
+
+            await _userRepository.Update(user);
+
+            return new UserResult(200, "Perfil de usuário adicionado.");
+        }
+
+        public async Task<UserResult> RemoveRole(string userId, string roleId)
+        {
+            var user = await _userRepository.GetByIdAsync(userId);
+            if (user == null)
+                return new UserResult(404, "Usuário não encontrado");
+
+            var role = await _roleRepository.GetByIdAsync(roleId);
+            if(role == null)
+                return new UserResult(404, "Perfil não encontrado.");
+
+            user.RemoveRole(role.Name);
+
+            await _userRepository.Update(user);
+
+            return new UserResult(200, "Perfil de usuário removido");
         }
     }
 }

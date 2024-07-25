@@ -23,12 +23,14 @@ namespace Beartic.Core.Entities
             Description = description;
             Price = price;
             QuantityOnHand = quantityOnHand;
+            Categories = new List<Category>();
         }
 
         public string Title { get; private set; }
         public string Description { get; private set; }
         public decimal Price { get; private set; }
         public int QuantityOnHand { get; private set; }
+        public IList<Category> Categories { get; private set; }
 
         public void DecreaseQuantityProduct(int quantity)
         {
@@ -67,6 +69,17 @@ namespace Beartic.Core.Entities
                 this.QuantityOnHand = quantity;
                 return;
             }
+        }
+
+        public void AddCategory(Category category)
+        {
+            if (category.Invalid)
+            {
+                AddNotifications(category);
+                return;
+            }
+
+            Categories.Add(category);
         }
     }
 }

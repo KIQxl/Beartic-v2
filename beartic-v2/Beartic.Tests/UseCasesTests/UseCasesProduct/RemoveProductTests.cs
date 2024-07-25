@@ -9,11 +9,12 @@ namespace Beartic.Tests.UseCasesTests.UseCasesProduct
     public class RemoveProductTests
     {
         private readonly IProductRepository _repository = new FakeProductRepository();
+        private readonly ICategoryRepository _categoryRepository = new FakeCategoryRepository();
 
         [TestMethod]
         public void GivenValidAndExistsIdReturnResultStatus200()
         {
-            var services = new ProductServices(_repository);
+            var services = new ProductServices(_repository, _categoryRepository);
             var result = services.DeleteProduct("1");
 
             Assert.IsTrue(result.Result.Success && result.Result.Status == 200);

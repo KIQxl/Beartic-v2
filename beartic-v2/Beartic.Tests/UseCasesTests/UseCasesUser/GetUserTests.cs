@@ -9,11 +9,12 @@ namespace Beartic.Tests.UseCasesTests.UseCasesUser
     public class GetUserTests
     {
         private readonly IUserRepository _userRepository = new FakeUserRepository();
+        private readonly IRoleRepository _roleRepository = new FakeRoleRepository();
 
         [TestMethod]
         public void GivenValidRequestIdReturnResultStatus200()
         {
-            var services = new UserServices(_userRepository);
+            var services = new UserServices(_userRepository, _roleRepository);
             var result = services.GetById("123");
 
             Assert.IsTrue(result.Result.Success && result.Result.Status == 200);
@@ -22,7 +23,7 @@ namespace Beartic.Tests.UseCasesTests.UseCasesUser
         [TestMethod]
         public void GivenNotExistsIdReturnResultStatus404()
         {
-            var services = new UserServices(_userRepository);
+            var services = new UserServices(_userRepository, _roleRepository);
             var result = services.GetById("124");
 
             Assert.IsTrue(!result.Result.Success && result.Result.Status == 404);

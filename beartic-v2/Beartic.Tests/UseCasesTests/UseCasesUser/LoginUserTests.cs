@@ -10,11 +10,12 @@ namespace Beartic.Tests.UseCasesTests.UseCasesUser
     public class LoginUserTests
     {
         private readonly IUserRepository _userRepository = new FakeUserRepository();
+        private readonly IRoleRepository _roleRepository = new FakeRoleRepository();
 
         [TestMethod]
         public void GivenValidRequestReturnResultStatus200()
         {
-            var services = new UserServices(_userRepository);
+            var services = new UserServices(_userRepository, _roleRepository);
             var request = new RequestLoginDto("user", "123456789");
             var result = services.Login(request);
 
@@ -24,7 +25,7 @@ namespace Beartic.Tests.UseCasesTests.UseCasesUser
         [TestMethod]
         public void GivenInvalidPasswordRequestReturnResultStatus401()
         {
-            var services = new UserServices(_userRepository);
+            var services = new UserServices(_userRepository, _roleRepository);
             var request = new RequestLoginDto("user", "12345689");
             var result = services.Login(request);
 
@@ -34,7 +35,7 @@ namespace Beartic.Tests.UseCasesTests.UseCasesUser
         [TestMethod]
         public void GivenInvalidUsernameRequestReturnResultStatus404()
         {
-            var services = new UserServices(_userRepository);
+            var services = new UserServices(_userRepository, _roleRepository);
             var request = new RequestLoginDto("uer", "123456789");
             var result = services.Login(request);
 

@@ -7,10 +7,12 @@ namespace Beartic.Core.UseCases.ProductUseCases
     public class ProductServices : IProductServices
     {
         public readonly IProductRepository _productRepository;
+        public readonly ICategoryRepository _categoryRepository;
 
-        public ProductServices(IProductRepository productRepository)
+        public ProductServices(IProductRepository productRepository, ICategoryRepository categoryRepository)
         {
             _productRepository = productRepository;
+            _categoryRepository = categoryRepository;
         }
 
         public async Task<ProductResult> CreateProduct(CreateProductDto request)
@@ -19,6 +21,16 @@ namespace Beartic.Core.UseCases.ProductUseCases
 
             if (product.Invalid)
                 return new ProductResult(401, "Erro no cadastro de produto", product.Notifications);
+
+            foreach (var id in request.Categories)
+            {
+                var category = await _categoryRepository.GetById(id);
+
+                if (category == null)
+                    return new ProductResult(404, "Categoria não encontrada");
+
+                product.AddCategory(category);
+            }
 
             await _productRepository.Add(product);
 

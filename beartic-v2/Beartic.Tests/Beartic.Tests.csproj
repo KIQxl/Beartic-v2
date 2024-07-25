@@ -20,4 +20,8 @@
     <ProjectReference Include="..\Beartic.Core\Beartic.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="UseCasesTests\UseCasesRole\" />
+  </ItemGroup>
+
 </Project>

@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{492BFE86-AF42-4450-A657-F33D42414365}|Beartic.Auth\\Beartic.Auth.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.auth\\usecases\\userusecases\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{492BFE86-AF42-4450-A657-F33D42414365}|Beartic.Auth\\Beartic.Auth.csproj|solutionrelative:beartic.auth\\usecases\\userusecases\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{492BFE86-AF42-4450-A657-F33D42414365}|Beartic.Auth\\Beartic.Auth.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.auth\\usecases\\userusecases\\userdtos\\requestlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{492BFE86-AF42-4450-A657-F33D42414365}|Beartic.Auth\\Beartic.Auth.csproj|solutionrelative:beartic.auth\\usecases\\userusecases\\userdtos\\requestlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A5DB681-C420-4750-ADB1-1809F0C1EE4D}|Beartic.Tests\\Beartic.Tests.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.tests\\fakerepositories\\fakeuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A5DB681-C420-4750-ADB1-1809F0C1EE4D}|Beartic.Tests\\Beartic.Tests.csproj|solutionrelative:beartic.tests\\fakerepositories\\fakeuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A5DB681-C420-4750-ADB1-1809F0C1EE4D}|Beartic.Tests\\Beartic.Tests.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.tests\\usecasestests\\usecasescategory\\createcategorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A5DB681-C420-4750-ADB1-1809F0C1EE4D}|Beartic.Tests\\Beartic.Tests.csproj|solutionrelative:beartic.tests\\usecasestests\\usecasescategory\\createcategorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserServices.cs",
-              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Auth\\UseCases\\UserUseCases\\UserServices.cs",
-              "RelativeDocumentMoniker": "Beartic.Auth\\UseCases\\UserUseCases\\UserServices.cs",
-              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Auth\\UseCases\\UserUseCases\\UserServices.cs",
-              "RelativeToolTip": "Beartic.Auth\\UseCases\\UserUseCases\\UserServices.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAADwvzIAAAAMAAAA",
+              "Title": "CreateCategoryTests.cs",
+              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\UseCasesTests\\UseCasesCategory\\CreateCategoryTests.cs",
+              "RelativeDocumentMoniker": "Beartic.Tests\\UseCasesTests\\UseCasesCategory\\CreateCategoryTests.cs",
+              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\UseCasesTests\\UseCasesCategory\\CreateCategoryTests.cs",
+              "RelativeToolTip": "Beartic.Tests\\UseCasesTests\\UseCasesCategory\\CreateCategoryTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T14:38:42.962Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FakeUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\FakeRepositories\\FakeUserRepository.cs",
-              "RelativeDocumentMoniker": "Beartic.Tests\\FakeRepositories\\FakeUserRepository.cs",
-              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\FakeRepositories\\FakeUserRepository.cs",
-              "RelativeToolTip": "Beartic.Tests\\FakeRepositories\\FakeUserRepository.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAA5wAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T14:37:22.207Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RequestLoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Auth\\UseCases\\UserUseCases\\UserDtos\\RequestLoginDto.cs",
-              "RelativeDocumentMoniker": "Beartic.Auth\\UseCases\\UserUseCases\\UserDtos\\RequestLoginDto.cs",
-              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Auth\\UseCases\\UserUseCases\\UserDtos\\RequestLoginDto.cs",
-              "RelativeToolTip": "Beartic.Auth\\UseCases\\UserUseCases\\UserDtos\\RequestLoginDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T14:36:50.506Z",
+              "WhenOpened": "2024-07-25T15:45:26.558Z",
               "EditorCaption": ""
             }
           ]

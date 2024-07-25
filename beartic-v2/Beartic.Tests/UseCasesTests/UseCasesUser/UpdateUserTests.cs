@@ -10,11 +10,12 @@ namespace Beartic.Tests.UseCasesTests.UseCasesUser
     public class UpdateUserTests
     {
         private readonly IUserRepository _userRepository = new FakeUserRepository();
+        private readonly IRoleRepository _roleRepository = new FakeRoleRepository();
 
         [TestMethod]
         public void GivenValidRequestReturnResultStatus201()
         {
-            var services = new UserServices(_userRepository);
+            var services = new UserServices(_userRepository, _roleRepository);
             var request = new UpdateUserDto("123", "user", "user", "user", "email@email.com", "11299338844");
             var result = services.Update(request);
 
@@ -24,7 +25,7 @@ namespace Beartic.Tests.UseCasesTests.UseCasesUser
         [TestMethod]
         public void GivenValidRequestButUserIdNotExistsReturnResultStatus404()
         {
-            var services = new UserServices(_userRepository);
+            var services = new UserServices(_userRepository, _roleRepository);
             var request = new UpdateUserDto("12", "user", "user", "user", "email@email.com", "11299338844");
             var result = services.Update(request);
 
@@ -34,11 +35,31 @@ namespace Beartic.Tests.UseCasesTests.UseCasesUser
         [TestMethod]
         public void GivenInvalidRequestReturnResultStatus401()
         {
-            var services = new UserServices(_userRepository);
+            var services = new UserServices(_userRepository, _roleRepository);
             var request = new UpdateUserDto("123", "", "user", "user", "emailemail.com", "11238844");
             var result = services.Update(request);
 
             Assert.IsTrue(!result.Result.Success && result.Result.Status == 401 && result.Result.Errors.Any());
+        }
+
+        [TestMethod]
+        public void GivenValidRequestReturnResultStatus200AndAddRole()
+        {
+            var services = new UserServices(_userRepository, _roleRepository);
+
+            var result = services.AddRole("123", "123");
+
+            Assert.IsTrue(result.Result.Success && result.Result.Status == 200);
+        }
+
+        [TestMethod]
+        public void GivenValidRequestReturnResultStatus200AndRemoveRole()
+        {
+            var services = new UserServices(_userRepository, _roleRepository);
+
+            var result = services.RemoveRole("123", "123");
+
+            Assert.IsTrue(result.Result.Success && result.Result.Status == 200);
         }
     }
 }

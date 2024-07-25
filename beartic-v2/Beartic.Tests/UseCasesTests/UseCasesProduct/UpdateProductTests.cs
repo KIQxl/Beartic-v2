@@ -10,11 +10,12 @@ namespace Beartic.Tests.UseCasesTests.UseCasesProduct
     public class UpdateProductTests
     {
         private readonly IProductRepository _repository = new FakeProductRepository();
+        private readonly ICategoryRepository _categoryRepository = new FakeCategoryRepository();
 
         [TestMethod]
         public void GivenValidRequestReturnResultStatus201()
         {
-            var services = new ProductServices(_repository);
+            var services = new ProductServices(_repository, _categoryRepository);
             var request = new UpdateProductDto("1", "Novo produto", "Novo produto", 100m, 20);
             var result = services.UpdateProduct(request);
 
@@ -24,7 +25,7 @@ namespace Beartic.Tests.UseCasesTests.UseCasesProduct
         [TestMethod]
         public void GivenInvalidRequestIdReturnResultStatus404NotFound()
         {
-            var services = new ProductServices(_repository);
+            var services = new ProductServices(_repository, _categoryRepository);
             var request = new UpdateProductDto("99", "Novo produto", "Novo produto", 100m, 20);
             var result = services.UpdateProduct(request);
 
@@ -34,7 +35,7 @@ namespace Beartic.Tests.UseCasesTests.UseCasesProduct
         [TestMethod]
         public void GivenInvalidRequestReturnResultStatus401BadRequest()
         {
-            var services = new ProductServices(_repository);
+            var services = new ProductServices(_repository, _categoryRepository);
             var request = new UpdateProductDto("1", "", "No", 0m, 0);
             var result = services.UpdateProduct(request);
 

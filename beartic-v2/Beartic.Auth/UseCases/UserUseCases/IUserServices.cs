@@ -10,5 +10,7 @@ namespace Beartic.Auth.UseCases.UserUseCases
         public Task<UserResult> Remove(string id);
         public Task<UserResult> GetById(string id);
         public Task<LoginResult> Login(RequestLoginDto request);
+        public Task<UserResult> RemoveRole(string userId, string roleId);
+        public Task<UserResult> AddRole(string userId, string roleId);
     }
 }

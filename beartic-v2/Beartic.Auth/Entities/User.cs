@@ -1,4 +1,5 @@
-﻿using Beartic.Auth.ValueObjects;
+﻿using Beartic.Auth.Entities;
+using Beartic.Auth.ValueObjects;
 using Beartic.Shared.Entities;
 using Beartic.Shared.ValueObjects;
 using Flunt.Validations;
@@ -21,6 +22,7 @@ namespace Beartic.Core.Entities
             Document = document;
             Phone = phone;
             Password = password;
+            Roles = new List<Role>();
         }
 
         public string Username { get; private set; }
@@ -29,6 +31,7 @@ namespace Beartic.Core.Entities
         public Document Document { get; private set; }
         public Phone Phone { get; private set; }
         public Password Password { get; private set; }
+        public IList<Role> Roles { get; private set; }
 
         public void ChangePassword(Password password)
         {
@@ -83,6 +86,26 @@ namespace Beartic.Core.Entities
             }
 
             this.Phone = phone;
+        }
+
+        public void AddRole(Role role)
+        {
+            if(role.Invalid)
+            { 
+                AddNotifications(role); 
+                return; 
+            }
+
+            this.Roles.Add(role);
+        }
+
+        public void RemoveRole(string roleName)
+        {
+            var role = this.Roles.FirstOrDefault(x => x.Name.ToLower() == roleName.ToLower());
+            if(role != null)
+                this.Roles.Remove(role);
+
+            return;
         }
     }
 }
