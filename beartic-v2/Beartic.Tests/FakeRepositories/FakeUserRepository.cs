@@ -42,9 +42,9 @@ namespace Beartic.Tests.FakeRepositories
             return;
         }
 
-        public Task Update(User user)
+        public void Update(User user)
         {
-            return Task.CompletedTask;
+            return;
         }
     }
 }

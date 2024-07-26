@@ -7,9 +7,9 @@ namespace Beartic.Infraestructure.BussinessContext.Repositories
 {
     public class ProductRepository : IProductRepository
     {
-        private readonly DataContext _ctx;
+        private readonly BussinessData _ctx;
 
-        public ProductRepository(DataContext dataContext)
+        public ProductRepository(BussinessData dataContext)
         {
             _ctx = dataContext;
         }

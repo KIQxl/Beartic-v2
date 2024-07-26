@@ -7,9 +7,9 @@ namespace Beartic.Infraestructure.BussinessContext.Repositories
 {
     public class CustomerRepository : ICustomerRepository
     {
-        private readonly DataContext _ctx;
+        private readonly BussinessData _ctx;
 
-        public CustomerRepository(DataContext ctx)
+        public CustomerRepository(BussinessData ctx)
         {
             this._ctx = ctx;
         }

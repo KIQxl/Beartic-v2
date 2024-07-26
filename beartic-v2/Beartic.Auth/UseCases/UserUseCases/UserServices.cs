@@ -92,7 +92,7 @@ namespace Beartic.Auth.UseCases.UserUseCases
             if(user == null)
                 return new UserResult(404, "Usuário não encontrado");
 
-            await _userRepository.Update(user);
+            _userRepository.Update(user);
 
             return new UserResult(201, "Usuário atualizado.", new UserResultData(user.Id.ToString(), user.Username, user.Email.Address, user.Phone.Number));
         }
@@ -109,7 +109,7 @@ namespace Beartic.Auth.UseCases.UserUseCases
 
             user.AddRole(role);
 
-            await _userRepository.Update(user);
+            _userRepository.Update(user);
 
             return new UserResult(200, "Perfil de usuário adicionado.");
         }
@@ -126,7 +126,7 @@ namespace Beartic.Auth.UseCases.UserUseCases
 
             user.RemoveRole(role.Name);
 
-            await _userRepository.Update(user);
+            _userRepository.Update(user);
 
             return new UserResult(200, "Perfil de usuário removido");
         }

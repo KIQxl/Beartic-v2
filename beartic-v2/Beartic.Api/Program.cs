@@ -1,12 +1,10 @@
-using Beartic.Infraestructure.AuthContext.DataContext;
-using Beartic.Infraestructure.BussinessContext.Data;
-using Microsoft.EntityFrameworkCore;
+using Beartic.Api.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<DataContext>(opts => opts.UseSqlServer("", b => b.MigrationsAssembly("Beartic.Api")));
-builder.Services.AddDbContext<AuthContext>(opts => opts.UseSqlServer("", b => b.MigrationsAssembly("Beartic.Api")));
+builder.Services.AddContexts();
+builder.Services.AddDependenceInjections();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

@@ -7,7 +7,7 @@ namespace Beartic.Infraestructure.BussinessContext.Repositories
 {
     public class OrderRepository : IOrderRepository
     {
-        private readonly DataContext _ctx;
+        private readonly BussinessData _ctx;
 
         public async Task AddAsync(Order order)
         {

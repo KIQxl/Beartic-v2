@@ -7,9 +7,9 @@ namespace Beartic.Infraestructure.BussinessContext.Repositories
 {
     public class CategoryRepository : ICategoryRepository
     {
-        private readonly DataContext _ctx;
+        private readonly BussinessData _ctx;
 
-        public CategoryRepository(DataContext ctx)
+        public CategoryRepository(BussinessData ctx)
         {
             _ctx = ctx;
         }
