@@ -39,5 +39,10 @@ namespace Beartic.Tests.FakeRepositories
         {
             return;
         }
+
+        Task<IList<Product>> IProductRepository.GetProductsByIdAsync(IList<string> ids)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

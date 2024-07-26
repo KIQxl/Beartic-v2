@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Beartic.Api.Migrations.Data
+namespace Beartic.Api.Migrations
 {
     /// <inheritdoc />
     public partial class initial : Migration
@@ -11,6 +11,19 @@ namespace Beartic.Api.Migrations.Data
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "categories",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_categories", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "customers",
                 columns: table => new
@@ -75,6 +88,30 @@ namespace Beartic.Api.Migrations.Data
                 });
 
             migrationBuilder.CreateTable(
+                name: "Product_Category",
+                columns: table => new
+                {
+                    category_id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    product_id = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Product_Category", x => new { x.category_id, x.product_id });
+                    table.ForeignKey(
+                        name: "FK_category_productCategory",
+                        column: x => x.category_id,
+                        principalTable: "categories",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_product_productCategory",
+                        column: x => x.product_id,
+                        principalTable: "products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "orderItems",
                 columns: table => new
                 {
@@ -114,6 +151,11 @@ namespace Beartic.Api.Migrations.Data
                 name: "IX_orders_CustomerId",
                 table: "orders",
                 column: "CustomerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Product_Category_product_id",
+                table: "Product_Category",
+                column: "product_id");
         }
 
         /// <inheritdoc />
@@ -123,7 +165,13 @@ namespace Beartic.Api.Migrations.Data
                 name: "orderItems");
 
             migrationBuilder.DropTable(
+                name: "Product_Category");
+
+            migrationBuilder.DropTable(
                 name: "orders");
+
+            migrationBuilder.DropTable(
+                name: "categories");
 
             migrationBuilder.DropTable(
                 name: "products");

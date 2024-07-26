@@ -1,4 +1,5 @@
-﻿using Beartic.Core.Entities;
+﻿using Beartic.Auth.Entities;
+using Beartic.Core.Entities;
 using Beartic.Infraestructure.AuthContext.Mappings;
 using Flunt.Notifications;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,7 @@ namespace Beartic.Infraestructure.AuthContext.DataContext
         }
 
         public DbSet<User> users { get; set; }
+        public DbSet<Role> roles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

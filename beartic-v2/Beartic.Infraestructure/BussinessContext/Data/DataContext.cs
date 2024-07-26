@@ -3,7 +3,7 @@ using Beartic.Infraestructure.BussinessContext.Mappings;
 using Flunt.Notifications;
 using Microsoft.EntityFrameworkCore;
 
-namespace Beartic.Infraestructure.BussinessContext.DataContext
+namespace Beartic.Infraestructure.BussinessContext.Data
 {
     public class DataContext : DbContext
     {
@@ -16,6 +16,7 @@ namespace Beartic.Infraestructure.BussinessContext.DataContext
         public DbSet<Order> orders { get; set; }
         public DbSet<OrderItem> orderItems { get; set; }
         public DbSet<Product> products { get; set; }
+        public DbSet<Category> categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

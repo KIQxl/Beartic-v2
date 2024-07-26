@@ -31,6 +31,24 @@ namespace Beartic.Infraestructure.BussinessContext.Mappings
                 .IsRequired()
                 .HasColumnType("int")
                 .HasColumnName("QuantityOnHand");
+
+            builder.HasMany(x => x.Categories)
+                .WithMany(x => x.Products)
+                .UsingEntity<Dictionary<string, object>>(
+                "Product_Category",
+
+                category => category.HasOne<Category>()
+                .WithMany()
+                .HasForeignKey("category_id")
+                .HasConstraintName("FK_category_productCategory")
+                .OnDelete(DeleteBehavior.Cascade),
+
+                product => product.HasOne<Product>()
+                .WithMany()
+                .HasForeignKey("product_id")
+                .HasConstraintName("FK_product_productCategory")
+                .OnDelete(DeleteBehavior.Cascade)
+            );
         }
     }
 }

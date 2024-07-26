@@ -1,5 +1,5 @@
 using Beartic.Infraestructure.AuthContext.DataContext;
-using Beartic.Infraestructure.BussinessContext.DataContext;
+using Beartic.Infraestructure.BussinessContext.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

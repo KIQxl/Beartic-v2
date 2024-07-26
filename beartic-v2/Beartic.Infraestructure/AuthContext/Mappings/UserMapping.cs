@@ -1,4 +1,5 @@
-﻿using Beartic.Core.Entities;
+﻿using Beartic.Auth.Entities;
+using Beartic.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -70,6 +71,24 @@ namespace Beartic.Infraestructure.AuthContext.Mappings
                 .HasColumnName("document_type")
                 .HasColumnType("int");
             });
+
+            builder.HasMany(x => x.Roles)
+                .WithMany(x => x.Users)
+                .UsingEntity<Dictionary<string, object>>(
+                "user_role",
+
+                role => role.HasOne<Role>()
+                    .WithMany()
+                    .HasForeignKey("role_id")
+                    .HasConstraintName("FK_role_userRole")
+                    .OnDelete(DeleteBehavior.Cascade),
+
+                user => user.HasOne<User>()
+                    .WithMany()
+                    .HasForeignKey("user_id")
+                    .HasConstraintName("FK_user_userRole")
+                    .OnDelete(DeleteBehavior.Cascade)
+                );
         }
     }
 }

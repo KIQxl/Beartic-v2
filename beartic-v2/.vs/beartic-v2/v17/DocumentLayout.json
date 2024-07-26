@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8A5DB681-C420-4750-ADB1-1809F0C1EE4D}|Beartic.Tests\\Beartic.Tests.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.tests\\usecasestests\\usecasescategory\\createcategorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A5DB681-C420-4750-ADB1-1809F0C1EE4D}|Beartic.Tests\\Beartic.Tests.csproj|solutionrelative:beartic.tests\\usecasestests\\usecasescategory\\createcategorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|solutionrelative:beartic.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A5DB681-C420-4750-ADB1-1809F0C1EE4D}|Beartic.Tests\\Beartic.Tests.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.tests\\fakerepositories\\fakeproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A5DB681-C420-4750-ADB1-1809F0C1EE4D}|Beartic.Tests\\Beartic.Tests.csproj|solutionrelative:beartic.tests\\fakerepositories\\fakeproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDBBACC1-375C-4D71-A24A-DDED3193A72B}|Beartic.Infraestructure\\Beartic.Infraestructure.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.infraestructure\\authcontext\\datacontext\\authcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDBBACC1-375C-4D71-A24A-DDED3193A72B}|Beartic.Infraestructure\\Beartic.Infraestructure.csproj|solutionrelative:beartic.infraestructure\\authcontext\\datacontext\\authcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDBBACC1-375C-4D71-A24A-DDED3193A72B}|Beartic.Infraestructure\\Beartic.Infraestructure.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.infraestructure\\bussinesscontext\\mappings\\productmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDBBACC1-375C-4D71-A24A-DDED3193A72B}|Beartic.Infraestructure\\Beartic.Infraestructure.csproj|solutionrelative:beartic.infraestructure\\bussinesscontext\\mappings\\productmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDBBACC1-375C-4D71-A24A-DDED3193A72B}|Beartic.Infraestructure\\Beartic.Infraestructure.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.infraestructure\\bussinesscontext\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDBBACC1-375C-4D71-A24A-DDED3193A72B}|Beartic.Infraestructure\\Beartic.Infraestructure.csproj|solutionrelative:beartic.infraestructure\\bussinesscontext\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +35,63 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CreateCategoryTests.cs",
-              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\UseCasesTests\\UseCasesCategory\\CreateCategoryTests.cs",
-              "RelativeDocumentMoniker": "Beartic.Tests\\UseCasesTests\\UseCasesCategory\\CreateCategoryTests.cs",
-              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\UseCasesTests\\UseCasesCategory\\CreateCategoryTests.cs",
-              "RelativeToolTip": "Beartic.Tests\\UseCasesTests\\UseCasesCategory\\CreateCategoryTests.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Beartic.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Api\\Program.cs",
+              "RelativeToolTip": "Beartic.Api\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T15:45:26.558Z",
+              "WhenOpened": "2024-07-25T20:59:04.149Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FakeProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\FakeRepositories\\FakeProductRepository.cs",
+              "RelativeDocumentMoniker": "Beartic.Tests\\FakeRepositories\\FakeProductRepository.cs",
+              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\FakeRepositories\\FakeProductRepository.cs",
+              "RelativeToolTip": "Beartic.Tests\\FakeRepositories\\FakeProductRepository.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAowC0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T20:58:52.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthContext.cs",
+              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Infraestructure\\AuthContext\\DataContext\\AuthContext.cs",
+              "RelativeDocumentMoniker": "Beartic.Infraestructure\\AuthContext\\DataContext\\AuthContext.cs",
+              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Infraestructure\\AuthContext\\DataContext\\AuthContext.cs",
+              "RelativeToolTip": "Beartic.Infraestructure\\AuthContext\\DataContext\\AuthContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T20:57:47.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductMapping.cs",
+              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Infraestructure\\BussinessContext\\Mappings\\ProductMapping.cs",
+              "RelativeDocumentMoniker": "Beartic.Infraestructure\\BussinessContext\\Mappings\\ProductMapping.cs",
+              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Infraestructure\\BussinessContext\\Mappings\\ProductMapping.cs",
+              "RelativeToolTip": "Beartic.Infraestructure\\BussinessContext\\Mappings\\ProductMapping.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADAAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T20:51:34.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Infraestructure\\BussinessContext\\Data\\DataContext.cs",
+              "RelativeDocumentMoniker": "Beartic.Infraestructure\\BussinessContext\\Data\\DataContext.cs",
+              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Infraestructure\\BussinessContext\\Data\\DataContext.cs",
+              "RelativeToolTip": "Beartic.Infraestructure\\BussinessContext\\Data\\DataContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T19:00:29.561Z"
             }
           ]
         }

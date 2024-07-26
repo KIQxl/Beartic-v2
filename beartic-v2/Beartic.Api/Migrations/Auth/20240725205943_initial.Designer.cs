@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Beartic.Api.Migrations
+namespace Beartic.Api.Migrations.Auth
 {
     [DbContext(typeof(AuthContext))]
-    [Migration("20240724140402_initial")]
+    [Migration("20240725205943_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -24,6 +24,24 @@ namespace Beartic.Api.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("Beartic.Auth.Entities.Role", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("roles");
+                });
 
             modelBuilder.Entity("Beartic.Core.Entities.User", b =>
                 {
@@ -39,6 +57,21 @@ namespace Beartic.Api.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("users");
+                });
+
+            modelBuilder.Entity("user_role", b =>
+                {
+                    b.Property<Guid>("role_id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("user_id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("role_id", "user_id");
+
+                    b.HasIndex("user_id");
+
+                    b.ToTable("user_role");
                 });
 
             modelBuilder.Entity("Beartic.Core.Entities.User", b =>
@@ -162,6 +195,23 @@ namespace Beartic.Api.Migrations
 
                     b.Navigation("Phone")
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("user_role", b =>
+                {
+                    b.HasOne("Beartic.Auth.Entities.Role", null)
+                        .WithMany()
+                        .HasForeignKey("role_id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_role_userRole");
+
+                    b.HasOne("Beartic.Core.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("user_id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_user_userRole");
                 });
 #pragma warning restore 612, 618
         }
