@@ -1,0 +1,146 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Flunt/1.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Flunt.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Flunt.dll": {}
+        }
+      },
+      "Beartic.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Beartic.Shared": "1.0.0",
+          "Flunt": "1.0.5"
+        },
+        "compile": {
+          "bin/placeholder/Beartic.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Beartic.Core.dll": {}
+        }
+      },
+      "Beartic.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Flunt": "1.0.5"
+        },
+        "compile": {
+          "bin/placeholder/Beartic.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Beartic.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Flunt/1.0.5": {
+      "sha512": "2p1B/LLsMf0bGwyMQK48/278OXTodXn3HyTU1v7fr/x0bNfrVSNC1Do1PxbgiOlDLChtAbtt1kPgXFqUnGAagg==",
+      "type": "package",
+      "path": "flunt/1.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "flunt.1.0.5.nupkg.sha512",
+        "flunt.nuspec",
+        "lib/netstandard2.0/Flunt.dll"
+      ]
+    },
+    "Beartic.Core/1.0.0": {
+      "type": "project",
+      "path": "../Beartic.Core/Beartic.Core.csproj",
+      "msbuildProject": "../Beartic.Core/Beartic.Core.csproj"
+    },
+    "Beartic.Shared/1.0.0": {
+      "type": "project",
+      "path": "../SharedContext/Beartic.Shared.csproj",
+      "msbuildProject": "../SharedContext/Beartic.Shared.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Beartic.Core >= 1.0.0",
+      "Flunt >= 1.0.5"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\kaiqu\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Application\\Beartic.Application.csproj",
+      "projectName": "Beartic.Application",
+      "projectPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Application\\Beartic.Application.csproj",
+      "packagesPath": "C:\\Users\\kaiqu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Application\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\kaiqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Core\\Beartic.Core.csproj": {
+              "projectPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Core\\Beartic.Core.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "Flunt": {
+            "target": "Package",
+            "version": "[1.0.5, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

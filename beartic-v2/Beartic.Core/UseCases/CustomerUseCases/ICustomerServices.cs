@@ -8,5 +8,6 @@ namespace Beartic.Core.UseCases.CustomerUseCases
         public Task<CustomerResult> Remove(string id);
         public Task<CustomerResult> Update(UpdateCustomerDto request);
         public Task<GetCustomerResult> GetCustomerByDocument(string document);
+        public Task<GetCustomerResult> GetCustomerById(string id);
     }
 }

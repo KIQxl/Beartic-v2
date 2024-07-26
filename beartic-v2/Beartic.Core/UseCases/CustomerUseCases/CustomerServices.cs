@@ -44,6 +44,15 @@ namespace Beartic.Core.UseCases.CustomerUseCases
             return new GetCustomerResult(200, "Sucesso", new GetCustomerData(customer.Id.ToString(), customer.Name.ToString(), customer.Document.Number, customer.Phone.Number, customer.Email.Address, customer.Address.City, customer.Address.ZipCode, customer.Address.Street, customer.Address.Number));
         }
 
+        public async Task<GetCustomerResult> GetCustomerById(string id)
+        {
+            var customer = await _customerRepository.GetByIdAsync(id);
+            if (customer == null)
+                return new GetCustomerResult(404, "Cliente não encontrado");
+
+            return new GetCustomerResult(200, "Sucesso", new GetCustomerData(customer.Id.ToString(), customer.Name.ToString(), customer.Document.Number, customer.Phone.Number, customer.Email.Address, customer.Address.City, customer.Address.ZipCode, customer.Address.Street, customer.Address.Number));
+        }
+
         public async Task<CustomerResult> Remove(string id)
         {
             var customer = await _customerRepository.GetByIdAsync(id);
