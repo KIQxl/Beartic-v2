@@ -1,4 +1,5 @@
-﻿using Beartic.Core.UseCases.CustomerUseCases;
+﻿using Azure.Core;
+using Beartic.Core.UseCases.CustomerUseCases;
 using Beartic.Core.UseCases.CustomerUseCases.CustomerDtos;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,6 +28,18 @@ namespace Beartic.Api.Controllers
             return BadRequest(result);
         }
 
+        [HttpGet]
+        [Route("customers/get-by-document/{document}")]
+        public async Task<IActionResult> GetByDocumentAsync([FromRoute] string document)
+        {
+            var result = await _services.GetCustomerByDocument(document);
+
+            if (result.Success)
+                return Ok(result);
+
+            return BadRequest(result);
+        }
+
         [HttpPost]
         [Route("customers/")]
         public async Task<IActionResult> CreateAsync([FromBody] CreateCustomerDto request)
@@ -44,6 +57,18 @@ namespace Beartic.Api.Controllers
         public async Task<IActionResult> Update([FromBody] UpdateCustomerDto request)
         {
             var result = await _services.Update(request);
+
+            if (result.Success)
+                return Ok(result);
+
+            return BadRequest(result);
+        }
+
+        [HttpDelete]
+        [Route("customers/{id}")]
+        public async Task<IActionResult> Remove([FromRoute] string id)
+        {
+            var result = await _services.Remove(id);
 
             if (result.Success)
                 return Ok(result);
