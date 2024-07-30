@@ -26,5 +26,17 @@ namespace Beartic.Api.Controllers
 
             return BadRequest(result);
         }
+
+        [HttpGet]
+        [Route("orders/{id}")]
+        public async Task<IActionResult> GetOrderByIdAsync([FromRoute] string id)
+        {
+            var result = await _services.GetOrderByIdAsync(id);
+
+            if(result.Success)
+                return Ok(result);
+
+            return NotFound(result);
+        }
     }
 }

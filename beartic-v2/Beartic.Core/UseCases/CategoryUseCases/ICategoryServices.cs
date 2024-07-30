@@ -6,7 +6,7 @@ namespace Beartic.Core.UseCases.CategoryUseCases
     {
         public Task<CategoryResult> GetCategoryByIdAsync(string id);
         public Task<CategoryResult> CreateAsync(CreateCategoryDto request);
-        public Task<CategoryResult> UpdateAsync(CreateCategoryDto request);
+        public Task<CategoryResult> UpdateAsync(UpdateCategoryDto request);
         public Task<CategoryResult> DeleteAsync(string id);
     }
 }

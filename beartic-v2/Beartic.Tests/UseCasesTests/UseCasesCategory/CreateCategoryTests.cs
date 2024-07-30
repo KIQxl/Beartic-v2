@@ -15,7 +15,7 @@ namespace Beartic.Tests.UseCasesTests.UseCasesCategory
         public void GivenValidRequestReturnResultStatus201()
         {
             var services = new CategoryServices(_categoryRepository);
-            var request = new CreateCategoryDto(null, "Category", "Category");
+            var request = new CreateCategoryDto("Category", "Category");
 
             var result = services.CreateAsync(request);
             Assert.IsTrue(result.Result.Success && result.Result.Status == 201);
@@ -25,7 +25,7 @@ namespace Beartic.Tests.UseCasesTests.UseCasesCategory
         public void GivenInvalidRequestReturnResultStatus401()
         {
             var services = new CategoryServices(_categoryRepository);
-            var request = new CreateCategoryDto(null, "", "Category");
+            var request = new CreateCategoryDto("", "Category");
 
             var result = services.CreateAsync(request);
             Assert.IsTrue(!result.Result.Success && result.Result.Status == 401);

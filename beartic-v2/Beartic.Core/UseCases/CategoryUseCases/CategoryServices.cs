@@ -47,7 +47,7 @@ namespace Beartic.Core.UseCases.CategoryUseCases
             return new CategoryResult(200, "Sucesso", new CategoryResultData(category.Id.ToString(), category.Name));
         }
 
-        public async Task<CategoryResult> UpdateAsync(CreateCategoryDto request)
+        public async Task<CategoryResult> UpdateAsync(UpdateCategoryDto request)
         {
             var category = await _categoryRepository.GetById(request.Id);
 

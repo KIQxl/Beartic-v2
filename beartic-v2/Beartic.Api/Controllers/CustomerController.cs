@@ -25,7 +25,7 @@ namespace Beartic.Api.Controllers
             if(result.Success)
                 return Ok(result);
 
-            return BadRequest(result);
+            return NotFound(result);
         }
 
         [HttpGet]
