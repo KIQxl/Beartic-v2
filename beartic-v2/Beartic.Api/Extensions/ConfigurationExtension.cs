@@ -16,8 +16,8 @@ namespace Beartic.Api.Extensions
     {
         public static void AddContexts(this IServiceCollection services)
         {
-            services.AddDbContext<Infraestructure.BussinessContext.Data.BussinessData>(opts => opts.UseSqlServer("", b => b.MigrationsAssembly("Beartic.Api")));
-            services.AddDbContext<Infraestructure.AuthContext.Data.AuthData>(opts => opts.UseSqlServer("", b => b.MigrationsAssembly("Beartic.Api")));
+            services.AddDbContext<Infraestructure.BussinessContext.Data.BussinessData>(opts => opts.UseMySql("server=localhost; database=beartic-v2;user=root;password=123456", ServerVersion.AutoDetect("server=localhost; database=beartic-v2;user=root;password=123456"), b => b.MigrationsAssembly("Beartic.Api")));
+            services.AddDbContext<Infraestructure.AuthContext.Data.AuthData>(opts => opts.UseMySql("server=localhost; database=beartic-v2;user=root;password=123456", ServerVersion.AutoDetect("server=localhost; database=beartic-v2;user=root;password=123456"), b => b.MigrationsAssembly("Beartic.Api")));
         }
 
         public static void AddRepositoriesDependencyInjection(this IServiceCollection services)

@@ -11,3 +11,15 @@ C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\SharedContext
 C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\refint\Beartic.Shared.dll
 C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\Beartic.Shared.pdb
 C:\Users\kaiqu\OneDrive\Desktop\Repositories\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\ref\Beartic.Shared.dll
+C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\SharedContext\bin\Debug\net6.0\Beartic.Shared.deps.json
+C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\SharedContext\bin\Debug\net6.0\Beartic.Shared.dll
+C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\SharedContext\bin\Debug\net6.0\Beartic.Shared.pdb
+C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\Beartic.Shared.csproj.AssemblyReference.cache
+C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\Beartic.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\Beartic.Shared.AssemblyInfoInputs.cache
+C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\Beartic.Shared.AssemblyInfo.cs
+C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\Beartic.Shared.csproj.CoreCompileInputs.cache
+C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\Beartic.Shared.dll
+C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\refint\Beartic.Shared.dll
+C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\Beartic.Shared.pdb
+C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\ref\Beartic.Shared.dll

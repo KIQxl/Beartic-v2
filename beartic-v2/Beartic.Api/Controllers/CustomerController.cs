@@ -1,5 +1,4 @@
-﻿using Azure.Core;
-using Beartic.Core.UseCases.CustomerUseCases;
+﻿using Beartic.Core.UseCases.CustomerUseCases;
 using Beartic.Core.UseCases.CustomerUseCases.CustomerDtos;
 using Microsoft.AspNetCore.Mvc;
 

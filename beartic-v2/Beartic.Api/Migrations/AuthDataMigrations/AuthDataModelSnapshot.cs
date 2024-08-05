@@ -3,12 +3,11 @@ using System;
 using Beartic.Infraestructure.AuthContext.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Beartic.Api.Migrations
+namespace Beartic.Api.Migrations.AuthDataMigrations
 {
     [DbContext(typeof(AuthData))]
     partial class AuthDataModelSnapshot : ModelSnapshot
@@ -18,22 +17,20 @@ namespace Beartic.Api.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.14")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
-
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+                .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("Beartic.Auth.Entities.Role", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<bool>("Active")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
@@ -44,7 +41,7 @@ namespace Beartic.Api.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<string>("Username")
                         .IsRequired()
@@ -59,10 +56,10 @@ namespace Beartic.Api.Migrations
             modelBuilder.Entity("user_role", b =>
                 {
                     b.Property<Guid>("role_id")
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<Guid>("user_id")
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.HasKey("role_id", "user_id");
 
@@ -76,7 +73,7 @@ namespace Beartic.Api.Migrations
                     b.OwnsOne("Beartic.Auth.ValueObjects.Password", "Password", b1 =>
                         {
                             b1.Property<Guid>("UserId")
-                                .HasColumnType("uniqueidentifier");
+                                .HasColumnType("char(36)");
 
                             b1.Property<string>("PasswordHash")
                                 .IsRequired()
@@ -99,7 +96,7 @@ namespace Beartic.Api.Migrations
                     b.OwnsOne("Beartic.Shared.ValueObjects.Document", "Document", b1 =>
                         {
                             b1.Property<Guid>("UserId")
-                                .HasColumnType("uniqueidentifier");
+                                .HasColumnType("char(36)");
 
                             b1.Property<string>("Number")
                                 .IsRequired()
@@ -121,7 +118,7 @@ namespace Beartic.Api.Migrations
                     b.OwnsOne("Beartic.Shared.ValueObjects.Email", "Email", b1 =>
                         {
                             b1.Property<Guid>("UserId")
-                                .HasColumnType("uniqueidentifier");
+                                .HasColumnType("char(36)");
 
                             b1.Property<string>("Address")
                                 .IsRequired()
@@ -139,7 +136,7 @@ namespace Beartic.Api.Migrations
                     b.OwnsOne("Beartic.Shared.ValueObjects.Name", "Name", b1 =>
                         {
                             b1.Property<Guid>("UserId")
-                                .HasColumnType("uniqueidentifier");
+                                .HasColumnType("char(36)");
 
                             b1.Property<string>("Firstname")
                                 .IsRequired()
@@ -162,7 +159,7 @@ namespace Beartic.Api.Migrations
                     b.OwnsOne("Beartic.Shared.ValueObjects.Phone", "Phone", b1 =>
                         {
                             b1.Property<Guid>("UserId")
-                                .HasColumnType("uniqueidentifier");
+                                .HasColumnType("char(36)");
 
                             b1.Property<string>("Number")
                                 .IsRequired()

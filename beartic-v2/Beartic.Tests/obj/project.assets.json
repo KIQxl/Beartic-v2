@@ -6419,11 +6419,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\Beartic.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\kaiqu\\Desktop\\Beartic-v2\\beartic-v2\\Beartic.Tests\\Beartic.Tests.csproj",
       "projectName": "Beartic.Tests",
-      "projectPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\Beartic.Tests.csproj",
+      "projectPath": "C:\\Users\\kaiqu\\Desktop\\Beartic-v2\\beartic-v2\\Beartic.Tests\\Beartic.Tests.csproj",
       "packagesPath": "C:\\Users\\kaiqu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\obj\\",
+      "outputPath": "C:\\Users\\kaiqu\\Desktop\\Beartic-v2\\beartic-v2\\Beartic.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kaiqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6440,11 +6440,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Auth\\Beartic.Auth.csproj": {
-              "projectPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Auth\\Beartic.Auth.csproj"
+            "C:\\Users\\kaiqu\\Desktop\\Beartic-v2\\beartic-v2\\Beartic.Auth\\Beartic.Auth.csproj": {
+              "projectPath": "C:\\Users\\kaiqu\\Desktop\\Beartic-v2\\beartic-v2\\Beartic.Auth\\Beartic.Auth.csproj"
             },
-            "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Core\\Beartic.Core.csproj": {
-              "projectPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Core\\Beartic.Core.csproj"
+            "C:\\Users\\kaiqu\\Desktop\\Beartic-v2\\beartic-v2\\Beartic.Core\\Beartic.Core.csproj": {
+              "projectPath": "C:\\Users\\kaiqu\\Desktop\\Beartic-v2\\beartic-v2\\Beartic.Core\\Beartic.Core.csproj"
             }
           }
         }
@@ -6453,11 +6453,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -6497,7 +6492,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

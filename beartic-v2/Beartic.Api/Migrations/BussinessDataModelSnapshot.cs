@@ -3,12 +3,11 @@ using System;
 using Beartic.Infraestructure.BussinessContext.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Beartic.Api.Migrations.BussinessDataMigrations
+namespace Beartic.Api.Migrations
 {
     [DbContext(typeof(BussinessData))]
     partial class BussinessDataModelSnapshot : ModelSnapshot
@@ -18,23 +17,21 @@ namespace Beartic.Api.Migrations.BussinessDataMigrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.14")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
-
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+                .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("Beartic.Core.Entities.Category", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
@@ -45,7 +42,7 @@ namespace Beartic.Api.Migrations.BussinessDataMigrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.HasKey("Id");
 
@@ -56,10 +53,10 @@ namespace Beartic.Api.Migrations.BussinessDataMigrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<Guid>("CustomerId")
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("date")
@@ -84,16 +81,16 @@ namespace Beartic.Api.Migrations.BussinessDataMigrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<Guid?>("OrderId")
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(65,30)");
 
                     b.Property<Guid>("ProductId")
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
@@ -111,7 +108,7 @@ namespace Beartic.Api.Migrations.BussinessDataMigrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -139,10 +136,10 @@ namespace Beartic.Api.Migrations.BussinessDataMigrations
             modelBuilder.Entity("Product_Category", b =>
                 {
                     b.Property<Guid>("category_id")
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<Guid>("product_id")
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.HasKey("category_id", "product_id");
 
@@ -156,7 +153,7 @@ namespace Beartic.Api.Migrations.BussinessDataMigrations
                     b.OwnsOne("Beartic.Shared.ValueObjects.Address", "Address", b1 =>
                         {
                             b1.Property<Guid>("CustomerId")
-                                .HasColumnType("uniqueidentifier");
+                                .HasColumnType("char(36)");
 
                             b1.Property<string>("City")
                                 .IsRequired()
@@ -199,7 +196,7 @@ namespace Beartic.Api.Migrations.BussinessDataMigrations
                     b.OwnsOne("Beartic.Shared.ValueObjects.Document", "Document", b1 =>
                         {
                             b1.Property<Guid>("CustomerId")
-                                .HasColumnType("uniqueidentifier");
+                                .HasColumnType("char(36)");
 
                             b1.Property<string>("Number")
                                 .IsRequired()
@@ -221,7 +218,7 @@ namespace Beartic.Api.Migrations.BussinessDataMigrations
                     b.OwnsOne("Beartic.Shared.ValueObjects.Email", "Email", b1 =>
                         {
                             b1.Property<Guid>("CustomerId")
-                                .HasColumnType("uniqueidentifier");
+                                .HasColumnType("char(36)");
 
                             b1.Property<string>("Address")
                                 .IsRequired()
@@ -239,7 +236,7 @@ namespace Beartic.Api.Migrations.BussinessDataMigrations
                     b.OwnsOne("Beartic.Shared.ValueObjects.Name", "Name", b1 =>
                         {
                             b1.Property<Guid>("CustomerId")
-                                .HasColumnType("uniqueidentifier");
+                                .HasColumnType("char(36)");
 
                             b1.Property<string>("Firstname")
                                 .IsRequired()
@@ -262,7 +259,7 @@ namespace Beartic.Api.Migrations.BussinessDataMigrations
                     b.OwnsOne("Beartic.Shared.ValueObjects.Phone", "Phone", b1 =>
                         {
                             b1.Property<Guid>("CustomerId")
-                                .HasColumnType("uniqueidentifier");
+                                .HasColumnType("char(36)");
 
                             b1.Property<string>("Number")
                                 .IsRequired()
@@ -304,7 +301,7 @@ namespace Beartic.Api.Migrations.BussinessDataMigrations
                     b.OwnsOne("Beartic.Core.ValueObjects.Installment", "Installment", b1 =>
                         {
                             b1.Property<Guid>("OrderId")
-                                .HasColumnType("uniqueidentifier");
+                                .HasColumnType("char(36)");
 
                             b1.Property<decimal>("InstallmentPrice")
                                 .HasColumnType("decimal")
