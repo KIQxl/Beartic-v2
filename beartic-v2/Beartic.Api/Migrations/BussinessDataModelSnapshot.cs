@@ -60,15 +60,15 @@ namespace Beartic.Api.Migrations
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("date")
-                        .HasColumnName("Create_Date");
+                        .HasColumnName("create_Date");
 
                     b.Property<DateTime>("ModifiedAt")
                         .HasColumnType("date")
-                        .HasColumnName("Modification_Date");
+                        .HasColumnName("modification_Date");
 
                     b.Property<int>("Status")
                         .HasColumnType("int")
-                        .HasColumnName("Status");
+                        .HasColumnName("status");
 
                     b.HasKey("Id");
 
@@ -113,20 +113,20 @@ namespace Beartic.Api.Migrations
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("varchar(500)")
-                        .HasColumnName("Description");
+                        .HasColumnName("description");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal")
-                        .HasColumnName("Price");
+                        .HasColumnName("price");
 
                     b.Property<int>("QuantityOnHand")
                         .HasColumnType("int")
-                        .HasColumnName("QuantityOnHand");
+                        .HasColumnName("quantityOnHand");
 
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("varchar(100)")
-                        .HasColumnName("Title");
+                        .HasColumnName("title");
 
                     b.HasKey("Id");
 
@@ -158,32 +158,32 @@ namespace Beartic.Api.Migrations
                             b1.Property<string>("City")
                                 .IsRequired()
                                 .HasColumnType("varchar(100)")
-                                .HasColumnName("Address_City");
+                                .HasColumnName("address_city");
 
                             b1.Property<string>("Country")
                                 .IsRequired()
                                 .HasColumnType("varchar(50)")
-                                .HasColumnName("Address_Country");
+                                .HasColumnName("address_country");
 
                             b1.Property<string>("Number")
                                 .IsRequired()
                                 .HasColumnType("varchar(10)")
-                                .HasColumnName("Address_Number");
+                                .HasColumnName("address_number");
 
                             b1.Property<string>("State")
                                 .IsRequired()
                                 .HasColumnType("varchar(100)")
-                                .HasColumnName("Address_State");
+                                .HasColumnName("address_state");
 
                             b1.Property<string>("Street")
                                 .IsRequired()
                                 .HasColumnType("varchar(100)")
-                                .HasColumnName("Address_Street");
+                                .HasColumnName("address_street");
 
                             b1.Property<string>("ZipCode")
                                 .IsRequired()
                                 .HasColumnType("varchar(8)")
-                                .HasColumnName("Address_ZipCode");
+                                .HasColumnName("address_zipCode");
 
                             b1.HasKey("CustomerId");
 
@@ -201,11 +201,11 @@ namespace Beartic.Api.Migrations
                             b1.Property<string>("Number")
                                 .IsRequired()
                                 .HasColumnType("varchar(14)")
-                                .HasColumnName("Document_Number");
+                                .HasColumnName("document_number");
 
                             b1.Property<int>("Type")
                                 .HasColumnType("int")
-                                .HasColumnName("Document_Type");
+                                .HasColumnName("document_type");
 
                             b1.HasKey("CustomerId");
 
@@ -223,7 +223,7 @@ namespace Beartic.Api.Migrations
                             b1.Property<string>("Address")
                                 .IsRequired()
                                 .HasColumnType("varchar(100)")
-                                .HasColumnName("Email_Address");
+                                .HasColumnName("email_address");
 
                             b1.HasKey("CustomerId");
 
@@ -241,12 +241,12 @@ namespace Beartic.Api.Migrations
                             b1.Property<string>("Firstname")
                                 .IsRequired()
                                 .HasColumnType("varchar(50)")
-                                .HasColumnName("Firstname");
+                                .HasColumnName("name_firstname");
 
                             b1.Property<string>("Lastname")
                                 .IsRequired()
                                 .HasColumnType("varchar(50)")
-                                .HasColumnName("Lastname");
+                                .HasColumnName("name_lastname");
 
                             b1.HasKey("CustomerId");
 
@@ -264,7 +264,7 @@ namespace Beartic.Api.Migrations
                             b1.Property<string>("Number")
                                 .IsRequired()
                                 .HasColumnType("varchar(11)")
-                                .HasColumnName("Phone_Number");
+                                .HasColumnName("phone_number");
 
                             b1.HasKey("CustomerId");
 
@@ -305,19 +305,19 @@ namespace Beartic.Api.Migrations
 
                             b1.Property<decimal>("InstallmentPrice")
                                 .HasColumnType("decimal")
-                                .HasColumnName("Installment_Price");
+                                .HasColumnName("installment_price");
 
                             b1.Property<int>("Installments")
                                 .HasColumnType("int")
-                                .HasColumnName("Installments");
+                                .HasColumnName("installments");
 
                             b1.Property<DateTime>("ModifiedAt")
                                 .HasColumnType("date")
-                                .HasColumnName("Installment_Modification_Date");
+                                .HasColumnName("installment_modification_date");
 
                             b1.Property<decimal>("Price")
                                 .HasColumnType("decimal")
-                                .HasColumnName("Price");
+                                .HasColumnName("price");
 
                             b1.HasKey("OrderId");
 
@@ -346,6 +346,37 @@ namespace Beartic.Api.Migrations
                         .IsRequired();
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Beartic.Core.Entities.Product", b =>
+                {
+                    b.OwnsOne("Beartic.Core.ValueObjects.Images", "Images", b1 =>
+                        {
+                            b1.Property<Guid>("ProductId")
+                                .HasColumnType("char(36)");
+
+                            b1.Property<string>("FirstImageUrl")
+                                .HasColumnType("varchar(300)")
+                                .HasColumnName("image_first");
+
+                            b1.Property<string>("SecondImageUrl")
+                                .HasColumnType("varchar(300)")
+                                .HasColumnName("image_second");
+
+                            b1.Property<string>("ThirdImageUrl")
+                                .HasColumnType("varchar(300)")
+                                .HasColumnName("image_third");
+
+                            b1.HasKey("ProductId");
+
+                            b1.ToTable("products");
+
+                            b1.WithOwner()
+                                .HasForeignKey("ProductId");
+                        });
+
+                    b.Navigation("Images")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Product_Category", b =>

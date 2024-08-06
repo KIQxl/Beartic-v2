@@ -15,22 +15,40 @@ namespace Beartic.Infraestructure.BussinessContext.Mappings
             builder.Property(x => x.Title)
                 .IsRequired()
                 .HasColumnType("varchar(100)")
-                .HasColumnName("Title");
+                .HasColumnName("title");
 
             builder.Property(x => x.Description)
                 .IsRequired()
                 .HasColumnType("varchar(500)")
-                .HasColumnName("Description");
+                .HasColumnName("description");
 
             builder.Property(x => x.Price)
                 .IsRequired()
                 .HasColumnType("decimal")
-                .HasColumnName("Price");
+                .HasColumnName("price");
 
             builder.Property(x => x.QuantityOnHand)
                 .IsRequired()
                 .HasColumnType("int")
-                .HasColumnName("QuantityOnHand");
+                .HasColumnName("quantityOnHand");
+
+            builder.OwnsOne(x => x.Images, image =>
+            {
+                image.Property(x => x.FirstImageUrl)
+                .IsRequired(false)
+                .HasColumnType("varchar(300)")
+                .HasColumnName("image_first");
+
+                image.Property(x => x.SecondImageUrl)
+                .IsRequired(false)
+                .HasColumnType("varchar(300)")
+                .HasColumnName("image_second");
+
+                image.Property(x => x.ThirdImageUrl)
+                .IsRequired(false)
+                .HasColumnType("varchar(300)")
+                .HasColumnName("image_third");
+            });
 
             builder.HasMany(x => x.Categories)
                 .WithMany(x => x.Products)

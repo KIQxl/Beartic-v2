@@ -43,12 +43,19 @@ namespace Beartic.Api.Controllers
         [Route("customers/")]
         public async Task<IActionResult> CreateAsync([FromBody] CreateCustomerDto request)
         {
-            var result = await _services.CreateCustomer(request);
+            try
+            {
+                var result = await _services.CreateCustomer(request);
 
-            if (result.Success)
-                return Created($"v2/customers/{result.Data.Id}", result);
+                //if (result.Success)
+                    return Created($"v2/customers/{result.Data.Id}", result);
 
-            return BadRequest(result);
+                //return BadRequest(result);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
         [HttpPut]

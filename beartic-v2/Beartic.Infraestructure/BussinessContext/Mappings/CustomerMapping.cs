@@ -17,12 +17,12 @@ namespace Beartic.Infraestructure.BussinessContext.Mappings
                 name.Property(n => n.Firstname)
                 .IsRequired()
                 .HasColumnType("varchar(50)")
-                .HasColumnName("Firstname");
+                .HasColumnName("name_firstname");
 
                 name.Property(n => n.Lastname)
                 .IsRequired()
                 .HasColumnType("varchar(50)")
-                .HasColumnName("Lastname");
+                .HasColumnName("name_lastname");
             });
 
             builder.OwnsOne(x => x.Phone, phone =>
@@ -30,7 +30,7 @@ namespace Beartic.Infraestructure.BussinessContext.Mappings
                 phone.Property(p => p.Number)
                 .IsRequired()
                 .HasColumnType("varchar(11)")
-                .HasColumnName("Phone_Number");
+                .HasColumnName("phone_number");
             });
 
             builder.OwnsOne(x => x.Document, document =>
@@ -38,12 +38,12 @@ namespace Beartic.Infraestructure.BussinessContext.Mappings
                 document.Property(d => d.Number)
                 .IsRequired()
                 .HasColumnType("varchar(14)")
-                .HasColumnName("Document_Number");
+                .HasColumnName("document_number");
 
                 document.Property(d => d.Type)
                 .IsRequired()
                 .HasColumnType("int")
-                .HasColumnName("Document_Type");
+                .HasColumnName("document_type");
             });
 
             builder.OwnsOne(x => x.Email, email =>
@@ -51,7 +51,7 @@ namespace Beartic.Infraestructure.BussinessContext.Mappings
                 email.Property(e => e.Address)
                 .IsRequired()
                 .HasColumnType("varchar(100)")
-                .HasColumnName("Email_Address");
+                .HasColumnName("email_address");
             });
 
             builder.OwnsOne(x => x.Address, address =>
@@ -59,32 +59,32 @@ namespace Beartic.Infraestructure.BussinessContext.Mappings
                 address.Property(a => a.Street)
                 .IsRequired()
                 .HasColumnType("varchar(100)")
-                .HasColumnName("Address_Street");
+                .HasColumnName("address_street");
 
                 address.Property(a => a.City)
                 .IsRequired()
                 .HasColumnType("varchar(100)")
-                .HasColumnName("Address_City");
+                .HasColumnName("address_city");
 
                 address.Property(a => a.State)
                 .IsRequired()
                 .HasColumnType("varchar(100)")
-                .HasColumnName("Address_State");
+                .HasColumnName("address_state");
 
                 address.Property(a => a.ZipCode)
                 .IsRequired()
                 .HasColumnType("varchar(8)")
-                .HasColumnName("Address_ZipCode");
+                .HasColumnName("address_zipCode");
 
                 address.Property(a => a.Country)
                 .IsRequired()
                 .HasColumnType("varchar(50)")
-                .HasColumnName("Address_Country");
+                .HasColumnName("address_country");
 
                 address.Property(a => a.Number)
                 .IsRequired()
                 .HasColumnType("varchar(10)")
-                .HasColumnName("Address_Number");
+                .HasColumnName("address_number");
             });
 
             //builder.HasIndex(x => x.Email.Address).IsUnique();

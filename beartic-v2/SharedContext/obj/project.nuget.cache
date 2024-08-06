@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "suFFuqk6Div90tM77j6IRhjUet9q/wUN8vr9NhwiI2vJrqHC1BC0pCh+EJcPMNcgV1pehRfkMtIbly+rUigs5Q==",
+  "dgSpecHash": "7Xwh/GG1+OrvkW13fi2YRHSaVw39u7zAipMhTzF0iFqDXC7YkOiC4lvXW7XfIDqMJqwz6Yth4J2PljxXK1LwMQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kaiqu\\Desktop\\Beartic-v2\\beartic-v2\\SharedContext\\Beartic.Shared.csproj",
+  "projectFilePath": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\SharedContext\\Beartic.Shared.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\kaiqu\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512"
+    "C:\\Users\\Caiaque\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512"
   ],
   "logs": []
 }

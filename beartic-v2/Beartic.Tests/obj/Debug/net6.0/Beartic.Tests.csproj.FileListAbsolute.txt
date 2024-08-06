@@ -198,9 +198,7 @@ C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Tests\bin\Debug\
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Tests\bin\Debug\net6.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Tests\bin\Debug\net6.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Tests\bin\Debug\net6.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Tests\bin\Debug\net6.0\Beartic.Application.dll
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Tests\bin\Debug\net6.0\Beartic.Core.dll
-C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Tests\bin\Debug\net6.0\Beartic.Application.pdb
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Tests\bin\Debug\net6.0\Beartic.Core.pdb
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Tests\obj\Debug\net6.0\Beartic.Tests.csproj.CopyComplete
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Tests\obj\Debug\net6.0\Beartic.Tests.genruntimeconfig.cache
@@ -315,3 +313,7 @@ C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\Beartic.Tests\obj\Debug\net6.0\refi
 C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\Beartic.Tests\obj\Debug\net6.0\Beartic.Tests.pdb
 C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\Beartic.Tests\obj\Debug\net6.0\Beartic.Tests.genruntimeconfig.cache
 C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\Beartic.Tests\obj\Debug\net6.0\ref\Beartic.Tests.dll
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Tests\bin\Debug\net6.0\Beartic.Auth.dll
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Tests\bin\Debug\net6.0\Beartic.Shared.dll
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Tests\bin\Debug\net6.0\Beartic.Auth.pdb
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Tests\bin\Debug\net6.0\Beartic.Shared.pdb

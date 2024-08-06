@@ -15,39 +15,39 @@ namespace Beartic.Infraestructure.BussinessContext.Mappings
             builder.Property(x => x.Date)
                 .IsRequired()
                 .HasColumnType("date")
-                .HasColumnName("Create_Date");
+                .HasColumnName("create_Date");
 
             builder.Property(x => x.ModifiedAt)
                 .IsRequired()
                 .HasColumnType("date")
-                .HasColumnName("Modification_Date");
+                .HasColumnName("modification_Date");
 
             builder.Property(x => x.Status)
                 .IsRequired()
                 .HasColumnType("int")
-                .HasColumnName("Status");
+                .HasColumnName("status");
 
             builder.OwnsOne(x => x.Installment, installment =>
             {
                 installment.Property(i => i.Price)
                 .IsRequired()
                 .HasColumnType("decimal")
-                .HasColumnName("Price");
+                .HasColumnName("price");
 
                 installment.Property(i => i.Installments)
                 .IsRequired()
                 .HasColumnType("int")
-                .HasColumnName("Installments");
+                .HasColumnName("installments");
 
                 installment.Property(i => i.InstallmentPrice)
                 .IsRequired()
                 .HasColumnType("decimal")
-                .HasColumnName("Installment_Price");
+                .HasColumnName("installment_price");
 
                 installment.Property(i => i.ModifiedAt)
                 .IsRequired()
                 .HasColumnType("date")
-                .HasColumnName("Installment_Modification_Date");
+                .HasColumnName("installment_modification_date");
             });
         }
     }

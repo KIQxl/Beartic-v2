@@ -51,19 +51,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kaiqu\\.nuget\\packages\\": {}
+    "C:\\Users\\Caiaque\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kaiqu\\Desktop\\Beartic-v2\\beartic-v2\\Beartic.Auth\\Beartic.Auth.csproj",
+      "projectUniqueName": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Auth\\Beartic.Auth.csproj",
       "projectName": "Beartic.Auth",
-      "projectPath": "C:\\Users\\kaiqu\\Desktop\\Beartic-v2\\beartic-v2\\Beartic.Auth\\Beartic.Auth.csproj",
-      "packagesPath": "C:\\Users\\kaiqu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kaiqu\\Desktop\\Beartic-v2\\beartic-v2\\Beartic.Auth\\obj\\",
+      "projectPath": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Auth\\Beartic.Auth.csproj",
+      "packagesPath": "C:\\Users\\Caiaque\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Auth\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kaiqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Caiaque\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -77,8 +77,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\kaiqu\\Desktop\\Beartic-v2\\beartic-v2\\SharedContext\\Beartic.Shared.csproj": {
-              "projectPath": "C:\\Users\\kaiqu\\Desktop\\Beartic-v2\\beartic-v2\\SharedContext\\Beartic.Shared.csproj"
+            "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\SharedContext\\Beartic.Shared.csproj": {
+              "projectPath": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\SharedContext\\Beartic.Shared.csproj"
             }
           }
         }
@@ -108,7 +108,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

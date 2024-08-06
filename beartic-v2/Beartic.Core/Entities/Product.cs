@@ -1,4 +1,5 @@
-﻿using Beartic.Shared.Entities;
+﻿using Beartic.Core.ValueObjects;
+using Beartic.Shared.Entities;
 using Flunt.Validations;
 
 namespace Beartic.Core.Entities
@@ -30,6 +31,8 @@ namespace Beartic.Core.Entities
         public string Description { get; private set; }
         public decimal Price { get; private set; }
         public int QuantityOnHand { get; private set; }
+        public Images Images { get; private set; }
+        
         public IList<Category> Categories { get; private set; }
 
         public void DecreaseQuantityProduct(int quantity)
@@ -80,6 +83,11 @@ namespace Beartic.Core.Entities
             }
 
             Categories.Add(category);
+        }
+
+        public void AddImages(Images images)
+        {
+            this.Images = images;
         }
     }
 }

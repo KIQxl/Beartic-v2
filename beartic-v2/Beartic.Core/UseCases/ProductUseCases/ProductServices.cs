@@ -1,6 +1,7 @@
 ﻿using Beartic.Core.Entities;
 using Beartic.Core.Interfaces;
 using Beartic.Core.UseCases.ProductUseCases.ProductDtos.ProductDtos;
+using Beartic.Core.ValueObjects;
 
 namespace Beartic.Core.UseCases.ProductUseCases
 {
@@ -66,7 +67,9 @@ namespace Beartic.Core.UseCases.ProductUseCases
             if (product == null)
                 return new ProductResult(404, "Produto nao encontrado");
 
+            var image = new Images(request.FirstImageUrl, request.SecondImageUrl, request.ThirdImageUrl);
             product.SetProduct(request.Title, request.Description, request.Price, request.QuantityOnHand);
+            product.AddImages(image);
 
             if(product.Invalid)
                 return new ProductResult(401, "Erro ao cadastrar produto", product.Notifications);

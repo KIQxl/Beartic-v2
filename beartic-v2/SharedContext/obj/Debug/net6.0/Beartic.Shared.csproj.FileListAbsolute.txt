@@ -23,3 +23,15 @@ C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\Bear
 C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\refint\Beartic.Shared.dll
 C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\Beartic.Shared.pdb
 C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\ref\Beartic.Shared.dll
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\SharedContext\bin\Debug\net6.0\Beartic.Shared.deps.json
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\SharedContext\bin\Debug\net6.0\Beartic.Shared.dll
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\SharedContext\bin\Debug\net6.0\Beartic.Shared.pdb
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\Beartic.Shared.csproj.AssemblyReference.cache
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\Beartic.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\Beartic.Shared.AssemblyInfoInputs.cache
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\Beartic.Shared.AssemblyInfo.cs
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\Beartic.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\Beartic.Shared.dll
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\refint\Beartic.Shared.dll
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\Beartic.Shared.pdb
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\ref\Beartic.Shared.dll

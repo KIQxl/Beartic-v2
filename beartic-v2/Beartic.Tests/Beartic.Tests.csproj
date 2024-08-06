@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="UseCasesTests\UseCasesRole\**" />
+    <EmbeddedResource Remove="UseCasesTests\UseCasesRole\**" />
+    <None Remove="UseCasesTests\UseCasesRole\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="2.2.8" />
     <PackageReference Include="MSTest.TestFramework" Version="2.2.8" />
@@ -18,10 +24,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Beartic.Auth\Beartic.Auth.csproj" />
     <ProjectReference Include="..\Beartic.Core\Beartic.Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="UseCasesTests\UseCasesRole\" />
   </ItemGroup>
 
 </Project>
