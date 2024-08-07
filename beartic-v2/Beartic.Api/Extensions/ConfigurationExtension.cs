@@ -8,16 +8,17 @@ using Beartic.Core.UseCases.OrderUseCases;
 using Beartic.Core.UseCases.ProductUseCases;
 using Beartic.Infraestructure.AuthContext.Repositories;
 using Beartic.Infraestructure.BussinessContext.Repositories;
+using Beartic.Infraestructure.BussinessContext.Transactions;
 using Microsoft.EntityFrameworkCore;
 
 namespace Beartic.Api.Extensions
 {
     public static class ConfigurationExtension
     {
-        public static void AddContexts(this IServiceCollection services)
+        public static void AddContexts(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<Infraestructure.BussinessContext.Data.BussinessData>(opts => opts.UseMySql("server=localhost; database=beartic-v2;user=root;password=123456", ServerVersion.AutoDetect("server=localhost; database=beartic-v2;user=root;password=123456"), b => b.MigrationsAssembly("Beartic.Api")));
-            services.AddDbContext<Infraestructure.AuthContext.Data.AuthData>(opts => opts.UseMySql("server=localhost; database=beartic-v2;user=root;password=123456", ServerVersion.AutoDetect("server=localhost; database=beartic-v2;user=root;password=123456"), b => b.MigrationsAssembly("Beartic.Api")));
+            services.AddDbContext<Infraestructure.BussinessContext.Data.BussinessData>(opts => opts.UseMySql(configuration.GetConnectionString("Beartic-v2"), ServerVersion.AutoDetect(configuration.GetConnectionString("Beartic-v2")), b => b.MigrationsAssembly("Beartic.Api")));
+            services.AddDbContext<Infraestructure.AuthContext.Data.AuthData>(opts => opts.UseMySql(configuration.GetConnectionString("Beartic-v2"), ServerVersion.AutoDetect(configuration.GetConnectionString("Beartic-v2")), b => b.MigrationsAssembly("Beartic.Api")));
         }
 
         public static void AddRepositoriesDependencyInjection(this IServiceCollection services)
@@ -28,6 +29,7 @@ namespace Beartic.Api.Extensions
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<IRoleRepository, RoleRepositoy>();
+            services.AddTransient<IUow, Uow>();
         }
 
         public static void AddServicesDependencyInjection(this IServiceCollection services)

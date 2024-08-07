@@ -3,7 +3,7 @@ using Beartic.Api.Extensions;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-builder.Services.AddContexts();
+builder.Services.AddContexts(builder.Configuration);
 builder.Services.AddRepositoriesDependencyInjection();
 builder.Services.AddServicesDependencyInjection();
 
