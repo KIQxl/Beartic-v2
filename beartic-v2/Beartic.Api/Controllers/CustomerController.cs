@@ -67,7 +67,7 @@ namespace Beartic.Api.Controllers
 
                 if (result.Success)
                 {
-                    _uow.Commit();
+                    await _uow.Commit();
                     return Created($"v2/customers/{result.Data.Id}", result);
                 }
 
@@ -90,7 +90,7 @@ namespace Beartic.Api.Controllers
 
                 if (result.Success)
                 {
-                    _uow.Commit();
+                    await _uow.Commit();
                     return Ok(result);
                 }
 
@@ -113,7 +113,7 @@ namespace Beartic.Api.Controllers
 
                 if (result.Success)
                 {
-                    _uow.Commit();
+                    await _uow.Commit();
                     return Ok(result);
                 }
 

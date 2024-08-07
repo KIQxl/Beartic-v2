@@ -53,5 +53,21 @@ namespace Beartic.Core.UseCases.OrderUseCases
 
             return new OrderResult(200, $"Pedido {order.Id}", new OrderResultData(order.Id.ToString(), order.Customer.Name.ToString(), order.Date, order.Status, order.Installment.Price));
         }
+
+        public async Task<OrderResult> PayOrderAsync(PayOrderDto payRequest)
+        {
+            if(payRequest.Amount < 0)
+                return  new OrderResult(401, "O valor informado não é válido");
+
+            var order = await _orderRepository.GetByIdAsync(payRequest.Id);
+
+            if (order == null)
+                return new OrderResult(404, "Pedido não encontrado");
+
+            order.Pay(payRequest.Amount);
+            _orderRepository.Update(order);
+
+            return new OrderResult(200, "Pagamento realizado!", new OrderResultData(order.Id.ToString(), order.Customer.Name.ToString(), order.Date, order.Status, order.Installment.Price));
+        }
     }
 }

@@ -45,6 +45,9 @@ namespace Beartic.Core.Entities
 
         public void Pay(decimal amount)
         {
+            if (amount < 0)
+                return;
+
             if(Installment.Price == amount)
             {
                 Installment.PayDebit();

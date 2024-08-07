@@ -32,5 +32,11 @@ namespace Beartic.Infraestructure.BussinessContext.Repositories
                 return null;
             }
         }
+
+        public void Update(Order order)
+        {
+            _ctx.orders.Entry(order).State = EntityState.Modified;
+            _ctx.Update(order);
+        }
     }
 }

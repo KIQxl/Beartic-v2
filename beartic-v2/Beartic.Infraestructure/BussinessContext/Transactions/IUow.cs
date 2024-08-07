@@ -2,7 +2,7 @@
 {
     public interface IUow
     {
-        public void Commit();
+        public Task Commit();
         public void Rollback();
     }
 }

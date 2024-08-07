@@ -6,5 +6,6 @@ namespace Beartic.Core.Interfaces
     {
         public Task AddAsync(Order order);
         public Task<Order> GetByIdAsync(string id);
+        public void Update(Order order);
     }
 }

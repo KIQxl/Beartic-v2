@@ -11,9 +11,9 @@ namespace Beartic.Infraestructure.BussinessContext.Transactions
             _ctx = ctx;
         }
 
-        public void Commit()
+        public async Task Commit()
         {
-            _ctx.SaveChangesAsync();
+            await _ctx.SaveChangesAsync();
         }
 
         public void Rollback()

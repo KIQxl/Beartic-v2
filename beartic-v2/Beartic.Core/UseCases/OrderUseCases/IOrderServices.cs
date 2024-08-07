@@ -6,5 +6,6 @@ namespace Beartic.Core.UseCases.OrderUseCases
     {
         public Task<OrderResult> CreateOrder(CreateOrderDto request);
         public Task<OrderResult> GetOrderByIdAsync(string id);
+        public Task<OrderResult> PayOrderAsync(PayOrderDto payRequest);
     }
 }
