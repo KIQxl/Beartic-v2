@@ -11,5 +11,6 @@ namespace Beartic.Core.Interfaces
         public bool DocumentExists(string document);
         public bool EmailExists(string document);
         public Task<Customer> GetByDocumentAsync(string document);
+        public Task<IList<Customer>> GetAllAsync();
     }
 }

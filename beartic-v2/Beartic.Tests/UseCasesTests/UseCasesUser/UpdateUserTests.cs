@@ -33,13 +33,13 @@ namespace Beartic.Tests.UseCasesTests.UseCasesUser
         }
 
         [TestMethod]
-        public void GivenInvalidRequestReturnResultStatus401()
+        public void GivenInvalidRequestReturnResultStatus400()
         {
             var services = new UserServices(_userRepository, _roleRepository);
             var request = new UpdateUserDto("123", "", "user", "user", "emailemail.com", "11238844");
             var result = services.Update(request);
 
-            Assert.IsTrue(!result.Result.Success && result.Result.Status == 401 && result.Result.Errors.Any());
+            Assert.IsTrue(!result.Result.Success && result.Result.Status == 400 && result.Result.Errors.Any());
         }
 
         [TestMethod]

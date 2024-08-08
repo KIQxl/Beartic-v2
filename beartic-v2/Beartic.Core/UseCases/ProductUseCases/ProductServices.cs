@@ -21,7 +21,7 @@ namespace Beartic.Core.UseCases.ProductUseCases
             var product = new Product(request.Title, request.Description, request.Price, request.QuantityOnHand);
 
             if (product.Invalid)
-                return new ProductResult(401, "Erro no cadastro de produto", product.Notifications);
+                return new ProductResult(400, "Erro no cadastro de produto", product.Notifications);
 
             foreach (var id in request.Categories)
             {
@@ -72,7 +72,7 @@ namespace Beartic.Core.UseCases.ProductUseCases
             product.AddImages(image);
 
             if(product.Invalid)
-                return new ProductResult(401, "Erro ao cadastrar produto", product.Notifications);
+                return new ProductResult(400, "Erro ao cadastrar produto", product.Notifications);
 
             await _productRepository.Add(product);
 

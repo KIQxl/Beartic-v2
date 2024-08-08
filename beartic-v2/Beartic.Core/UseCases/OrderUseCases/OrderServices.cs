@@ -17,6 +17,18 @@ namespace Beartic.Core.UseCases.OrderUseCases
             _productRepository = productRepository;
         }
 
+        public async Task<OrderResult> CancelOrderAsync(string id)
+        {
+            var order = await _orderRepository.GetByIdAsync(id);
+            if(order == null)
+                return new OrderResult(404, "Pedido não encontrado");
+
+            order.Cancel();
+            _orderRepository.Update(order);
+
+            return new OrderResult(200, "Pedido cancelado.", new OrderResultData(order.Id.ToString(), order.Customer.Name.ToString(), order.Date, order.Status, order.Installment.Price));
+        }
+
         public async Task<OrderResult> CreateOrder(CreateOrderDto request)
         {
             var customer = await _customerRepository.GetByIdAsync(request.customerId);
@@ -54,10 +66,43 @@ namespace Beartic.Core.UseCases.OrderUseCases
             return new OrderResult(200, $"Pedido {order.Id}", new OrderResultData(order.Id.ToString(), order.Customer.Name.ToString(), order.Date, order.Status, order.Installment.Price));
         }
 
+        public async Task<OrdersResult> ListOrdersAsync()
+        {
+            var orders = await _orderRepository.GetAllAsync();
+            if (!orders.Any())
+                return new OrdersResult(404, "Nenhum pedido encontrado :/");
+
+            var ordersResult = new List<OrderResultData>();
+
+            foreach(var order in orders)
+            {
+                var orderResultData = new OrderResultData(order.Id.ToString(), order.Customer.Name.ToString(), order.Date, order.Status, order.Installment.Price);
+                ordersResult.Add(orderResultData);
+            }
+
+            return new OrdersResult(200, "Pedidos encontrados.", ordersResult);
+        }
+
+        public async Task<OrderResult> ParcelOrderAsync(ParcelOrderDto parcelRequest)
+        {
+            if(parcelRequest.Installments <= 0)
+                return new OrderResult(400, "O número de parcelas informado não é válido");
+
+            var order = await _orderRepository.GetByIdAsync(parcelRequest.Id);
+
+            if(order == null)
+                return new OrderResult(404, "Pedido não encontrado");
+
+            order.Parcel(parcelRequest.Installments);
+            _orderRepository.Update(order);
+
+            return new OrderResult(200, "Parcelamento realizado!", new OrderResultData(order.Id.ToString(), order.Customer.Name.ToString(), order.Date, order.Status, order.Installment.Price));
+        }
+
         public async Task<OrderResult> PayOrderAsync(PayOrderDto payRequest)
         {
             if(payRequest.Amount < 0)
-                return  new OrderResult(401, "O valor informado não é válido");
+                return  new OrderResult(400, "O valor informado não é válido");
 
             var order = await _orderRepository.GetByIdAsync(payRequest.Id);
 

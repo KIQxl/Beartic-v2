@@ -22,13 +22,13 @@ namespace Beartic.Tests.UseCasesTests.UseCasesCategory
         }
 
         [TestMethod]
-        public void GivenInvalidRequestReturnResultStatus401()
+        public void GivenInvalidRequestReturnResultStatus400()
         {
             var services = new CategoryServices(_categoryRepository);
             var request = new CreateCategoryDto("", "Category");
 
             var result = services.CreateAsync(request);
-            Assert.IsTrue(!result.Result.Success && result.Result.Status == 401);
+            Assert.IsTrue(!result.Result.Success && result.Result.Status == 400);
         }
     }
 }

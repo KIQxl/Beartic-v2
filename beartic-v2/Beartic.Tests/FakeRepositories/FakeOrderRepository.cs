@@ -15,6 +15,11 @@ namespace Beartic.Tests.FakeRepositories
             throw new NotImplementedException();
         }
 
+        public Task<IEnumerable<Order>> GetAllAsync()
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<Order> GetByIdAsync(string id)
         {
             if(id == "1")
@@ -32,6 +37,11 @@ namespace Beartic.Tests.FakeRepositories
             }
 
             return null;
+        }
+
+        public void Update(Order order)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -32,7 +32,10 @@ namespace Beartic.Api.Controllers
                     return Created($"v2/orders/{result.Data.Id}", result);
                 }
 
-                return BadRequest(result);
+                if (result.Status == 400)
+                    return BadRequest(result);
+
+                return NotFound(result);
             }
             catch (Exception ex)
             {
@@ -59,7 +62,7 @@ namespace Beartic.Api.Controllers
             }
         }
 
-        [HttpPost]
+        [HttpPut]
         [Route("orders/pay")]
         public async Task<IActionResult> PayOrder([FromBody] PayOrderDto payRequest)
         {
@@ -73,7 +76,76 @@ namespace Beartic.Api.Controllers
                     return Ok(result);
                 }
 
-                return BadRequest(result);
+                if (result.Status == 400)
+                    return BadRequest(result);
+
+                return NotFound(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPut]
+        [Route("orders/parcel")]
+        public async Task<IActionResult> ParcelOrder([FromBody] ParcelOrderDto parcelRequest)
+        {
+            try
+            {
+                var result = await _services.ParcelOrderAsync(parcelRequest);
+
+                if (result.Success)
+                {
+                    await _uow.Commit();
+                    return Ok(result);
+                }
+
+                if (result.Status == 400)
+                    return BadRequest(result);
+
+                return NotFound(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("orders")]
+        public async Task<IActionResult> GetAllOrders()
+        {
+            try
+            {
+                var result = await _services.ListOrdersAsync();
+
+                if (result.Success)
+                    return Ok(result);
+
+                return NotFound(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPut]
+        [Route("orders/cancel/{id}")]
+        public async Task<IActionResult> CancelOrder([FromRoute] string id)
+        {
+            try
+            {
+                var result = await _services.CancelOrderAsync(id);
+
+                if (result.Success)
+                {
+                    await _uow.Commit();
+                    return Ok(result);
+                }
+
+                return NotFound(result);
             }
             catch (Exception ex)
             {

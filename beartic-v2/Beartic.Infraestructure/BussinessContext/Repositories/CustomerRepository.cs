@@ -50,6 +50,18 @@ namespace Beartic.Infraestructure.BussinessContext.Repositories
             }
         }
 
+        public async Task<IList<Customer>> GetAllAsync()
+        {
+            try
+            {
+                return await _ctx.customers.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
         public async Task<Customer> GetByDocumentAsync(string document)
         {
             try

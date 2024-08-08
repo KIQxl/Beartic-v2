@@ -49,7 +49,7 @@ namespace Beartic.Api.Controllers
                 if (result.Success)
                     return Ok(result);
 
-                return BadRequest(result);
+                return NotFound(result);
             }
             catch (Exception ex)
             {
@@ -94,7 +94,10 @@ namespace Beartic.Api.Controllers
                     return Ok(result);
                 }
 
-                return BadRequest(result);
+                if(result.Status == 400)
+                    return BadRequest(result);
+
+                return NotFound();
             }
             catch(Exception ex)
             {
@@ -117,11 +120,30 @@ namespace Beartic.Api.Controllers
                     return Ok(result);
                 }
 
-                return BadRequest(result);
+                return NotFound(result);
             }
             catch (Exception ex)
             {
                 _uow.Rollback();
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("customers")]
+        public async Task<IActionResult> GetAll()
+        {
+            try
+            {
+                var result = await _services.GetCustomersAsync();
+
+                if (result.Success)
+                    return Ok(result);
+
+                return NotFound(result);
+            }
+            catch (Exception ex)
+            {
                 return StatusCode(500, ex.Message);
             }
         }

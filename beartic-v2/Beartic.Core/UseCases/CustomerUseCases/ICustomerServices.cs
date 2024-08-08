@@ -7,7 +7,8 @@ namespace Beartic.Core.UseCases.CustomerUseCases
         public Task<CustomerResult> CreateCustomer(CreateCustomerDto request);
         public Task<CustomerResult> Remove(string id);
         public Task<CustomerResult> Update(UpdateCustomerDto request);
-        public Task<GetCustomerResult> GetCustomerByDocument(string document);
-        public Task<GetCustomerResult> GetCustomerById(string id);
+        public Task<CustomerResult> GetCustomerByDocument(string document);
+        public Task<CustomerResult> GetCustomerById(string id);
+        public Task<CustomersResult> GetCustomersAsync();
     }
 }

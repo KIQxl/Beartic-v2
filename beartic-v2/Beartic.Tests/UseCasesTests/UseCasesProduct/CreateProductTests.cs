@@ -23,13 +23,13 @@ namespace Beartic.Tests.UseCasesTests.UseCasesProduct
         }
 
         [TestMethod]
-        public void GivenInvalidRequestReturnResultStatus401() 
+        public void GivenInvalidRequestReturnResultStatus400() 
         {
             var services = new ProductServices(_repository, _categoryRepository);
             var request = new CreateProductDto("P", "Produto criado par", -1, -10, new List<string> { "123" });
             var result = services.CreateProduct(request);
 
-            Assert.IsTrue(!result.Result.Success && result.Result.Status == 401 && result.Result.Errors.Any());
+            Assert.IsTrue(!result.Result.Success && result.Result.Status == 400 && result.Result.Errors.Any());
         }
     }
 }

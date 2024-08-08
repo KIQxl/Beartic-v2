@@ -28,7 +28,7 @@ namespace Beartic.Auth.UseCases.RoleUseCases
             var role = new Role(request.Name, request.Active);
 
             if (role.Invalid)
-                return new RoleResult(401, "Erro ao cadastrar perfil", role.Notifications);
+                return new RoleResult(400, "Erro ao cadastrar perfil", role.Notifications);
 
             await _roleRepository.Add(role);
 

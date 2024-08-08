@@ -59,5 +59,10 @@ namespace Beartic.Tests.FakeRepositories
 
             return Task.FromResult<Customer>(null);
         }
+
+        public Task<IList<Customer>> GetAllAsync()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

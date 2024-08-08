@@ -33,13 +33,13 @@ namespace Beartic.Tests.UseCasesTests.UseCasesCustomer
         }
 
         [TestMethod]
-        public void GivenInvalidCustomerRequestReturnResultStatus401()
+        public void GivenInvalidCustomerRequestReturnResultStatus400()
         {
             var customerServices = new CustomerServices(_customerRepository);
             var updateCustomerDto = new UpdateCustomerDto("123", "Update", "lastname ", "updateemail.com", "11922334455", "", EDocumentType.CPF, "rua", "", "estado", "cep", "país", "numero");
             var result = customerServices.Update(updateCustomerDto);
 
-            Assert.IsTrue(!result.Result.Success && result.Result.Message == "Não foi possível alterar os dados" && result.Result.Status == 401 && result.Result.Errors.Any());
+            Assert.IsTrue(!result.Result.Success && result.Result.Message == "Não foi possível alterar os dados" && result.Result.Status == 400 && result.Result.Errors.Any());
         }
     }
 }

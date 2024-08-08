@@ -24,23 +24,23 @@ namespace Beartic.Tests.UseCasesTests.UseCasesUser
         }
 
         [TestMethod]
-        public void GivenInvalidRequestReturnResultStatus401()
+        public void GivenInvalidRequestReturnResultStatus400()
         {
             var services = new UserServices(_userRepository, _roleRepository);
             var request = new CreateUserDto("", "", "", "", "teste.com", "65950707078", EDocumentType.CPF, "119213322", "123489", new List<string> { "123", "12", "1" });
             var response = services.Create(request);
 
-            Assert.IsTrue(!response.Result.Success && response.Result.Status == 401 && response.Result.Message == "Usuário não cadastrado" && response.Result.Errors.Any());
+            Assert.IsTrue(!response.Result.Success && response.Result.Status == 400 && response.Result.Message == "Usuário não cadastrado" && response.Result.Errors.Any());
         }
 
         [TestMethod]
-        public void GivenUserExistsReturnResultStatus401()
+        public void GivenUserExistsReturnResultStatus400()
         {
             var services = new UserServices(_userRepository, _roleRepository);
             var request = new CreateUserDto("123", "user1", "kaique", "alves", "exists@email.com", "65950707079", EDocumentType.CPF, "11922113322", "123456789", new List<string> { "123", "12", "1" });
             var response = services.Create(request);
 
-            Assert.IsTrue(!response.Result.Success && response.Result.Status == 401 && response.Result.Message == "O documento informado já está cadastrado.");
+            Assert.IsTrue(!response.Result.Success && response.Result.Status == 400 && response.Result.Message == "O documento informado já está cadastrado.");
         }
     }
 }

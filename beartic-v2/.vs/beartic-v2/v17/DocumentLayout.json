@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.api\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|solutionrelative:beartic.api\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.api\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|solutionrelative:beartic.api\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4ACA8F79-35BC-49B9-955C-033017A2DC1A}|Beartic.Core\\Beartic.Core.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.core\\usecases\\orderusecases\\orderservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4ACA8F79-35BC-49B9-955C-033017A2DC1A}|Beartic.Core\\Beartic.Core.csproj|solutionrelative:beartic.core\\usecases\\orderusecases\\orderservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DDBBACC1-375C-4D71-A24A-DDED3193A72B}|Beartic.Infraestructure\\Beartic.Infraestructure.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.infraestructure\\bussinesscontext\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDBBACC1-375C-4D71-A24A-DDED3193A72B}|Beartic.Infraestructure\\Beartic.Infraestructure.csproj|solutionrelative:beartic.infraestructure\\bussinesscontext\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A5DB681-C420-4750-ADB1-1809F0C1EE4D}|Beartic.Tests\\Beartic.Tests.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.tests\\fakerepositories\\fakecustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A5DB681-C420-4750-ADB1-1809F0C1EE4D}|Beartic.Tests\\Beartic.Tests.csproj|solutionrelative:beartic.tests\\fakerepositories\\fakecustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +34,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Api\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "Beartic.Api\\Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Api\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "Beartic.Api\\Controllers\\OrderController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD0AAAASAAAA",
+              "DocumentIndex": 2,
+              "Title": "FakeCustomerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\FakeRepositories\\FakeCustomerRepository.cs",
+              "RelativeDocumentMoniker": "Beartic.Tests\\FakeRepositories\\FakeCustomerRepository.cs",
+              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Tests\\FakeRepositories\\FakeCustomerRepository.cs",
+              "RelativeToolTip": "Beartic.Tests\\FakeRepositories\\FakeCustomerRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T12:46:35.037Z",
+              "WhenOpened": "2024-08-08T15:13:47.744Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "OrderServices.cs",
-              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Core\\UseCases\\OrderUseCases\\OrderServices.cs",
-              "RelativeDocumentMoniker": "Beartic.Core\\UseCases\\OrderUseCases\\OrderServices.cs",
-              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Core\\UseCases\\OrderUseCases\\OrderServices.cs",
-              "RelativeToolTip": "Beartic.Core\\UseCases\\OrderUseCases\\OrderServices.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAowEEAAAAAAAAA",
+              "Title": "CustomerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Infraestructure\\BussinessContext\\Repositories\\CustomerRepository.cs",
+              "RelativeDocumentMoniker": "Beartic.Infraestructure\\BussinessContext\\Repositories\\CustomerRepository.cs",
+              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Infraestructure\\BussinessContext\\Repositories\\CustomerRepository.cs",
+              "RelativeToolTip": "Beartic.Infraestructure\\BussinessContext\\Repositories\\CustomerRepository.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowDQAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T12:46:32.134Z",
+              "WhenOpened": "2024-08-08T15:13:38.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Api\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "Beartic.Api\\Controllers\\CustomerController.cs",
+              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Api\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "Beartic.Api\\Controllers\\CustomerController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwJIAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-08T15:10:55.837Z",
               "EditorCaption": ""
             }
           ]

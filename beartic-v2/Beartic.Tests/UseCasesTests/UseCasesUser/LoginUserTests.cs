@@ -23,13 +23,13 @@ namespace Beartic.Tests.UseCasesTests.UseCasesUser
         }
 
         [TestMethod]
-        public void GivenInvalidPasswordRequestReturnResultStatus401()
+        public void GivenInvalidPasswordRequestReturnResultStatus400()
         {
             var services = new UserServices(_userRepository, _roleRepository);
             var request = new RequestLoginDto("user", "12345689");
             var result = services.Login(request);
 
-            Assert.IsTrue(!result.Result.Success && result.Result.Status == 401);
+            Assert.IsTrue(!result.Result.Success && result.Result.Status == 400);
         }
 
         [TestMethod]

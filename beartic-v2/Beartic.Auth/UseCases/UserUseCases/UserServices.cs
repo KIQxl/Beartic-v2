@@ -37,10 +37,10 @@ namespace Beartic.Auth.UseCases.UserUseCases
             }
 
             if (user.Invalid)
-                return new UserResult(401, "Usuário não cadastrado", user.Notifications);
+                return new UserResult(400, "Usuário não cadastrado", user.Notifications);
 
             if(await _userRepository.EmailExists(user.Email.Address))
-                return new UserResult(401, "O documento informado já está cadastrado.");
+                return new UserResult(400, "O documento informado já está cadastrado.");
 
             await _userRepository.Add(user);
 
@@ -65,7 +65,7 @@ namespace Beartic.Auth.UseCases.UserUseCases
                 return new LoginResult(404, "Usuário não encontrado");
 
             if(!user.Password.Auth(request.Password))
-                return new LoginResult(401, "Credenciais incorretas");
+                return new LoginResult(400, "Credenciais incorretas");
 
             return new LoginResult(200, "Autenticado", new LoginResultData(user.Id.ToString(), user.Username, user.Email.Address));
         }
@@ -85,7 +85,7 @@ namespace Beartic.Auth.UseCases.UserUseCases
         public async Task<UserResult> Update(UpdateUserDto request)
         {
             if(request.Invalid)
-                return new UserResult(401, "Erro ao atualizar usuário", request.Notifications);
+                return new UserResult(400, "Erro ao atualizar usuário", request.Notifications);
 
             var user = await _userRepository.GetByIdAsync(request.Id);
 

@@ -21,6 +21,11 @@ namespace Beartic.Infraestructure.BussinessContext.Repositories
             }
         }
 
+        public async Task<IEnumerable<Order>> GetAllAsync()
+        {
+            return await _ctx.orders.Where(x => x.Status == Core.Enums.EOrderStatus.WaitingPayment || x.Status == Core.Enums.EOrderStatus.WaitingDelivery).ToListAsync();
+        }
+
         public async Task<Order> GetByIdAsync(string id)
         {
             try
@@ -35,8 +40,15 @@ namespace Beartic.Infraestructure.BussinessContext.Repositories
 
         public void Update(Order order)
         {
-            _ctx.orders.Entry(order).State = EntityState.Modified;
-            _ctx.Update(order);
+            try
+            {
+                _ctx.orders.Entry(order).State = EntityState.Modified;
+                _ctx.Update(order);
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
         }
     }
 }

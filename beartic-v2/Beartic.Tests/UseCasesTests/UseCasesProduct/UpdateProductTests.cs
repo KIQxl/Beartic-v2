@@ -33,13 +33,13 @@ namespace Beartic.Tests.UseCasesTests.UseCasesProduct
         }
 
         [TestMethod]
-        public void GivenInvalidRequestReturnResultStatus401BadRequest()
+        public void GivenInvalidRequestReturnResultStatus400BadRequest()
         {
             var services = new ProductServices(_repository, _categoryRepository);
             var request = new UpdateProductDto("1", "", "No", 0m, 0);
             var result = services.UpdateProduct(request);
 
-            Assert.IsTrue(!result.Result.Success && result.Result.Status == 401 && result.Result.Message == "Erro ao cadastrar produto");
+            Assert.IsTrue(!result.Result.Success && result.Result.Status == 400 && result.Result.Message == "Erro ao cadastrar produto");
         }
     }
 }

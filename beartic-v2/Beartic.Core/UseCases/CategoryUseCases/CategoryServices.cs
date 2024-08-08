@@ -18,7 +18,7 @@ namespace Beartic.Core.UseCases.CategoryUseCases
             var category = new Category(request.CategoryName, request.CategoryDescription);
 
             if (category.Invalid)
-                return new CategoryResult(401, "Categoria não cadastrada", category.Notifications);
+                return new CategoryResult(400, "Categoria não cadastrada", category.Notifications);
 
             await _categoryRepository.Add(category);
 
