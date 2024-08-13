@@ -17,7 +17,7 @@ namespace Beartic.Tests.UseCasesTests.UseCasesUser
         public void GivenValidRequestReturnResultStatus201()
         {
             var services = new UserServices(_userRepository, _roleRepository);
-            var request = new CreateUserDto("124", "user1", "kaique", "alves", "email@teste.com", "65950707079", EDocumentType.CPF, "11922113322", "123456789", new List<string> { "123", "12", "1"});
+            var request = new CreateUserDto("124", "user1", "kaique", "alves", "email@teste.com", "65950707079", EDocumentType.CPF, "11922113322", "123456789", new List<string> { "123" });
             var response = services.Create(request);
 
             Assert.IsTrue(response.Result.Success && response.Result.Status == 201);

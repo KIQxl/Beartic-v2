@@ -123,5 +123,49 @@ namespace Beartic.Api.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+
+        [HttpPut]
+        [Route("users/add-role")]
+        public async Task<IActionResult> AddRole([FromBody] AlterRole request)
+        {
+            try
+            {
+                var result = await _userServices.AddRole(request);
+
+                if(result.Success)
+                {
+                    await _uow.Commit();
+                    return Ok(result);
+                }
+
+                return NotFound(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPut]
+        [Route("users/remove-role")]
+        public async Task<IActionResult> RemoveRole([FromBody] AlterRole request)
+        {
+            try
+            {
+                var result = await _userServices.RemoveRole(request);
+
+                if (result.Success)
+                {
+                    await _uow.Commit();
+                    return Ok(result);
+                }
+
+                return NotFound(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }

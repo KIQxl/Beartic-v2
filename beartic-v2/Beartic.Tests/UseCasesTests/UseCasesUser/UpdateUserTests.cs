@@ -16,7 +16,7 @@ namespace Beartic.Tests.UseCasesTests.UseCasesUser
         public void GivenValidRequestReturnResultStatus201()
         {
             var services = new UserServices(_userRepository, _roleRepository);
-            var request = new UpdateUserDto("123", "user", "user", "user", "email@email.com", "11299338844");
+            var request = new UpdateUserDto("123", "user", "user", "user", "email@email.com", "11299338844", "79008677083", Shared.Enums.EDocumentType.CPF);
             var result = services.Update(request);
 
             Assert.IsTrue(result.Result.Success && result.Result.Status == 201);
@@ -26,7 +26,7 @@ namespace Beartic.Tests.UseCasesTests.UseCasesUser
         public void GivenValidRequestButUserIdNotExistsReturnResultStatus404()
         {
             var services = new UserServices(_userRepository, _roleRepository);
-            var request = new UpdateUserDto("12", "user", "user", "user", "email@email.com", "11299338844");
+            var request = new UpdateUserDto("12", "user", "user", "user", "email@email.com", "11299338844", "79008677083", Shared.Enums.EDocumentType.CPF);
             var result = services.Update(request);
 
             Assert.IsTrue(!result.Result.Success && result.Result.Status == 404);
@@ -36,7 +36,7 @@ namespace Beartic.Tests.UseCasesTests.UseCasesUser
         public void GivenInvalidRequestReturnResultStatus400()
         {
             var services = new UserServices(_userRepository, _roleRepository);
-            var request = new UpdateUserDto("123", "", "user", "user", "emailemail.com", "11238844");
+            var request = new UpdateUserDto("123", "", "user", "user", "emailemail.com", "11238844", "79008677083", Shared.Enums.EDocumentType.CPF);
             var result = services.Update(request);
 
             Assert.IsTrue(!result.Result.Success && result.Result.Status == 400 && result.Result.Errors.Any());
@@ -47,7 +47,7 @@ namespace Beartic.Tests.UseCasesTests.UseCasesUser
         {
             var services = new UserServices(_userRepository, _roleRepository);
 
-            var result = services.AddRole("123", "123");
+            var result = services.AddRole(new AlterRole { roleId = "123", userId = "123" });
 
             Assert.IsTrue(result.Result.Success && result.Result.Status == 200);
         }
@@ -57,7 +57,7 @@ namespace Beartic.Tests.UseCasesTests.UseCasesUser
         {
             var services = new UserServices(_userRepository, _roleRepository);
 
-            var result = services.RemoveRole("123", "123");
+            var result = services.RemoveRole(new AlterRole { roleId = "123", userId = "123" });
 
             Assert.IsTrue(result.Result.Success && result.Result.Status == 200);
         }

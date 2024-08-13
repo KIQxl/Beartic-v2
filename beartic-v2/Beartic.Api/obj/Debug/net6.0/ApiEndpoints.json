@@ -1,0 +1,416 @@
+[
+  {
+    "ContainingType": "Beartic.Api.Controllers.CategoryController",
+    "Method": "Create",
+    "RelativePath": "v2/categories",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Beartic.Core.UseCases.CategoryUseCases.CategoryDtos.CreateCategoryDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.CategoryController",
+    "Method": "Update",
+    "RelativePath": "v2/categories",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Beartic.Core.UseCases.CategoryUseCases.CategoryDtos.UpdateCategoryDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.CategoryController",
+    "Method": "GetById",
+    "RelativePath": "v2/categories/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.CategoryController",
+    "Method": "Delete",
+    "RelativePath": "v2/categories/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.CustomerController",
+    "Method": "CreateAsync",
+    "RelativePath": "v2/customers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Beartic.Core.UseCases.CustomerUseCases.CustomerDtos.CreateCustomerDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.CustomerController",
+    "Method": "Update",
+    "RelativePath": "v2/customers",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Beartic.Core.UseCases.CustomerUseCases.CustomerDtos.UpdateCustomerDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.CustomerController",
+    "Method": "GetAll",
+    "RelativePath": "v2/customers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.CustomerController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "v2/customers/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.CustomerController",
+    "Method": "Remove",
+    "RelativePath": "v2/customers/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.CustomerController",
+    "Method": "GetByDocumentAsync",
+    "RelativePath": "v2/customers/get-by-document/{document}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "document",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.OrderController",
+    "Method": "CreateOrder",
+    "RelativePath": "v2/orders",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Beartic.Core.UseCases.OrderUseCases.OrderDtos.CreateOrderDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.OrderController",
+    "Method": "GetAllOrders",
+    "RelativePath": "v2/orders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.OrderController",
+    "Method": "GetOrderByIdAsync",
+    "RelativePath": "v2/orders/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.OrderController",
+    "Method": "CancelOrder",
+    "RelativePath": "v2/orders/cancel/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.OrderController",
+    "Method": "ParcelOrder",
+    "RelativePath": "v2/orders/parcel",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parcelRequest",
+        "Type": "Beartic.Core.UseCases.OrderUseCases.OrderDtos.ParcelOrderDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.OrderController",
+    "Method": "PayOrder",
+    "RelativePath": "v2/orders/pay",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "payRequest",
+        "Type": "Beartic.Core.UseCases.OrderUseCases.OrderDtos.PayOrderDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.ProductController",
+    "Method": "Create",
+    "RelativePath": "v2/products",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Beartic.Core.UseCases.ProductUseCases.ProductDtos.ProductDtos.CreateProductDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.ProductController",
+    "Method": "Update",
+    "RelativePath": "v2/products",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Beartic.Core.UseCases.ProductUseCases.ProductDtos.ProductDtos.UpdateProductDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.ProductController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "v2/products/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.ProductController",
+    "Method": "Delete",
+    "RelativePath": "v2/products/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.UserController",
+    "Method": "GetAll",
+    "RelativePath": "v2/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.UserController",
+    "Method": "Create",
+    "RelativePath": "v2/users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Beartic.Auth.UseCases.UserUseCases.UserDtos.CreateUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.UserController",
+    "Method": "Update",
+    "RelativePath": "v2/users",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Beartic.Auth.UseCases.UserUseCases.UserDtos.UpdateUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.UserController",
+    "Method": "GetById",
+    "RelativePath": "v2/users/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.UserController",
+    "Method": "Remove",
+    "RelativePath": "v2/users/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.UserController",
+    "Method": "AddRole",
+    "RelativePath": "v2/users/add-role",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Beartic.Auth.UseCases.UserUseCases.UserDtos.AlterRole",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.UserController",
+    "Method": "RemoveRole",
+    "RelativePath": "v2/users/remove-role",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Beartic.Auth.UseCases.UserUseCases.UserDtos.AlterRole",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

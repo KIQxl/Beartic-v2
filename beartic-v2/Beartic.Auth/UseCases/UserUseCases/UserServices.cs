@@ -38,7 +38,7 @@ namespace Beartic.Auth.UseCases.UserUseCases
                 var role = await _roleRepository.GetByIdAsync(id);
                 if(role == null || role.Invalid)
                 {
-                    return new UserResult(400, "Usuário não cadastrado", role.Notifications);
+                    return new UserResult(400, "Usuário não cadastrado, o perfil não foi encontrado", role.Notifications);
                 }
 
                 user.AddRole(role);
@@ -97,13 +97,13 @@ namespace Beartic.Auth.UseCases.UserUseCases
             return new UserResult(201, "Usuário atualizado.", new UserResultData(user.Id.ToString(), user.Username, user.Email.Address, user.Phone.Number));
         }
 
-        public async Task<UserResult> AddRole(string userId, string roleId)
+        public async Task<UserResult> AddRole(AlterRole request)
         {
-            var user = await _userRepository.GetByIdAsync(userId);
+            var user = await _userRepository.GetByIdAsync(request.userId);
             if (user == null)
                 return new UserResult(404, "Usuário não encontrado");
 
-            var role = await _roleRepository.GetByIdAsync(roleId);
+            var role = await _roleRepository.GetByIdAsync(request.roleId);
             if (role == null)
                 return new UserResult(404, "Perfil não encontrado.");
 
@@ -114,13 +114,13 @@ namespace Beartic.Auth.UseCases.UserUseCases
             return new UserResult(200, "Perfil de usuário adicionado.");
         }
 
-        public async Task<UserResult> RemoveRole(string userId, string roleId)
+        public async Task<UserResult> RemoveRole(AlterRole request)
         {
-            var user = await _userRepository.GetByIdAsync(userId);
+            var user = await _userRepository.GetByIdAsync(request.userId);
             if (user == null)
                 return new UserResult(404, "Usuário não encontrado");
 
-            var role = await _roleRepository.GetByIdAsync(roleId);
+            var role = await _roleRepository.GetByIdAsync(request.roleId);
             if(role == null)
                 return new UserResult(404, "Perfil não encontrado.");
 
