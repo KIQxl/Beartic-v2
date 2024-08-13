@@ -1,11 +1,12 @@
-﻿using Flunt.Notifications;
+﻿using Beartic.Shared.Enums;
+using Flunt.Notifications;
 using Flunt.Validations;
 
 namespace Beartic.Auth.UseCases.UserUseCases.UserDtos
 {
     public class UpdateUserDto : Notifiable
     {
-        public UpdateUserDto(string id, string username, string firstname, string lastname, string email, string phone)
+        public UpdateUserDto(string id, string username, string firstname, string lastname, string email, string phone, string document, EDocumentType documentType)
         {
             AddNotifications(new Contract()
                 .Requires()
@@ -15,6 +16,7 @@ namespace Beartic.Auth.UseCases.UserUseCases.UserDtos
                 .IsNotNullOrEmpty(lastname, "lastname", "Sobrenome do usuário é obrigatório")
                 .IsNotNullOrEmpty(email, "email", "Email é obrigatório")
                 .IsNotNullOrEmpty(phone, "phone", "Telefone é obrigatório")
+                .IsNotNullOrEmpty(document, "document", "Documento é obrigatório")
                 );
 
             Id = id;
@@ -23,6 +25,8 @@ namespace Beartic.Auth.UseCases.UserUseCases.UserDtos
             Lastname = lastname;
             Email = email;
             Phone = phone;
+            Document = document;
+            DocumentType = documentType;
         }
 
         public string Id { get; set; }
@@ -31,5 +35,7 @@ namespace Beartic.Auth.UseCases.UserUseCases.UserDtos
         public string Lastname { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
+        public string Document { get; set; }
+        public EDocumentType DocumentType { get; set; }
     }
 }

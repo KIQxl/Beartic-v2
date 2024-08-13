@@ -23,7 +23,7 @@ namespace Beartic.Infraestructure.BussinessContext.Repositories
 
         public async Task<IEnumerable<Order>> GetAllAsync()
         {
-            return await _ctx.orders.Where(x => x.Status == Core.Enums.EOrderStatus.WaitingPayment || x.Status == Core.Enums.EOrderStatus.WaitingDelivery).ToListAsync();
+            return await _ctx.orders.AsNoTracking().Where(x => x.Status == Core.Enums.EOrderStatus.WaitingPayment || x.Status == Core.Enums.EOrderStatus.WaitingDelivery).ToListAsync();
         }
 
         public async Task<Order> GetByIdAsync(string id)

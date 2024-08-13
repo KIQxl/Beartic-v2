@@ -21,6 +21,11 @@ namespace Beartic.Tests.FakeRepositories
             return false;
         }
 
+        public Task<List<User>> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<User> GetByIdAsync(string id)
         {
             if (id == "123")

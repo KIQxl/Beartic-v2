@@ -30,7 +30,7 @@ namespace Beartic.Infraestructure.BussinessContext.Repositories
         {
             try
             {
-                return _ctx.customers.Any(x => x.Document.Number == document);
+                return _ctx.customers.AsNoTracking().Any(x => x.Document.Number == document);
             }
             catch (Exception ex)
             {
@@ -42,7 +42,7 @@ namespace Beartic.Infraestructure.BussinessContext.Repositories
         {
             try
             {
-                return _ctx.customers.Any(x => x.Email.Address == email);
+                return _ctx.customers.AsNoTracking().Any(x => x.Email.Address == email);
             }
             catch (Exception ex)
             {
@@ -54,7 +54,7 @@ namespace Beartic.Infraestructure.BussinessContext.Repositories
         {
             try
             {
-                return await _ctx.customers.ToListAsync();
+                return await _ctx.customers.AsNoTracking().ToListAsync();
             }
             catch (Exception ex)
             {
@@ -66,7 +66,7 @@ namespace Beartic.Infraestructure.BussinessContext.Repositories
         {
             try
             {
-                return await _ctx.customers.FirstOrDefaultAsync(x => x.Document.Number == document);
+                return await _ctx.customers.AsNoTracking().FirstOrDefaultAsync(x => x.Document.Number == document);
             }
             catch (Exception ex)
             {

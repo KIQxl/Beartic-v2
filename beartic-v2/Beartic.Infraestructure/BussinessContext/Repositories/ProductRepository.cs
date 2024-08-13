@@ -43,7 +43,7 @@ namespace Beartic.Infraestructure.BussinessContext.Repositories
         {
             try
             {
-                return await _ctx.products.Where(x => ids.Contains(x.Id.ToString())).ToListAsync();
+                return await _ctx.products.AsNoTracking().Where(x => ids.Contains(x.Id.ToString())).ToListAsync();
             }
             catch (Exception ex)
             {

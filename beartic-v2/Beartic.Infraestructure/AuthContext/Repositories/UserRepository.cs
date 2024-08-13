@@ -63,5 +63,14 @@ namespace Beartic.Infraestructure.AuthContext.Repositories
             }
             catch { }
         }
+
+        public async Task<List<User>> GetAll()
+        {
+            try
+            {
+                return await _ctx.users.AsNoTracking().ToListAsync();
+            }
+            catch { return null; }
+        }
     }
 }

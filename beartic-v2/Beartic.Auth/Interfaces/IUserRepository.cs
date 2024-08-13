@@ -4,6 +4,7 @@ namespace Beartic.Auth.Interfaces
 {
     public interface IUserRepository
     {
+        public Task<List<User>> GetAll();
         public Task Add(User user);
         public void Update(User user);
         public Task<User> GetByIdAsync(string id);

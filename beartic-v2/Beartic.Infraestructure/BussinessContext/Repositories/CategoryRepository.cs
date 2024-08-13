@@ -45,7 +45,7 @@ namespace Beartic.Infraestructure.BussinessContext.Repositories
         {
             try
             {
-                return await _ctx.categories.FirstOrDefaultAsync(x => x.Name.ToString() == name);
+                return await _ctx.categories.AsNoTracking().FirstOrDefaultAsync(x => x.Name.ToString() == name);
             }
             catch { return null; }
         }

@@ -27,20 +27,22 @@ namespace Beartic.Auth.UseCases.UserUseCases
             var password = new Password(request.Password);
             var user = new User(request.Username, name, email, document, phone, password);
 
-            foreach(string id in request.Roles)
-            {
-                var role = await _roleRepository.GetByIdAsync(id);
-                if(role != null)
-                {
-                    user.AddRole(role);
-                }
-            }
-
             if (user.Invalid)
                 return new UserResult(400, "Usuário não cadastrado", user.Notifications);
 
-            if(await _userRepository.EmailExists(user.Email.Address))
+            if (await _userRepository.EmailExists(user.Email.Address))
                 return new UserResult(400, "O documento informado já está cadastrado.");
+
+            foreach (string id in request.Roles)
+            {
+                var role = await _roleRepository.GetByIdAsync(id);
+                if(role == null || role.Invalid)
+                {
+                    return new UserResult(400, "Usuário não cadastrado", role.Notifications);
+                }
+
+                user.AddRole(role);
+            }
 
             await _userRepository.Add(user);
 
@@ -55,19 +57,6 @@ namespace Beartic.Auth.UseCases.UserUseCases
                 return new UserResult(404, "Usuário não encontrado");
 
             return new UserResult(200, "Sucesso", new UserResultData(user.Id.ToString(), user.Username, user.Email.Address, user.Phone.Number));
-        }
-
-        public async Task<LoginResult> Login(RequestLoginDto request)
-        {
-            var user = await _userRepository.GetByUsernameAsync(request.Username);
-
-            if (user == null)
-                return new LoginResult(404, "Usuário não encontrado");
-
-            if(!user.Password.Auth(request.Password))
-                return new LoginResult(400, "Credenciais incorretas");
-
-            return new LoginResult(200, "Autenticado", new LoginResultData(user.Id.ToString(), user.Username, user.Email.Address));
         }
 
         public async Task<UserResult> Remove(string id)
@@ -91,6 +80,17 @@ namespace Beartic.Auth.UseCases.UserUseCases
 
             if(user == null)
                 return new UserResult(404, "Usuário não encontrado");
+
+            var document = new Document(request.Document, request.DocumentType);
+            var phone = new Phone(request.Phone);
+            var email = new Email(request.Email);
+            var name = new Name(request.Firstname, request.Lastname);
+
+
+            user.ChangeDocument(document);
+            user.ChangePhone(phone);
+            user.ChangeEmail(email);
+            user.ChangeName(name);
 
             _userRepository.Update(user);
 
@@ -129,6 +129,23 @@ namespace Beartic.Auth.UseCases.UserUseCases
             _userRepository.Update(user);
 
             return new UserResult(200, "Perfil de usuário removido");
+        }
+
+        public async Task<UsersResult> GetAll()
+        {
+            var users = await _userRepository.GetAll();
+
+            if (users == null || !users.Any())
+                return new UsersResult(404, "Nenhum usuário encontrado");
+
+            var usersResult = new List<UserResultData>();
+
+            foreach (var user in users)
+            {
+                usersResult.Add(new UserResultData(user.Id.ToString(), user.Name.ToString(), user.Email.Address, user.Phone.Number));
+            }
+
+            return new UsersResult(200, "Encontrados", usersResult);
         }
     }
 }
