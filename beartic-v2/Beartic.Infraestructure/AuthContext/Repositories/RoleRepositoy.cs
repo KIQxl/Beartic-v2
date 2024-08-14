@@ -18,6 +18,11 @@ namespace Beartic.Infraestructure.AuthContext.Repositories
             catch { }
         }
 
+        public async Task<IList<Role>> GetAll()
+        {
+            return await _ctx.roles.AsNoTracking().Where(x => x.Active == true).ToListAsync();
+        }
+
         public async Task<Role> GetByIdAsync(string id)
         {
             try
@@ -25,6 +30,17 @@ namespace Beartic.Infraestructure.AuthContext.Repositories
                 return await _ctx.roles.FirstOrDefaultAsync(x => x.Id.ToString() == id);
             }
             catch { return null; }
+        }
+
+        public async Task<bool> GetByName(string name)
+        {
+            return await _ctx.roles.AsNoTracking().AnyAsync(x => x.Name.ToUpper() == name.ToUpper());
+        }
+
+        public void Update(Role role)
+        {
+            _ctx.roles.Entry(role).State = EntityState.Modified;
+            _ctx.roles.Update(role);
         }
     }
 }

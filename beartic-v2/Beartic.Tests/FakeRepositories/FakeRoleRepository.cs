@@ -10,6 +10,11 @@ namespace Beartic.Tests.FakeRepositories
             return Task.CompletedTask;
         }
 
+        public Task<IList<Role>> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<Role> GetByIdAsync(string id)
         {
             if(id == "123")
@@ -19,6 +24,11 @@ namespace Beartic.Tests.FakeRepositories
                 return new Role("Gerente", true);
 
             return null;
+        }
+
+        public Task<Role> GetByName()
+        {
+            throw new NotImplementedException();
         }
     }
 }

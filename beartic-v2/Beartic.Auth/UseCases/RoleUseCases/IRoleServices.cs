@@ -6,6 +6,7 @@ namespace Beartic.Auth.UseCases.RoleUseCases
     {
         public Task<RoleResult> GetByIdAsync(string id);
         public Task<RoleResult> Create(CreateRoleDto request);
-        public Task ActiveDeactive(string id);
+        public Task<RoleResult> ActiveDeactive(string id);
+        public Task<RolesResult> GetAll();
     }
 }
