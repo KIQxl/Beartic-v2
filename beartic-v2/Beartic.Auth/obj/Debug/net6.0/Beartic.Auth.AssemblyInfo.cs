@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Beartic.Auth")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf5d2771ab991aa8c3c8f8bb0f8f822d620246fa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b40702c791e4fc61cbb4c17cd303ff50fb30b39")]
 [assembly: System.Reflection.AssemblyProductAttribute("Beartic.Auth")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Beartic.Auth")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
