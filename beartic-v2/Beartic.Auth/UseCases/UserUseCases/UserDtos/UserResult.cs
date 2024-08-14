@@ -1,4 +1,5 @@
-﻿using Beartic.Shared.Dtos;
+﻿using Beartic.Auth.Entities;
+using Beartic.Shared.Dtos;
 using Flunt.Notifications;
 
 namespace Beartic.Auth.UseCases.UserUseCases.UserDtos
@@ -14,5 +15,5 @@ namespace Beartic.Auth.UseCases.UserUseCases.UserDtos
         }
     }
 
-    public record UserResultData(string Id, string Username, string Email, string Phone);
+    public record UserResultData(string Id, string Username, string Email, string Phone, IEnumerable<Role> roles);
 }

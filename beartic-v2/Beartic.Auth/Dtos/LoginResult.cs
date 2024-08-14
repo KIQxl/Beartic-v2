@@ -1,4 +1,5 @@
-﻿using Beartic.Shared.Dtos;
+﻿using Beartic.Auth.Entities;
+using Beartic.Shared.Dtos;
 using Flunt.Notifications;
 
 namespace Beartic.Auth.Dtos
@@ -14,5 +15,12 @@ namespace Beartic.Auth.Dtos
         }
     }
 
-    public record LoginResultData(string Id, string Username, string Email, string? Token = "");
+    public record LoginResultData
+    {
+        public string Id { get; set; }
+        public string Username { get; set; }
+        public string Email { get; set; }
+        public IEnumerable<Role> roles { get; set; }
+        public string? Token { get; set; } = string.Empty;
+    }
 }

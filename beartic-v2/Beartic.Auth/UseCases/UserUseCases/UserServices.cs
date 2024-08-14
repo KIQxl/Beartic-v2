@@ -46,7 +46,7 @@ namespace Beartic.Auth.UseCases.UserUseCases
 
             await _userRepository.Add(user);
 
-            return new UserResult(201, "Usuário cadastrado", new UserResultData(user.Id.ToString(), user.Username, user.Email.Address, user.Phone.Number));
+            return new UserResult(201, "Usuário cadastrado", new UserResultData(user.Id.ToString(), user.Username, user.Email.Address, user.Phone.Number, user.Roles));
         }
 
         public async Task<UserResult> GetById(string id)
@@ -56,7 +56,7 @@ namespace Beartic.Auth.UseCases.UserUseCases
             if (user == null)
                 return new UserResult(404, "Usuário não encontrado");
 
-            return new UserResult(200, "Sucesso", new UserResultData(user.Id.ToString(), user.Username, user.Email.Address, user.Phone.Number));
+            return new UserResult(200, "Sucesso", new UserResultData(user.Id.ToString(), user.Username, user.Email.Address, user.Phone.Number, user.Roles));
         }
 
         public async Task<UserResult> Remove(string id)
@@ -68,7 +68,7 @@ namespace Beartic.Auth.UseCases.UserUseCases
 
             _userRepository.Remove(user);
 
-            return new UserResult(200, "Sucesso", new UserResultData(user.Id.ToString(), user.Username, user.Email.Address, user.Phone.Number));
+            return new UserResult(200, "Sucesso", new UserResultData(user.Id.ToString(), user.Username, user.Email.Address, user.Phone.Number, user.Roles));
         }
 
         public async Task<UserResult> Update(UpdateUserDto request)
@@ -94,7 +94,7 @@ namespace Beartic.Auth.UseCases.UserUseCases
 
             _userRepository.Update(user);
 
-            return new UserResult(201, "Usuário atualizado.", new UserResultData(user.Id.ToString(), user.Username, user.Email.Address, user.Phone.Number));
+            return new UserResult(201, "Usuário atualizado.", new UserResultData(user.Id.ToString(), user.Username, user.Email.Address, user.Phone.Number, user.Roles));
         }
 
         public async Task<UserResult> AddRole(AlterRole request)
@@ -142,7 +142,7 @@ namespace Beartic.Auth.UseCases.UserUseCases
 
             foreach (var user in users)
             {
-                usersResult.Add(new UserResultData(user.Id.ToString(), user.Name.ToString(), user.Email.Address, user.Phone.Number));
+                usersResult.Add(new UserResultData(user.Id.ToString(), user.Name.ToString(), user.Email.Address, user.Phone.Number, user.Roles));
             }
 
             return new UsersResult(200, "Encontrados", usersResult);

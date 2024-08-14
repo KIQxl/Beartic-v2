@@ -68,7 +68,7 @@ namespace Beartic.Infraestructure.AuthContext.Repositories
         {
             try
             {
-                return await _ctx.users.AsNoTracking().ToListAsync();
+                return await _ctx.users.AsNoTracking().Include(x => x.Roles).ToListAsync();
             }
             catch { return null; }
         }

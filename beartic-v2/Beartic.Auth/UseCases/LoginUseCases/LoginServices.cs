@@ -23,7 +23,12 @@ namespace Beartic.Auth.UseCases.LoginUseCases
             if (!user.Password.Auth(request.Password))
                 return new LoginResult(400, "Credenciais incorretas");
 
-            return new LoginResult(200, "Autenticado", new LoginResultData(user.Id.ToString(), user.Username, user.Email.Address));
+            return new LoginResult(200, "Autenticado", new LoginResultData{
+                Id = user.Id.ToString(),
+                Username = user.Username,
+                Email = user.Email.Address,
+                roles = user.Roles
+            });
         }
     }
 }

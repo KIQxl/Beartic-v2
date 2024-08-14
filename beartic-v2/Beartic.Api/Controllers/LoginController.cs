@@ -1,4 +1,5 @@
-﻿using Beartic.Auth.UseCases.LoginUseCases;
+﻿using Beartic.Api.Services;
+using Beartic.Auth.UseCases.LoginUseCases;
 using Beartic.Auth.UseCases.LoginUseCases.LoginDtos;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,6 +26,9 @@ namespace Beartic.Api.Controllers
 
                 if (result.Success)
                 {
+                    var token = TokenService.GenerateToken(result.Data.Username, result.Data.Id, result.Data.roles);
+                    result.Data.Token = token;
+
                     return Ok(result);
                 }
 
