@@ -9,7 +9,7 @@ namespace Beartic.Api.Services
 {
     public static class TokenService
     {
-        public static string GenerateToken(string name, string id, IEnumerable<Role> roles)
+        public static string GenerateToken(string id, string name, string email, IEnumerable<Role> roles)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes("dn3923nfc9w0hc92h90p2wh");
@@ -20,6 +20,7 @@ namespace Beartic.Api.Services
             {
                 new Claim("Id", id),
                 new Claim(ClaimTypes.Name, name),
+                new Claim(ClaimTypes.Email, email)
             };
 
             foreach (var role in roles)

@@ -9,7 +9,10 @@ using Beartic.Core.UseCases.ProductUseCases;
 using Beartic.Infraestructure.AuthContext.Repositories;
 using Beartic.Infraestructure.BussinessContext.Repositories;
 using Beartic.Infraestructure.BussinessContext.Transactions;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace Beartic.Api.Extensions
 {
@@ -40,6 +43,44 @@ namespace Beartic.Api.Extensions
             services.AddScoped<ICategoryServices, CategoryServices>();
             services.AddScoped<IUserServices, UserServices>();
             services.AddScoped<IRoleServices, RoleServices>();
+        }
+
+        public static void AddJwtSecurity(this WebApplicationBuilder builder, string key)
+        {
+            var byteKey = Encoding.ASCII.GetBytes(key);
+            var symmetricSecurityKey = new SymmetricSecurityKey(byteKey);
+
+            builder.Services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(x =>
+            {
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(byteKey),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
+        }
+
+        public static void AddAppConfig(this WebApplication app)
+        {
+            app.UseCors(x =>
+            {
+                x.AllowAnyHeader();
+                x.AllowAnyMethod();
+                x.AllowAnyOrigin();
+            });
+
+            app.UseHttpsRedirection();
+
+            app.UseAuthentication();
+            app.UseAuthorization();
+
+            app.MapControllers();
         }
     }
 }

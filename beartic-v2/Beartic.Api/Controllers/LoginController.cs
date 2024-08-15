@@ -26,7 +26,7 @@ namespace Beartic.Api.Controllers
 
                 if (result.Success)
                 {
-                    var token = TokenService.GenerateToken(result.Data.Username, result.Data.Id, result.Data.roles);
+                    var token = TokenService.GenerateToken(result.Data.Id, result.Data.Username, result.Data.Email, result.Data.roles);
                     result.Data.Token = token;
 
                     return Ok(result);
