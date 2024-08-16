@@ -24,8 +24,22 @@ namespace Beartic.Infraestructure.AuthContext.Data
             modelBuilder.ApplyConfiguration(new UserMapping());
             modelBuilder.Ignore<Notification>();
 
-            modelBuilder.Entity<User>().HasData(new User("Default-User", new Name("Default", "User"), new Email("defaultuser@email.com"), new Document("45261517850", EDocumentType.CPF), new Phone("11977268607"), new Password("Kaique1998@")));
+            //modelBuilder.Entity<User>().HasData(new User("Default-User", new Name("Default", "User"), new Email("defaultuser@email.com"), new Document("87778018063", EDocumentType.CPF), new Phone("11977268607"), new Password("123456789k@")));
             modelBuilder.Entity<Role>().HasData(new Role("Deafult-Role", true));
+
+            modelBuilder.Entity<User>().HasData(new
+            {
+                Id = Guid.NewGuid(), // Se necessário, substitua pelo ID correto.
+                Username = "Default-User",
+                Email_Address = "defaultuser@email.com",
+                Name_Firstname = "Default",
+                Name_Lastname = "User",
+                Phone_Number = "11977268607",
+                Password_Hash = "123456789k@",  // Hash adequado
+                Password_Key = "SomeSalt",     // Salt adequado
+                Document_Number = "87778018063",
+                Document_Type = (int)EDocumentType.CPF, // Enum como int
+            });
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
