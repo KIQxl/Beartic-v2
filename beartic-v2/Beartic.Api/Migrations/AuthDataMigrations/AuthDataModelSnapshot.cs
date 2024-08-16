@@ -35,6 +35,14 @@ namespace Beartic.Api.Migrations.AuthDataMigrations
                     b.HasKey("Id");
 
                     b.ToTable("roles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("618a4da9-fc99-43f0-85b6-ec8405d7913f"),
+                            Active = true,
+                            Name = "Deafult-Role"
+                        });
                 });
 
             modelBuilder.Entity("Beartic.Core.Entities.User", b =>
