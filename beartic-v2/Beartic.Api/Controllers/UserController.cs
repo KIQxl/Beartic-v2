@@ -1,6 +1,6 @@
 ﻿using Beartic.Auth.UseCases.UserUseCases;
 using Beartic.Auth.UseCases.UserUseCases.UserDtos;
-using Beartic.Infraestructure.BussinessContext.Transactions;
+using Beartic.Infraestructure.Transactions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Beartic.Api.Controllers
@@ -66,7 +66,7 @@ namespace Beartic.Api.Controllers
 
                 if (result.Success)
                 {
-                    await _uow.Commit();
+                    await _uow.AuthCommit();
                     return Created($"v2/users/{result.Data.Id}", result);
                 }
 
@@ -74,7 +74,7 @@ namespace Beartic.Api.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ex.Message);
+                return StatusCode(500, ex.InnerException.Message);
             }
         }
 
@@ -87,7 +87,7 @@ namespace Beartic.Api.Controllers
                 var result = await _userServices.Update(request);
                 if (result.Success)
                 {
-                    await _uow.Commit();
+                    await _uow.AuthCommit();
                     return Created($"v2/users/{result.Data.Id}", result);
                 }
 
@@ -112,7 +112,7 @@ namespace Beartic.Api.Controllers
 
                 if (result.Success)
                 {
-                    await _uow.Commit();
+                    await _uow.AuthCommit();
                     return Ok(result);
                 }
 
@@ -134,7 +134,7 @@ namespace Beartic.Api.Controllers
 
                 if(result.Success)
                 {
-                    await _uow.Commit();
+                    await _uow.AuthCommit();
                     return Ok(result);
                 }
 
@@ -156,7 +156,7 @@ namespace Beartic.Api.Controllers
 
                 if (result.Success)
                 {
-                    await _uow.Commit();
+                    await _uow.AuthCommit();
                     return Ok(result);
                 }
 

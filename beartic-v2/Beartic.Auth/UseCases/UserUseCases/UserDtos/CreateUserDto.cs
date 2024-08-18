@@ -4,11 +4,14 @@ namespace Beartic.Auth.UseCases.UserUseCases.UserDtos
 {
     public class CreateUserDto
     {
-        public CreateUserDto(string id, string username, string fisrtname, string lastname, string email, string document, EDocumentType documentType, string phone, string password, IList<string> roles)
+        public CreateUserDto()
         {
-            Id = id;
+            
+        }
+        public CreateUserDto(string username, string fisrtname, string lastname, string email, string document, EDocumentType documentType, string phone, string password, IList<string> roles)
+        {
             Username = username;
-            Fisrtname = fisrtname;
+            Firstname = fisrtname;
             Lastname = lastname;
             Email = email;
             Document = document;
@@ -18,9 +21,8 @@ namespace Beartic.Auth.UseCases.UserUseCases.UserDtos
             Roles = roles;
         }
 
-        public string Id { get; set; }
         public string Username { get; set; }
-        public string Fisrtname { get; set; }
+        public string Firstname { get; set; }
         public string Lastname { get; set; }
         public string Email { get; set; }
         public string Document { get; set; }

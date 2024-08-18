@@ -31,7 +31,7 @@ namespace Beartic.Core.Entities
         public Document Document { get; private set; }
         public Phone Phone { get; private set; }
         public Password Password { get; private set; }
-        public IList<Role> Roles { get; private set; }
+        public virtual IList<Role> Roles { get; private set; }
 
         public void ChangePassword(Password password)
         {

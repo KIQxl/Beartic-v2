@@ -9,6 +9,11 @@ namespace Beartic.Infraestructure.AuthContext.Repositories
     {
         private readonly AuthData _ctx;
 
+        public RoleRepositoy(AuthData ctx)
+        {
+            _ctx = ctx;
+        }
+
         public async Task Add(Role role)
         {
             try
@@ -35,6 +40,11 @@ namespace Beartic.Infraestructure.AuthContext.Repositories
         public async Task<bool> GetByName(string name)
         {
             return await _ctx.roles.AsNoTracking().AnyAsync(x => x.Name.ToUpper() == name.ToUpper());
+        }
+
+        public async Task<Role> GetRoleByName(string name)
+        {
+            return await _ctx.roles.FirstOrDefaultAsync(x => x.Name.ToUpper() == name.ToUpper());
         }
 
         public void Update(Role role)

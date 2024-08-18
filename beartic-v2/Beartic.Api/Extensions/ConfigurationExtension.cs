@@ -10,7 +10,7 @@ using Beartic.Infraestructure.AuthContext.Data;
 using Beartic.Infraestructure.AuthContext.Repositories;
 using Beartic.Infraestructure.BussinessContext.Data;
 using Beartic.Infraestructure.BussinessContext.Repositories;
-using Beartic.Infraestructure.BussinessContext.Transactions;
+using Beartic.Infraestructure.Transactions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;

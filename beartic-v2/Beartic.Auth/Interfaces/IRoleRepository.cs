@@ -9,5 +9,6 @@ namespace Beartic.Auth.Interfaces
         public Task<IList<Role>> GetAll();
         public Task<bool> GetByName(string name);
         public void Update(Role role);
+        public Task<Role> GetRoleByName(string name);
     }
 }

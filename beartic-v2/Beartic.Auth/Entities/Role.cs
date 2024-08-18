@@ -6,6 +6,11 @@ namespace Beartic.Auth.Entities
 {
     public class Role : BaseEntity
     {
+        public Role()
+        {
+            
+        }
+
         public Role(string name, bool active)
         {
             AddNotifications(new Contract()

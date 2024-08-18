@@ -1,6 +1,6 @@
 ﻿using Beartic.Auth.UseCases.RoleUseCases;
 using Beartic.Auth.UseCases.RoleUseCases.RoleDtos;
-using Beartic.Infraestructure.BussinessContext.Transactions;
+using Beartic.Infraestructure.Transactions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Beartic.Api.Controllers
@@ -47,7 +47,7 @@ namespace Beartic.Api.Controllers
 
                 if(result.Success)
                 {
-                    await _uow.Commit();
+                    await _uow.AuthCommit();
                     return Ok(result);
                 }
 
@@ -69,7 +69,7 @@ namespace Beartic.Api.Controllers
 
                 if (result.Success)
                 {
-                    await _uow.Commit();
+                    await _uow.AuthCommit();
                     return Created($"v2/roles/{result.Data.Id}", result);
                 }
 
@@ -91,7 +91,7 @@ namespace Beartic.Api.Controllers
 
                 if(result.Success)
                 {
-                    await _uow.Commit();
+                    await _uow.AuthCommit();
                     return Ok(result);
                 }
 

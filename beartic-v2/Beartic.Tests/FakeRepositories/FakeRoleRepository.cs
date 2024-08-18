@@ -36,6 +36,11 @@ namespace Beartic.Tests.FakeRepositories
             throw new NotImplementedException();
         }
 
+        public Task<Role> GetRoleByName(string name)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(Role role)
         {
             throw new NotImplementedException();

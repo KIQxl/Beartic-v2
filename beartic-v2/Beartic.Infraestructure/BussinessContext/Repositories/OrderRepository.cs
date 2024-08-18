@@ -9,6 +9,11 @@ namespace Beartic.Infraestructure.BussinessContext.Repositories
     {
         private readonly BussinessData _ctx;
 
+        public OrderRepository(BussinessData ctx)
+        {
+            _ctx = ctx;
+        }
+
         public async Task AddAsync(Order order)
         {
             try

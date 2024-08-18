@@ -20,33 +20,40 @@ namespace Beartic.Auth.UseCases.UserUseCases
 
         public async Task<UserResult> Create(CreateUserDto request)
         {
-            var name = new Name(request.Fisrtname, request.Lastname);
-            var document = new Document(request.Document, request.DocumentType);
-            var email = new Email(request.Email);
-            var phone = new Phone(request.Phone);
-            var password = new Password(request.Password);
-            var user = new User(request.Username, name, email, document, phone, password);
-
-            if (user.Invalid)
-                return new UserResult(400, "Usuário não cadastrado", user.Notifications);
-
-            if (await _userRepository.EmailExists(user.Email.Address))
-                return new UserResult(400, "O documento informado já está cadastrado.");
-
-            foreach (string id in request.Roles)
+           try
             {
-                var role = await _roleRepository.GetByIdAsync(id);
-                if(role == null || role.Invalid)
+                var name = new Name(request.Firstname, request.Lastname);
+                var document = new Document(request.Document, request.DocumentType);
+                var email = new Email(request.Email);
+                var phone = new Phone(request.Phone);
+                var password = new Password(request.Password);
+                var user = new User(request.Username, name, email, document, phone, password);
+
+                if (user.Invalid)
+                    return new UserResult(400, "Usuário não cadastrado", user.Notifications);
+
+                if (await _userRepository.EmailExists(user.Email.Address))
+                    return new UserResult(400, "O Email informado já está cadastrado.");
+
+                foreach (string roleName in request.Roles)
                 {
-                    return new UserResult(400, "Usuário não cadastrado, o perfil não foi encontrado", role.Notifications);
+                    var role = await _roleRepository.GetRoleByName(roleName);
+                    if (role == null)
+                    {
+                        return new UserResult(400, "Usuário não cadastrado, o perfil não foi encontrado");
+                    }
+
+                    user.AddRole(role);
                 }
 
-                user.AddRole(role);
+                await _userRepository.Add(user);
+
+                return new UserResult(201, "Usuário cadastrado", new UserResultData(user.Id.ToString(), user.Username, user.Email.Address, user.Phone.Number, user.Roles));
             }
-
-            await _userRepository.Add(user);
-
-            return new UserResult(201, "Usuário cadastrado", new UserResultData(user.Id.ToString(), user.Username, user.Email.Address, user.Phone.Number, user.Roles));
+            catch
+            {
+                return null;
+            }
         }
 
         public async Task<UserResult> GetById(string id)

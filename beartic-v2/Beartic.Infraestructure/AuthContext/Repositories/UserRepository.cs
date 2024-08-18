@@ -9,6 +9,11 @@ namespace Beartic.Infraestructure.AuthContext.Repositories
     {
         private readonly AuthData _ctx;
 
+        public UserRepository(AuthData ctx)
+        {
+            _ctx = ctx;
+        }
+
         public async Task Add(User user)
         {
             try

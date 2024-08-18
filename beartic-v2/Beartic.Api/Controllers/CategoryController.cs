@@ -1,6 +1,6 @@
 ﻿using Beartic.Core.UseCases.CategoryUseCases;
 using Beartic.Core.UseCases.CategoryUseCases.CategoryDtos;
-using Beartic.Infraestructure.BussinessContext.Transactions;
+using Beartic.Infraestructure.Transactions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Beartic.Api.Controllers
@@ -47,7 +47,7 @@ namespace Beartic.Api.Controllers
 
                 if (result.Success)
                 {
-                    await _uow.Commit();
+                    await _uow.BussinessCommit();
                     return Created($"v2/categories/{result.Data.Id}", result);
                 }
 
@@ -69,7 +69,7 @@ namespace Beartic.Api.Controllers
 
                 if (result.Success)
                 {
-                    await _uow.Commit();
+                    await _uow.BussinessCommit();
                     return Ok(result);
                 }
 
@@ -91,7 +91,7 @@ namespace Beartic.Api.Controllers
 
                 if (result.Success)
                 {
-                    await _uow.Commit();
+                    await _uow.BussinessCommit();
                     return Ok(result);
                 }
 
