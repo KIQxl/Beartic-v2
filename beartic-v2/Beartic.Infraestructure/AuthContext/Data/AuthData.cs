@@ -25,7 +25,7 @@ namespace Beartic.Infraestructure.AuthContext.Data
             modelBuilder.Ignore<Notification>();
 
             //modelBuilder.Entity<User>().HasData(new User("Default-User", new Name("Default", "User"), new Email("defaultuser@email.com"), new Document("87778018063", EDocumentType.CPF), new Phone("11977268607"), new Password("123456789k@")));
-            modelBuilder.Entity<Role>().HasData(new Role("Deafult-Role", true));
+            modelBuilder.Entity<Role>().HasData(new Role("Default-Role", true));
 
             modelBuilder.Entity<User>().HasData(new
             {

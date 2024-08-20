@@ -1,5 +1,4 @@
 ﻿using Beartic.Auth.Entities;
-using Beartic.Auth.UseCases.UserUseCases.UserDtos;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -25,9 +24,7 @@ namespace Beartic.Api.Services
 
             foreach (var role in roles)
             {
-                
                 claims.Add(new Claim(ClaimTypes.Role, role.Name));
-
             }
 
             var tokenDescriptor = new SecurityTokenDescriptor
