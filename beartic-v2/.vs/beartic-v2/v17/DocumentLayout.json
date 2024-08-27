@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.api\\extensions\\configurationextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|solutionrelative:beartic.api\\extensions\\configurationextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|solutionrelative:beartic.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.api\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|solutionrelative:beartic.api\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DDBBACC1-375C-4D71-A24A-DDED3193A72B}|Beartic.Infraestructure\\Beartic.Infraestructure.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.infraestructure\\authcontext\\data\\authdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDBBACC1-375C-4D71-A24A-DDED3193A72B}|Beartic.Infraestructure\\Beartic.Infraestructure.csproj|solutionrelative:beartic.infraestructure\\authcontext\\data\\authdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{492BFE86-AF42-4450-A657-F33D42414365}|Beartic.Auth\\Beartic.Auth.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.auth\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{492BFE86-AF42-4450-A657-F33D42414365}|Beartic.Auth\\Beartic.Auth.csproj|solutionrelative:beartic.auth\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|c:\\users\\kaiqu\\onedrive\\desktop\\repositories\\beartic-v2\\beartic-v2\\beartic.api\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|solutionrelative:beartic.api\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,65 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ConfigurationExtension.cs",
-              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Api\\Extensions\\ConfigurationExtension.cs",
-              "RelativeDocumentMoniker": "Beartic.Api\\Extensions\\ConfigurationExtension.cs",
-              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Api\\Extensions\\ConfigurationExtension.cs",
-              "RelativeToolTip": "Beartic.Api\\Extensions\\ConfigurationExtension.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA3AAAA",
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Api\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Beartic.Api\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Api\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Beartic.Api\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T12:11:46.455Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Api\\Program.cs",
-              "RelativeDocumentMoniker": "Beartic.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Api\\Program.cs",
-              "RelativeToolTip": "Beartic.Api\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T12:11:41.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Api\\Services\\TokenService.cs",
-              "RelativeDocumentMoniker": "Beartic.Api\\Services\\TokenService.cs",
-              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Api\\Services\\TokenService.cs",
-              "RelativeToolTip": "Beartic.Api\\Services\\TokenService.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAIwCcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T12:07:12.744Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Auth\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "Beartic.Auth\\Entities\\User.cs",
-              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Auth\\Entities\\User.cs",
-              "RelativeToolTip": "Beartic.Auth\\Entities\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T12:19:05.152Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthData.cs",
-              "DocumentMoniker": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Infraestructure\\AuthContext\\Data\\AuthData.cs",
-              "RelativeDocumentMoniker": "Beartic.Infraestructure\\AuthContext\\Data\\AuthData.cs",
-              "ToolTip": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Infraestructure\\AuthContext\\Data\\AuthData.cs",
-              "RelativeToolTip": "Beartic.Infraestructure\\AuthContext\\Data\\AuthData.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAA5wBwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T12:15:34.568Z",
+              "WhenOpened": "2024-08-27T15:12:38.209Z",
               "EditorCaption": ""
             }
           ]

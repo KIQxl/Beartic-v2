@@ -1,4 +1,5 @@
-﻿using Beartic.Auth.Entities;
+﻿using Beartic.Api.Services.ServicesModels;
+using Beartic.Auth.Entities;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -6,14 +7,19 @@ using System.Text;
 
 namespace Beartic.Api.Services
 {
-    public static class TokenService
+    public class TokenService
     {
-        public static string GenerateToken(string id, string name, string email, IEnumerable<Role> roles)
+        private readonly JwtSettings _jwtSettings;
+
+        public TokenService(JwtSettings jwtSettings)
+        {
+            _jwtSettings = jwtSettings;
+        }
+
+        public string GenerateToken(string id, string name, string email, IEnumerable<Role> roles)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes("dn3923nfc9w0hc92h90p2wh");
-
-
+            var key = Encoding.ASCII.GetBytes(_jwtSettings.Secret);
 
             var claims = new List<Claim>
             {
@@ -29,8 +35,10 @@ namespace Beartic.Api.Services
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
+                Issuer = _jwtSettings.Issuer,
+                Audience = _jwtSettings.Audience,
                 Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.UtcNow.AddHours(5),
+                Expires = DateTime.UtcNow.AddHours(_jwtSettings.ExpiresInHours),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256),
             };
 

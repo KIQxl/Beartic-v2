@@ -1,4 +1,7 @@
-﻿using Beartic.Auth.Interfaces;
+﻿using Beartic.Api.Services;
+using Beartic.Api.Services.ServicesModels;
+using Beartic.Auth.Interfaces;
+using Beartic.Auth.UseCases.LoginUseCases;
 using Beartic.Auth.UseCases.RoleUseCases;
 using Beartic.Auth.UseCases.UserUseCases;
 using Beartic.Core.Interfaces;
@@ -45,12 +48,17 @@ namespace Beartic.Api.Extensions
             services.AddScoped<ICategoryServices, CategoryServices>();
             services.AddScoped<IUserServices, UserServices>();
             services.AddScoped<IRoleServices, RoleServices>();
+            services.AddScoped<ILoginServices, LoginServices>();
         }
 
-        public static void AddJwtSecurity(this WebApplicationBuilder builder, string key)
+        public static void AddJwtSecurity(this WebApplicationBuilder builder)
         {
-            var byteKey = Encoding.ASCII.GetBytes(key);
-            var symmetricSecurityKey = new SymmetricSecurityKey(byteKey);
+            var jwtSettingsSection = builder.Configuration.GetSection("JwtSettings");
+            builder.Services.Configure<JwtSettings>(jwtSettingsSection);
+
+            var jwtSettings = jwtSettingsSection.Get<JwtSettings>();
+
+            var byteKey = Encoding.ASCII.GetBytes(jwtSettings.Secret);
 
             builder.Services.AddAuthentication(x =>
             {
@@ -58,12 +66,17 @@ namespace Beartic.Api.Extensions
                 x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             }).AddJwtBearer(x =>
             {
+                x.RequireHttpsMetadata = true;
+                x.SaveToken = true;
+
                 x.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(byteKey),
-                    ValidateIssuer = false,
-                    ValidateAudience = false
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidAudience = jwtSettings.Audience,
+                    ValidIssuer = jwtSettings.Issuer
                 };
             });
         }

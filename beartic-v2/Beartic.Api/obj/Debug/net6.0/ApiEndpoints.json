@@ -154,6 +154,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Beartic.Api.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "v2/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Beartic.Api.Controllers.OrderController",
     "Method": "CreateOrder",
     "RelativePath": "v2/orders",
@@ -296,6 +306,64 @@
     "Method": "Delete",
     "RelativePath": "v2/products/{id}",
     "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.RoleController",
+    "Method": "GetAll",
+    "RelativePath": "v2/roles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.RoleController",
+    "Method": "Create",
+    "RelativePath": "v2/roles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Beartic.Auth.UseCases.RoleUseCases.RoleDtos.CreateRoleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.RoleController",
+    "Method": "GetById",
+    "RelativePath": "v2/roles/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.RoleController",
+    "Method": "ActiveAndDeactive",
+    "RelativePath": "v2/roles/{id}",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [

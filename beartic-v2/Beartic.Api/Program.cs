@@ -12,7 +12,7 @@ builder.Services.AddControllers()
 builder.Services.AddContexts(builder.Configuration);
 builder.Services.AddRepositoriesDependencyInjection();
 builder.Services.AddServicesDependencyInjection();
-builder.AddJwtSecurity("dn3923nfc9w0hc92h90p2wh");
+builder.AddJwtSecurity();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
