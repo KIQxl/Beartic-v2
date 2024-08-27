@@ -18,6 +18,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace Beartic.Api.Extensions
 {
@@ -83,19 +84,28 @@ namespace Beartic.Api.Extensions
 
         public static void AddAppConfig(this WebApplication app)
         {
-            app.UseCors(x =>
-            {
-                x.AllowAnyHeader();
-                x.AllowAnyMethod();
-                x.AllowAnyOrigin();
-            });
-
             app.UseHttpsRedirection();
 
             app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllers();
+        }
+
+        public static void ConfigureCorsAndControllers(this WebApplicationBuilder builder)
+        {
+            builder.Services.AddControllers()
+                .AddJsonOptions(opts =>
+                {
+                    opts.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+                });
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("Development", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
+                options.AddPolicy("Production", builder => builder.WithOrigins("https://localhost:9000").AllowAnyMethod().AllowAnyHeader());
+            });
         }
     }
 }

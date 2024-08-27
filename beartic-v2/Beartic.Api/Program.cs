@@ -2,13 +2,8 @@ using Beartic.Api.Extensions;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddCors();
-builder.Services.AddControllers()
-    .AddJsonOptions(opts =>
-    {
-        opts.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-    });
 
+builder.ConfigureCorsAndControllers();
 builder.Services.AddContexts(builder.Configuration);
 builder.Services.AddRepositoriesDependencyInjection();
 builder.Services.AddServicesDependencyInjection();
@@ -23,6 +18,11 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseCors("Development");
+}
+else
+{
+    app.UseCors("Production");
 }
 
 app.AddAppConfig();
