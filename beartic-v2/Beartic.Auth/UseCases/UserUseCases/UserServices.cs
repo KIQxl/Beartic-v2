@@ -154,5 +154,24 @@ namespace Beartic.Auth.UseCases.UserUseCases
 
             return new UsersResult(200, "Encontrados", usersResult);
         }
+
+        public async Task<UserResult> ChangePassword(ChangePasswordDto request)
+        {
+            if(request.Password != request.ConfirmPassword)
+                return new UserResult(401, "As senhas não conferem");
+
+            var user = await _userRepository.GetByEmailAsync(request.Email);
+
+            if(user is null)
+                return new UserResult(404, "Usuário não encontrado");
+
+            var password = new Password(request.Password);
+
+            user.ChangePassword(password);
+
+            _userRepository.Update(user);
+
+            return new UserResult(200, "Senha alterada com sucesso!");
+        }
     }
 }

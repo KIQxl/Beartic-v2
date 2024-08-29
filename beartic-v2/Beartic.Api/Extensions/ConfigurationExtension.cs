@@ -1,5 +1,4 @@
-﻿using Beartic.Api.Services;
-using Beartic.Api.Services.ServicesModels;
+﻿using Beartic.Api.Services.ServicesModels;
 using Beartic.Auth.Interfaces;
 using Beartic.Auth.UseCases.LoginUseCases;
 using Beartic.Auth.UseCases.RoleUseCases;

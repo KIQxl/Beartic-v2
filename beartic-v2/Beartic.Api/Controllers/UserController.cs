@@ -167,5 +167,29 @@ namespace Beartic.Api.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+
+        [HttpPut("users/change-password")]
+        public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordDto request)
+        {
+            try
+            {
+                var result = await _userServices.ChangePassword(request);
+
+                if (result.Success)
+                {
+                    await _uow.AuthCommit();
+                    return Ok(result);
+                }
+
+                if (result.Status == 401)
+                    return BadRequest(result);
+
+                return NotFound(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }

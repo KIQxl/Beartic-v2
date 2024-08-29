@@ -1,9 +1,7 @@
 ﻿using Beartic.Auth.Entities;
-using Beartic.Auth.ValueObjects;
 using Beartic.Core.Entities;
 using Beartic.Infraestructure.AuthContext.Mappings;
 using Beartic.Shared.Enums;
-using Beartic.Shared.ValueObjects;
 using Flunt.Notifications;
 using Microsoft.EntityFrameworkCore;
 

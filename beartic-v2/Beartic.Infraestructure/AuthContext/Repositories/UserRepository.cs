@@ -77,5 +77,14 @@ namespace Beartic.Infraestructure.AuthContext.Repositories
             }
             catch { return null; }
         }
+
+        public async Task<User> GetByEmailAsync(string email)
+        {
+            try
+            {
+                return await _ctx.users.FirstOrDefaultAsync(x => x.Email.Address == email);
+            }
+            catch { return null; }
+        }
     }
 }

@@ -12,5 +12,6 @@ namespace Beartic.Auth.UseCases.UserUseCases
         public Task<UserResult> RemoveRole(AlterRole request);
         public Task<UserResult> AddRole(AlterRole request);
         public Task<UsersResult> GetAll();
+        public Task<UserResult> ChangePassword(ChangePasswordDto request);
     }
 }
