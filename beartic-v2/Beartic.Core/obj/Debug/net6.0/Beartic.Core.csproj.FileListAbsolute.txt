@@ -43,4 +43,5 @@ C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\Beartic.Core\obj\Debug\net6.0\Beart
 C:\Users\kaiqu\Desktop\Beartic-v2\beartic-v2\Beartic.Core\obj\Debug\net6.0\ref\Beartic.Core.dll
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Core\bin\Debug\net6.0\Beartic.Shared.dll
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Core\bin\Debug\net6.0\Beartic.Shared.pdb
-C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Core\obj\Debug\net6.0\Beartic.Core.csproj.CopyComplete
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Core\obj\Debug\net6.0\Beartic.Core.sourcelink.json
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Core\obj\Debug\net6.0\Beartic..298C58B1.Up2Date

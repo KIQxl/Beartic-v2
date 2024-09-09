@@ -1,5 +1,6 @@
 ﻿using Beartic.Api.Services.ServicesModels;
 using Beartic.Auth.Entities;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -11,9 +12,9 @@ namespace Beartic.Api.Services
     {
         private readonly JwtSettings _jwtSettings;
 
-        public TokenService(JwtSettings jwtSettings)
+        public TokenService(IOptions<JwtSettings> jwtSettings)
         {
-            _jwtSettings = jwtSettings;
+            _jwtSettings = jwtSettings.Value;
         }
 
         public string GenerateToken(string id, string name, string email, IEnumerable<Role> roles)

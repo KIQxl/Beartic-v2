@@ -1,0 +1,123 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|c:\\users\\caiaque\\desktop\\projects\\beartic-v2\\beartic-v2\\beartic.api\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|solutionrelative:beartic.api\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|c:\\users\\caiaque\\desktop\\projects\\beartic-v2\\beartic-v2\\beartic.api\\extensions\\configurationextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|solutionrelative:beartic.api\\extensions\\configurationextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|c:\\users\\caiaque\\desktop\\projects\\beartic-v2\\beartic-v2\\beartic.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|solutionrelative:beartic.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|c:\\users\\caiaque\\desktop\\projects\\beartic-v2\\beartic-v2\\beartic.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|solutionrelative:beartic.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|c:\\users\\caiaque\\desktop\\projects\\beartic-v2\\beartic-v2\\beartic.api\\services\\servicesmodels\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|solutionrelative:beartic.api\\services\\servicesmodels\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Beartic.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Api\\Program.cs",
+              "RelativeToolTip": "Beartic.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T00:07:06.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Api\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "Beartic.Api\\Services\\TokenService.cs",
+              "ToolTip": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Api\\Services\\TokenService.cs",
+              "RelativeToolTip": "Beartic.Api\\Services\\TokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T00:07:22.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "Beartic.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Api\\appsettings.json",
+              "RelativeToolTip": "Beartic.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-08T23:59:49.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ConfigurationExtension.cs",
+              "DocumentMoniker": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Api\\Extensions\\ConfigurationExtension.cs",
+              "RelativeDocumentMoniker": "Beartic.Api\\Extensions\\ConfigurationExtension.cs",
+              "ToolTip": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Api\\Extensions\\ConfigurationExtension.cs*",
+              "RelativeToolTip": "Beartic.Api\\Extensions\\ConfigurationExtension.cs*",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T23:59:32.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "JwtSettings.cs",
+              "DocumentMoniker": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Api\\Services\\ServicesModels\\JwtSettings.cs",
+              "RelativeDocumentMoniker": "Beartic.Api\\Services\\ServicesModels\\JwtSettings.cs",
+              "ToolTip": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Api\\Services\\ServicesModels\\JwtSettings.cs",
+              "RelativeToolTip": "Beartic.Api\\Services\\ServicesModels\\JwtSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T23:59:23.619Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

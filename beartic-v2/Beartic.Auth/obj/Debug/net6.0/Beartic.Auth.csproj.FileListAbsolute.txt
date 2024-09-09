@@ -39,8 +39,9 @@ C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\n
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\Beartic.Auth.AssemblyInfoInputs.cache
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\Beartic.Auth.AssemblyInfo.cs
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\Beartic.Auth.csproj.CoreCompileInputs.cache
-C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\Beartic.Auth.csproj.CopyComplete
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\Beartic.Auth.dll
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\refint\Beartic.Auth.dll
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\Beartic.Auth.pdb
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\ref\Beartic.Auth.dll
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\Beartic.Auth.sourcelink.json
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\Beartic.Auth\obj\Debug\net6.0\Beartic..55358DE1.Up2Date

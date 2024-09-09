@@ -35,3 +35,4 @@ C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\SharedContext\obj\Debug\
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\refint\Beartic.Shared.dll
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\Beartic.Shared.pdb
 C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\ref\Beartic.Shared.dll
+C:\Users\Caiaque\Desktop\projects\Beartic-v2\beartic-v2\SharedContext\obj\Debug\net6.0\Beartic.Shared.sourcelink.json

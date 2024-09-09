@@ -1,4 +1,5 @@
-﻿using Beartic.Api.Services.ServicesModels;
+﻿using Beartic.Api.Services;
+using Beartic.Api.Services.ServicesModels;
 using Beartic.Auth.Interfaces;
 using Beartic.Auth.UseCases.LoginUseCases;
 using Beartic.Auth.UseCases.RoleUseCases;
@@ -49,6 +50,7 @@ namespace Beartic.Api.Extensions
             services.AddScoped<IUserServices, UserServices>();
             services.AddScoped<IRoleServices, RoleServices>();
             services.AddScoped<ILoginServices, LoginServices>();
+            services.AddScoped<TokenService>();
         }
 
         public static void AddJwtSecurity(this WebApplicationBuilder builder)

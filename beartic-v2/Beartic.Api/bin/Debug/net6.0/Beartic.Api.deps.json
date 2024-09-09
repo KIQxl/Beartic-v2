@@ -562,7 +562,10 @@
           "Beartic.Shared": "1.0.0"
         },
         "runtime": {
-          "Beartic.Auth.dll": {}
+          "Beartic.Auth.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Beartic.Core/1.0.0": {
@@ -571,7 +574,10 @@
           "Flunt": "1.0.5"
         },
         "runtime": {
-          "Beartic.Core.dll": {}
+          "Beartic.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Beartic.Infraestructure/1.0.0": {
@@ -582,7 +588,10 @@
           "Pomelo.EntityFrameworkCore.MySql": "7.0.0"
         },
         "runtime": {
-          "Beartic.Infraestructure.dll": {}
+          "Beartic.Infraestructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Beartic.Shared/1.0.0": {
@@ -590,7 +599,10 @@
           "Flunt": "1.0.5"
         },
         "runtime": {
-          "Beartic.Shared.dll": {}
+          "Beartic.Shared.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

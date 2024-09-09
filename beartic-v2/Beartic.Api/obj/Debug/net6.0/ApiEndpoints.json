@@ -467,6 +467,22 @@
   },
   {
     "ContainingType": "Beartic.Api.Controllers.UserController",
+    "Method": "ChangePassword",
+    "RelativePath": "v2/users/change-password",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Beartic.Auth.UseCases.UserUseCases.UserDtos.ChangePasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.UserController",
     "Method": "RemoveRole",
     "RelativePath": "v2/users/remove-role",
     "HttpMethod": "PUT",

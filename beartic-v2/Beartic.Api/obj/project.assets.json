@@ -2932,19 +2932,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kaiqu\\.nuget\\packages\\": {}
+    "C:\\Users\\Caiaque\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Api\\Beartic.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Api\\Beartic.Api.csproj",
       "projectName": "Beartic.Api",
-      "projectPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Api\\Beartic.Api.csproj",
-      "packagesPath": "C:\\Users\\kaiqu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Api\\obj\\",
+      "projectPath": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Api\\Beartic.Api.csproj",
+      "packagesPath": "C:\\Users\\Caiaque\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kaiqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Caiaque\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2952,14 +2952,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Infraestructure\\Beartic.Infraestructure.csproj": {
-              "projectPath": "C:\\Users\\kaiqu\\OneDrive\\Desktop\\Repositories\\Beartic-v2\\beartic-v2\\Beartic.Infraestructure\\Beartic.Infraestructure.csproj"
+            "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Infraestructure\\Beartic.Infraestructure.csproj": {
+              "projectPath": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Infraestructure\\Beartic.Infraestructure.csproj"
             }
           }
         }
@@ -3023,7 +3024,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
