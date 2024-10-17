@@ -19,48 +19,48 @@ namespace Beartic.Api.Controllers
             _tokenService = tokenService;
         }
 
-        //[HttpPost]
-        //[Route("login")]
-        //public async Task<IActionResult> Login(RequestLoginDto request)
-        //{
-        //    try
-        //    {
-        //        var result = await _loginServices.Login(request);
-
-        //        if (result.Success)
-        //        {
-        //            var token = _tokenService.GenerateToken(result.Data.Id, result.Data.Username, result.Data.Email, result.Data.roles);
-        //            result.Data.Token = token;
-
-        //            return Ok(result);
-        //        }
-
-        //        return BadRequest(result);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return StatusCode(500, ex.Message);
-        //    }
-        //}
-
         [HttpPost]
         [Route("login")]
-        public async Task<IActionResult> Login()
+        public async Task<IActionResult> Login(RequestLoginDto request)
         {
             try
             {
-                if (true)
+                var result = await _loginServices.Login(request);
+
+                if (result.Success)
                 {
-                    var token = _tokenService.GenerateToken("dnmi233290w0dhj890qa", "Kaique", "kaique@email.com", new List<Role> { new Role("adm", true), new Role("director", true), new Role("manager", true) });
-                    return Ok(token);
+                    var token = _tokenService.GenerateToken(result.Data.Id, result.Data.Username, result.Data.Email, result.Data.roles);
+                    result.Data.Token = token;
+
+                    return Ok(result);
                 }
 
-                return BadRequest();
+                return BadRequest(result);
             }
             catch (Exception ex)
             {
                 return StatusCode(500, ex.Message);
             }
         }
+
+        //[HttpPost]
+        //[Route("login")]
+        //public async Task<IActionResult> Login()
+        //{
+        //    try
+        //    {
+        //        if (true)
+        //        {
+        //            var token = _tokenService.GenerateToken("dnmi233290w0dhj890qa", "Kaique", "kaique@email.com", new List<Role> { new Role("adm", true), new Role("director", true), new Role("manager", true) });
+        //            return Ok(token);
+        //        }
+
+        //        return BadRequest();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, ex.Message);
+        //    }
+        //}
     }
 }

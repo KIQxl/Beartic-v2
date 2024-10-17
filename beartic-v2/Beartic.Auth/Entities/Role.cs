@@ -1,6 +1,7 @@
 ﻿using Beartic.Core.Entities;
 using Beartic.Shared.Entities;
 using Flunt.Validations;
+using System.Text.Json.Serialization;
 
 namespace Beartic.Auth.Entities
 {
@@ -26,7 +27,9 @@ namespace Beartic.Auth.Entities
 
         public string Name { get; private set; }
         public bool Active { get; private set; }
-        public IList<User> Users { get; private set; }
+
+        [JsonIgnore]
+        public virtual IList<User> Users { get; private set; }
 
         public void ActiveDeactive() => this.Active = !this.Active;
     }

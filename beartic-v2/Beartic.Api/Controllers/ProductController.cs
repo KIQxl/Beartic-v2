@@ -1,12 +1,14 @@
 ﻿using Beartic.Core.UseCases.ProductUseCases;
 using Beartic.Core.UseCases.ProductUseCases.ProductDtos.ProductDtos;
 using Beartic.Infraestructure.Transactions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Beartic.Api.Controllers
 {
     [ApiController]
     [Route("v2")]
+    [Authorize]
     public class ProductController : ControllerBase
     {
         private readonly IProductServices _services;

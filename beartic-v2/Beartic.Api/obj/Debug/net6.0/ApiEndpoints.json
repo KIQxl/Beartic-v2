@@ -160,7 +160,13 @@
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Beartic.Auth.UseCases.LoginUseCases.LoginDtos.RequestLoginDto",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

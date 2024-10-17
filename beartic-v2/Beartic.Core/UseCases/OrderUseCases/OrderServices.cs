@@ -41,6 +41,9 @@ namespace Beartic.Core.UseCases.OrderUseCases
             foreach(var item in request.orderItems)
             {
                 var product = await _productRepository.GetProductByIdAsync(item.ProductId);
+                if (product is null)
+                    return new OrderResult(400, $"O produto com o Id: {item.ProductId} não foi encontrado");
+
                 var orderItem = new OrderItem(product, item.Quantity);
                 if (orderItem.Invalid)
                     return new OrderResult(400, $"Houve um erro no produto {orderItem.Product.Title} do pedido", orderItem.Notifications);
