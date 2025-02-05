@@ -26,6 +26,11 @@ namespace Beartic.Tests.FakeRepositories
             throw new NotImplementedException();
         }
 
+        public Task<User> GetByEmailAsync(string email)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<User> GetByIdAsync(string id)
         {
             if (id == "123")

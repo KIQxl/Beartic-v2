@@ -28,5 +28,13 @@ namespace Beartic.Tests.UseCasesTests.UseCasesProduct
 
             Assert.IsTrue(!result.Result.Success && result.Result.Status == 404);
         }
+
+        public async void GetAllProducts()
+        {
+            var services = new ProductServices(_repository, _categoryRepository);
+            var products = await services.GetAllProducts();
+
+            Assert.IsTrue(products.Data.Any());
+        }
     }
 }

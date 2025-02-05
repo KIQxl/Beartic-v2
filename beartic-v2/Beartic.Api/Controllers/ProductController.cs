@@ -8,7 +8,7 @@ namespace Beartic.Api.Controllers
 {
     [ApiController]
     [Route("v2")]
-    [Authorize]
+    //[Authorize]
     public class ProductController : ControllerBase
     {
         private readonly IProductServices _services;
@@ -27,6 +27,25 @@ namespace Beartic.Api.Controllers
             try
             {
                 var result = await _services.GetProduct(id);
+
+                if (result.Success)
+                    return Ok(result);
+
+                return NotFound(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("products/")]
+        public async Task<IActionResult> GetByAllAsync()
+        {
+            try
+            {
+                var result = await _services.GetAllProducts();
 
                 if (result.Success)
                     return Ok(result);

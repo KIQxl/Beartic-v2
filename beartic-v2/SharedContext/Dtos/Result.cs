@@ -1,8 +1,9 @@
-﻿using Flunt.Notifications;
+﻿using Beartic.Shared.Interfaces;
+using Flunt.Notifications;
 
 namespace Beartic.Shared.Dtos
 {
-    public class Result<T>
+    public class Result<T> : IResult
     {
         public Result(int status, string message, T data)
         {

@@ -27,6 +27,18 @@ namespace Beartic.Infraestructure.BussinessContext.Repositories
             }
         }
 
+        public async Task<List<Product>> GetAllProducts()
+        {
+            try
+            {
+                return await _ctx.products.AsNoTracking().ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
         public async Task<Product> GetProductByIdAsync(string id)
         {
             try

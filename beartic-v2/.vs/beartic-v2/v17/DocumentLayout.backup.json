@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|c:\\users\\caiaque\\desktop\\projects\\beartic-v2\\beartic-v2\\beartic.api\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|solutionrelative:beartic.api\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|c:\\users\\caiaque\\desktop\\projects\\beartic-v2\\beartic-v2\\beartic.api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|solutionrelative:beartic.api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4ACA8F79-35BC-49B9-955C-033017A2DC1A}|Beartic.Core\\Beartic.Core.csproj|c:\\users\\caiaque\\desktop\\projects\\beartic-v2\\beartic-v2\\beartic.core\\usecases\\orderusecases\\orderservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4ACA8F79-35BC-49B9-955C-033017A2DC1A}|Beartic.Core\\Beartic.Core.csproj|solutionrelative:beartic.core\\usecases\\orderusecases\\orderservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4ACA8F79-35BC-49B9-955C-033017A2DC1A}|Beartic.Core\\Beartic.Core.csproj|c:\\users\\caiaque\\desktop\\projects\\beartic-v2\\beartic-v2\\beartic.core\\usecases\\productusecases\\productservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ACA8F79-35BC-49B9-955C-033017A2DC1A}|Beartic.Core\\Beartic.Core.csproj|solutionrelative:beartic.core\\usecases\\productusecases\\productservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4ACA8F79-35BC-49B9-955C-033017A2DC1A}|Beartic.Core\\Beartic.Core.csproj|c:\\users\\caiaque\\desktop\\projects\\beartic-v2\\beartic-v2\\beartic.core\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4ACA8F79-35BC-49B9-955C-033017A2DC1A}|Beartic.Core\\Beartic.Core.csproj|solutionrelative:beartic.core\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DDBBACC1-375C-4D71-A24A-DDED3193A72B}|Beartic.Infraestructure\\Beartic.Infraestructure.csproj|c:\\users\\caiaque\\desktop\\projects\\beartic-v2\\beartic-v2\\beartic.infraestructure\\bussinesscontext\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDBBACC1-375C-4D71-A24A-DDED3193A72B}|Beartic.Infraestructure\\Beartic.Infraestructure.csproj|solutionrelative:beartic.infraestructure\\bussinesscontext\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4ACA8F79-35BC-49B9-955C-033017A2DC1A}|Beartic.Core\\Beartic.Core.csproj|c:\\users\\caiaque\\desktop\\projects\\beartic-v2\\beartic-v2\\beartic.core\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4ACA8F79-35BC-49B9-955C-033017A2DC1A}|Beartic.Core\\Beartic.Core.csproj|solutionrelative:beartic.core\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|c:\\users\\caiaque\\desktop\\projects\\beartic-v2\\beartic-v2\\beartic.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C08AAB56-D048-487F-B3CD-2047A11CBEE3}|Beartic.Api\\Beartic.Api.csproj|solutionrelative:beartic.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4ACA8F79-35BC-49B9-955C-033017A2DC1A}|Beartic.Core\\Beartic.Core.csproj|c:\\users\\caiaque\\desktop\\projects\\beartic-v2\\beartic-v2\\beartic.core\\usecases\\customerusecases\\customerservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ACA8F79-35BC-49B9-955C-033017A2DC1A}|Beartic.Core\\Beartic.Core.csproj|solutionrelative:beartic.core\\usecases\\customerusecases\\customerservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,21 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 8,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrderItem.cs",
-              "DocumentMoniker": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Core\\Entities\\OrderItem.cs",
-              "RelativeDocumentMoniker": "Beartic.Core\\Entities\\OrderItem.cs",
-              "ToolTip": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Core\\Entities\\OrderItem.cs",
-              "RelativeToolTip": "Beartic.Core\\Entities\\OrderItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T22:55:51.806Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
@@ -58,55 +41,71 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Core\\Entities\\Order.cs",
-              "RelativeDocumentMoniker": "Beartic.Core\\Entities\\Order.cs",
-              "ToolTip": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Core\\Entities\\Order.cs",
-              "RelativeToolTip": "Beartic.Core\\Entities\\Order.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAmwC0AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T22:17:04.488Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "OrderServices.cs",
-              "DocumentMoniker": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Core\\UseCases\\OrderUseCases\\OrderServices.cs",
-              "RelativeDocumentMoniker": "Beartic.Core\\UseCases\\OrderUseCases\\OrderServices.cs",
-              "ToolTip": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Core\\UseCases\\OrderUseCases\\OrderServices.cs",
-              "RelativeToolTip": "Beartic.Core\\UseCases\\OrderUseCases\\OrderServices.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAcwHIAAAApAAAAAAAAAA==",
+              "Title": "ProductServices.cs",
+              "DocumentMoniker": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Core\\UseCases\\ProductUseCases\\ProductServices.cs",
+              "RelativeDocumentMoniker": "Beartic.Core\\UseCases\\ProductUseCases\\ProductServices.cs",
+              "ToolTip": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Core\\UseCases\\ProductUseCases\\ProductServices.cs",
+              "RelativeToolTip": "Beartic.Core\\UseCases\\ProductUseCases\\ProductServices.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAwD4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T20:41:42.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-04T15:43:24.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomerServices.cs",
+              "DocumentMoniker": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Core\\UseCases\\CustomerUseCases\\CustomerServices.cs",
+              "RelativeDocumentMoniker": "Beartic.Core\\UseCases\\CustomerUseCases\\CustomerServices.cs",
+              "ToolTip": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Core\\UseCases\\CustomerUseCases\\CustomerServices.cs",
+              "RelativeToolTip": "Beartic.Core\\UseCases\\CustomerUseCases\\CustomerServices.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwD0AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T15:39:35.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Infraestructure\\BussinessContext\\Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "Beartic.Infraestructure\\BussinessContext\\Repositories\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Infraestructure\\BussinessContext\\Repositories\\ProductRepository.cs",
+              "RelativeToolTip": "Beartic.Infraestructure\\BussinessContext\\Repositories\\ProductRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCEAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T15:34:48.438Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Api\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "Beartic.Api\\Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Api\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "Beartic.Api\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Api\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Beartic.Api\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Api\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Beartic.Api\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwAoAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T04:18:47.121Z",
+              "WhenOpened": "2025-02-04T15:33:31.82Z",
               "EditorCaption": ""
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Api\\Program.cs",
-              "RelativeDocumentMoniker": "Beartic.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\Caiaque\\Desktop\\projects\\Beartic-v2\\beartic-v2\\Beartic.Api\\Program.cs",
-              "RelativeToolTip": "Beartic.Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T17:24:27.033Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             }
           ]
         },

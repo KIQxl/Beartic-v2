@@ -8,5 +8,6 @@ namespace Beartic.Core.Interfaces
         public Task<Product> GetProductByIdAsync(string id);
         public Task Add(Product product);
         public void Remove(Product product);
+        public Task<List<Product>> GetAllProducts();
     }
 }

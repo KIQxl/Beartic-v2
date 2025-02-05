@@ -2,6 +2,8 @@
 using Beartic.Core.Interfaces;
 using Beartic.Core.UseCases.ProductUseCases.ProductDtos.ProductDtos;
 using Beartic.Core.ValueObjects;
+using Beartic.Shared.Dtos;
+using Beartic.Shared.Interfaces;
 
 namespace Beartic.Core.UseCases.ProductUseCases
 {
@@ -58,6 +60,23 @@ namespace Beartic.Core.UseCases.ProductUseCases
                 return new ProductResult(404, "Produto não encontrado");
 
             return new ProductResult(200, "Sucesso!", new ProductResultData(product.Id.ToString(), product.Title, product.Description, product.Price, product.QuantityOnHand));
+        }
+
+        public async Task<ProductsResult> GetAllProducts()
+        {
+            var products = await _productRepository.GetAllProducts();
+
+            if (products is null)
+                return new ProductsResult(404, "Produto não encontrado");
+
+            //var productsResult = products.Select(p => new ProductResultData(p.Id.ToString(), p.Title, p.Description, p.Price, p.QuantityOnHand));
+            var productsResult = new List<ProductResultData>();
+            foreach (var product in products)
+            {
+                productsResult.Add(new ProductResultData(product.Id.ToString(), product.Title, product.Description, product.Price, product.QuantityOnHand));
+            }
+
+            return new ProductsResult(200, "Sucesso!", productsResult.ToList());
         }
 
         public async Task<ProductResult> UpdateProduct(UpdateProductDto request)

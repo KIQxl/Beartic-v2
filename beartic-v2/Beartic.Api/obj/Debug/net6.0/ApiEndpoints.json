@@ -261,6 +261,16 @@
   },
   {
     "ContainingType": "Beartic.Api.Controllers.ProductController",
+    "Method": "GetByAllAsync",
+    "RelativePath": "v2/products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Beartic.Api.Controllers.ProductController",
     "Method": "Create",
     "RelativePath": "v2/products",
     "HttpMethod": "POST",

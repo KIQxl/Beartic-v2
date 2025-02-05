@@ -11,7 +11,6 @@ namespace Beartic.Core.ValueObjects
             Installments = installments;
             InstallmentPrice = price / installments;
             ModifiedAt = DateTime.Now;
-
         }
 
         public decimal Price { get; private set; }
